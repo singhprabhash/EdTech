@@ -1,0 +1,327 @@
+{
+  "description": "Exact assets from archived ready_design HTML; no metadata or claims approved by vendoring.",
+  "images": {
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAGF_AzlA1hC2ekL709-EhyoXkuR2GSp6m0-zXAxufDkdcPWlVC76U0kWm7Yts-OXmV9VKs8-ba5XAavE0PVhSZlyTlxfrgukHhArysEZ05jloYfdDmRKgdowWTv0XYe6dGT1qYNlo00RFvwAg-EUVOUPkrv9IDbH_eUfZJSOmAQHSKJdGIQz-ehWMCTkwah3jNiMWEp_AZeVbTx98AkkCMDLNqq_5xkhpRX2YyFh1lJdFgLXmmXsTN4w": {
+      "path": "/reference-assets/bf151bfa1c8b9e71.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAGF_AzlA1hC2ekL709-EhyoXkuR2GSp6m0-zXAxufDkdcPWlVC76U0kWm7Yts-OXmV9VKs8-ba5XAavE0PVhSZlyTlxfrgukHhArysEZ05jloYfdDmRKgdowWTv0XYe6dGT1qYNlo00RFvwAg-EUVOUPkrv9IDbH_eUfZJSOmAQHSKJdGIQz-ehWMCTkwah3jNiMWEp_AZeVbTx98AkkCMDLNqq_5xkhpRX2YyFh1lJdFgLXmmXsTN4w",
+      "bytes": 42581,
+      "sha256": "2301f41f76305e2452e798ac43d5fd368de724f253ab98905e9967229341f877",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAPJgRGmR3y43U7E6XpfJTJFg4Bdlvx6bFCKgowQn9fXrXJjBVPY9UiOG960EC0k6DheDS-C86hyqhhGRBSjh76RuHyqQ7GxF7qbRWTPPcs-l2ytwRf1aMuh_E8d7ulE5iJwwcc38PJQX7iN2ZtvVvfxh6OkzHGR2d-jH82D1DlAfdbVpLCkkQNnKPmu4hf_lEadVbzLJBHvEpj2oEuICP5vXjYInGNnop1fAM4CCFqejklX0zYU4Ms9w": {
+      "path": "/reference-assets/4472c09b60aaf532.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAPJgRGmR3y43U7E6XpfJTJFg4Bdlvx6bFCKgowQn9fXrXJjBVPY9UiOG960EC0k6DheDS-C86hyqhhGRBSjh76RuHyqQ7GxF7qbRWTPPcs-l2ytwRf1aMuh_E8d7ulE5iJwwcc38PJQX7iN2ZtvVvfxh6OkzHGR2d-jH82D1DlAfdbVpLCkkQNnKPmu4hf_lEadVbzLJBHvEpj2oEuICP5vXjYInGNnop1fAM4CCFqejklX0zYU4Ms9w",
+      "bytes": 68176,
+      "sha256": "694a74ae93347b5d31ec9a98710e6104b7eb0fa12675442c8afd0a35e846f467",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAdK-zR5fe4R0eXQfPSdYaSa0dNSeJtGAANflTCtkffEcLZXC2DVJybrbL3qww_ky3eDfjppCPdAVG29cjzLKKCS7zvoifPS89LqTp3V2Umixxf4HN-mbdVNhac0WMIYVmJKxBu-UTYfeq__unhygM69GTVyHoibVMVkSwu5-OXlSBTDIoPHgJQnWyaqsguNBebBUs-OYc1C1uOhexMhBSI2O-V9DeT83EY1UvwYehqNWD31O850VTnqQ": {
+      "path": "/reference-assets/88842f6a263b67b8.jpg",
+      "source_files": [
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdK-zR5fe4R0eXQfPSdYaSa0dNSeJtGAANflTCtkffEcLZXC2DVJybrbL3qww_ky3eDfjppCPdAVG29cjzLKKCS7zvoifPS89LqTp3V2Umixxf4HN-mbdVNhac0WMIYVmJKxBu-UTYfeq__unhygM69GTVyHoibVMVkSwu5-OXlSBTDIoPHgJQnWyaqsguNBebBUs-OYc1C1uOhexMhBSI2O-V9DeT83EY1UvwYehqNWD31O850VTnqQ",
+      "bytes": 38888,
+      "sha256": "8133fb9eb080c892d470c2d2bb727eeb9cc7a96c25d3f649b632ba0ebf976cd2",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAgwBEE3eHwd8A8LyJ4ZjWLMEz6D7cY3qY_6aSC5DAxsyyXucC_6X_V9IYVr-epNq7bfwoC8b4Q7CUXXRo9ugqzHDP-FGCwu7MgI4co4ClPpDx7XqZSIq19Y4c31lqkXcSYKr7KG_bFMojcyh4_YfM3kPATizp1IO0x2qq9bGaBzMH_IEJ7SVd5NEs76AG_nW0bqc2a6X6IwLvbv8KLl4tgIeXLyWws0qbpENy2wbkXUUp4W8JDuiExdw": {
+      "path": "/reference-assets/3970a60b3f57f00c.jpg",
+      "source_files": [
+        "ready_design/catalog.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAgwBEE3eHwd8A8LyJ4ZjWLMEz6D7cY3qY_6aSC5DAxsyyXucC_6X_V9IYVr-epNq7bfwoC8b4Q7CUXXRo9ugqzHDP-FGCwu7MgI4co4ClPpDx7XqZSIq19Y4c31lqkXcSYKr7KG_bFMojcyh4_YfM3kPATizp1IO0x2qq9bGaBzMH_IEJ7SVd5NEs76AG_nW0bqc2a6X6IwLvbv8KLl4tgIeXLyWws0qbpENy2wbkXUUp4W8JDuiExdw",
+      "bytes": 58256,
+      "sha256": "ddd338f122c9c67565d4d48429cb7d9b93add4e17fe58184f9d648017c366c7b",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAsQtC3hYBu768F86ugsUIDLUqGz1sMyIY6MNM1TymrUbLrw_TnL7K80EGobKmOBezmZwEEDCK3_o--I48bys--J7NjpAO7SdedeUMJ-v2L91VcoKlrcEqrTSGYF5Wzd7mlXZHWtWvWxW_1QcWLQ2Prs4ul4yObQOX-wg-3f69pEh7QhIi4eZ0kiKjHHoCfc2hiVMKcF6jUs7fWK_UuV7wm9pj4sKI8D97SzX4w5JYcqTxxiildQd_8fg": {
+      "path": "/reference-assets/42c58f8796d669fe.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAsQtC3hYBu768F86ugsUIDLUqGz1sMyIY6MNM1TymrUbLrw_TnL7K80EGobKmOBezmZwEEDCK3_o--I48bys--J7NjpAO7SdedeUMJ-v2L91VcoKlrcEqrTSGYF5Wzd7mlXZHWtWvWxW_1QcWLQ2Prs4ul4yObQOX-wg-3f69pEh7QhIi4eZ0kiKjHHoCfc2hiVMKcF6jUs7fWK_UuV7wm9pj4sKI8D97SzX4w5JYcqTxxiildQd_8fg",
+      "bytes": 49803,
+      "sha256": "b1b98d0ab411e6ed581f213efa5f731258752b6d057211f4e35d44595fa8199c",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuB--IZuGFbnYeqNA4oXZCcVad6xCOQmxb1FeuQL5LJdJbbsRm6YNJc8mvjQtlMkNS3JPUJmcVkX9_uNlXHPc79T-gA2sHUZsYLTzevPArDU1-ghh1vtuLcBuCryZMBrzwf-9Keex6s93UQDTwj5aJPVoLPHtxTjR2eu6ZzvfxNQHOZkLnCgFTqHFKtQoODWENdUr4E77ly6b77QbzZnbJ7JqXCLkykCn1R1ULVw7_8Hw-kxsziYC0on0g": {
+      "path": "/reference-assets/1c37d245b5b0f974.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuB--IZuGFbnYeqNA4oXZCcVad6xCOQmxb1FeuQL5LJdJbbsRm6YNJc8mvjQtlMkNS3JPUJmcVkX9_uNlXHPc79T-gA2sHUZsYLTzevPArDU1-ghh1vtuLcBuCryZMBrzwf-9Keex6s93UQDTwj5aJPVoLPHtxTjR2eu6ZzvfxNQHOZkLnCgFTqHFKtQoODWENdUr4E77ly6b77QbzZnbJ7JqXCLkykCn1R1ULVw7_8Hw-kxsziYC0on0g",
+      "bytes": 39367,
+      "sha256": "e7059234ac30b4e2747e76e5ceabdfbcfbc61ab063b6ec676e7fa1eb81a7e12a",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBIsE0z0yc2k9hZTwjn7YzKE3zXy2FYGS_Qg9-rJUwnwvT9-1spkOHbWrwRn9Fum02NzzullU1eIQjXahF8PUw6I2vP5vabJ_MKHvkYZZ2U2nvo2p1Dp6VcRLCckooWh0BKtkeXSFbBqLmyJxzPYOWRes9a1pT1-Nt9AU4ikw65aPoX4YUI5fYWdAPZCUtxYOcRFaf7c0EP8_AZhnk7xr-jAOe80A3_XMgycgXQuCCbmCixFQC79yoU7g": {
+      "path": "/reference-assets/645647be9dfd6209.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBIsE0z0yc2k9hZTwjn7YzKE3zXy2FYGS_Qg9-rJUwnwvT9-1spkOHbWrwRn9Fum02NzzullU1eIQjXahF8PUw6I2vP5vabJ_MKHvkYZZ2U2nvo2p1Dp6VcRLCckooWh0BKtkeXSFbBqLmyJxzPYOWRes9a1pT1-Nt9AU4ikw65aPoX4YUI5fYWdAPZCUtxYOcRFaf7c0EP8_AZhnk7xr-jAOe80A3_XMgycgXQuCCbmCixFQC79yoU7g",
+      "bytes": 55029,
+      "sha256": "d6ef6bb3d71c91444bac765921fcd3a799ef865d6a3a315650a77adf0d614c20",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBWCqeTT7wYbHRf2xzQVb26mQNmbqKPKA6XpKC7X5oZVh2b7luDYry3BlL5PgMrXUPNKwaekihrzYqL3KNhDCxYJTxdK2HyDli4DNz_VmtNy1Hs10i7m5qDoyfhhvdpU_TtTI14CtZ16xEtqYI1n56C9BjtBTV0z6SVFCl-o20QyinsD4s7sHwxDDD9Cg1zFQ_me3EGxex9bZirvTrTBiW4xUfe38m4pvVh7fCyPQNeozFtJKXHcFuwog": {
+      "path": "/reference-assets/3807dfec4ca6c8c7.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBWCqeTT7wYbHRf2xzQVb26mQNmbqKPKA6XpKC7X5oZVh2b7luDYry3BlL5PgMrXUPNKwaekihrzYqL3KNhDCxYJTxdK2HyDli4DNz_VmtNy1Hs10i7m5qDoyfhhvdpU_TtTI14CtZ16xEtqYI1n56C9BjtBTV0z6SVFCl-o20QyinsD4s7sHwxDDD9Cg1zFQ_me3EGxex9bZirvTrTBiW4xUfe38m4pvVh7fCyPQNeozFtJKXHcFuwog",
+      "bytes": 40676,
+      "sha256": "42221589d9825f8ba721630f4d3a7169bcbb060e68b52837e38743234be0a16f",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBigtcF-J1mjccePMyjjaV7dsV1K4RfO2TWifwPJTOS9vpRHOjZ2egfVBAajVDMnPW2Dq53ZTurt2vOBcFg8GKMHhfqAd8NOiIZvXTCEoWOkMZCg_27yzCrC5ZTl7fP5o8ne0vO5B7HxyTQR0dKCWqm8lsUSe6M3OxApMKtXyqUftb_hoNTTlIWs0tz0nyEwUDPZetExCvXZb5YMcLS2C-4cG1r7SLWiAtc6QwJx0f7biHfNjk6HfAeig": {
+      "path": "/reference-assets/05a4f36cd926b58d.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBigtcF-J1mjccePMyjjaV7dsV1K4RfO2TWifwPJTOS9vpRHOjZ2egfVBAajVDMnPW2Dq53ZTurt2vOBcFg8GKMHhfqAd8NOiIZvXTCEoWOkMZCg_27yzCrC5ZTl7fP5o8ne0vO5B7HxyTQR0dKCWqm8lsUSe6M3OxApMKtXyqUftb_hoNTTlIWs0tz0nyEwUDPZetExCvXZb5YMcLS2C-4cG1r7SLWiAtc6QwJx0f7biHfNjk6HfAeig",
+      "bytes": 65500,
+      "sha256": "1514bbe3af20775507790dbbda5be3506cef49b33e2514db35c6a879c072fe95",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBmADbjn5fH-oFNGzjNsSdJbZ4MRQSyrvYQobz3cftYMQnY_SG7lFe63Rbv6prbBo4l0AsR4hWJnFMWEYsJ9L4GE_6r_xwZhVFGsjUk9xVgpz3xf9DF4Gc7cE1ij-iKrocSRLq8aLwV-drPWC1rDXSG7TmMz1FQbiuGnUU4e_RvwKcxVZPGeKjF81_64LIXv_udLdAzYJ6h9PwVqmjVtVoFG8JaEFPxeI_SRCKDoZdzZ7UV3x1P2nylaQ": {
+      "path": "/reference-assets/115af46f57bf2563.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmADbjn5fH-oFNGzjNsSdJbZ4MRQSyrvYQobz3cftYMQnY_SG7lFe63Rbv6prbBo4l0AsR4hWJnFMWEYsJ9L4GE_6r_xwZhVFGsjUk9xVgpz3xf9DF4Gc7cE1ij-iKrocSRLq8aLwV-drPWC1rDXSG7TmMz1FQbiuGnUU4e_RvwKcxVZPGeKjF81_64LIXv_udLdAzYJ6h9PwVqmjVtVoFG8JaEFPxeI_SRCKDoZdzZ7UV3x1P2nylaQ",
+      "bytes": 60541,
+      "sha256": "08af6aee6858e83c0b92b1fa768bd5f32822a5e49709d54b5b76f7ff8abb28cf",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBo7NJbFvJW9ZbvU-iTH0aCUr9aj8186qvVaO_7rqkPA1A6VuwzV9alXD1toAwgcwRP00EQ-b9KJNCpCpGSTPS1rYwBJTiNLyLVB91LjsrjQ3Q6ScGVE-WCg0BouV-eSN8icz6C9QLrIjnCyo7uVgyT_qpSyMXK0S8oiF8eqvu5MFVK46Cu_GklwLgqNCxjdYOAF7-N6DGeo2qwVuJQlM3CYa8CxzoA9QT4Vsuyp_0d6vac0mK28qb7Wg": {
+      "path": "/reference-assets/7d53f7aa53ee9f84.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBo7NJbFvJW9ZbvU-iTH0aCUr9aj8186qvVaO_7rqkPA1A6VuwzV9alXD1toAwgcwRP00EQ-b9KJNCpCpGSTPS1rYwBJTiNLyLVB91LjsrjQ3Q6ScGVE-WCg0BouV-eSN8icz6C9QLrIjnCyo7uVgyT_qpSyMXK0S8oiF8eqvu5MFVK46Cu_GklwLgqNCxjdYOAF7-N6DGeo2qwVuJQlM3CYa8CxzoA9QT4Vsuyp_0d6vac0mK28qb7Wg",
+      "bytes": 55759,
+      "sha256": "4e28ce286122a7f7344bb142780ee7990c46bbec28b7a5aaee975bf159bcea08",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBz7rIafbjox_lbjHnt6ZkqrF98Aq7w_COQYEIEyWVCt_xkWiHoFN70iEkFfCU5YwqD7nSyq2tFJfpVCzqMyufWDmoIfbrdlkjJnixtp6eUIiVi2APawSBxMBR8zvbYWFqKpeQckPzPACWdEa6z4Dd971Ec-6wuUgxgHmQDlWBDCt-HBzJumfgjMBQ_VvR7wqwVSBjsDKprTlYx6M6uL96CzWe1AA5O8AlAzuWCRQzAURCqpGOdZzAD_w": {
+      "path": "/reference-assets/4811fc2c8de0834b.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBz7rIafbjox_lbjHnt6ZkqrF98Aq7w_COQYEIEyWVCt_xkWiHoFN70iEkFfCU5YwqD7nSyq2tFJfpVCzqMyufWDmoIfbrdlkjJnixtp6eUIiVi2APawSBxMBR8zvbYWFqKpeQckPzPACWdEa6z4Dd971Ec-6wuUgxgHmQDlWBDCt-HBzJumfgjMBQ_VvR7wqwVSBjsDKprTlYx6M6uL96CzWe1AA5O8AlAzuWCRQzAURCqpGOdZzAD_w",
+      "bytes": 72665,
+      "sha256": "0a976622c3c473bc334fc34849c2258f4ee01947a8941e8117789171a9c163e2",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCZogbq71Fb5ucuAEzPZK_3HvPzCqh4N08yuKKG-YKQcr5fQSlWx4LZmQ463e5TrGZcO5mbQoejAvrV8Kk8WM9yM7gXCq8LsR8hcSEiwCBn6JRHnwm5rgveAqdJonKFbo7qH9XNKQzasqoNzzunRCkAKZ2cpQIlueTzERIWDniHghT_F4Oh125oorp1EsxmdsxLzAqnPcDLpIYd-2lT_zFdBbS5ohsLxg1bWHBSX5ywAWQYZmPsgiNyng": {
+      "path": "/reference-assets/61a4a5590a49a3ac.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZogbq71Fb5ucuAEzPZK_3HvPzCqh4N08yuKKG-YKQcr5fQSlWx4LZmQ463e5TrGZcO5mbQoejAvrV8Kk8WM9yM7gXCq8LsR8hcSEiwCBn6JRHnwm5rgveAqdJonKFbo7qH9XNKQzasqoNzzunRCkAKZ2cpQIlueTzERIWDniHghT_F4Oh125oorp1EsxmdsxLzAqnPcDLpIYd-2lT_zFdBbS5ohsLxg1bWHBSX5ywAWQYZmPsgiNyng",
+      "bytes": 30487,
+      "sha256": "6d7ba8abfac58406bcac6ec180673207113c91bfef3b4f8eff4bc181ca52dc23",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCoBr3JQbSYlqmbP5HcVbg_JwDpN10Fmb5MKJbVfzN13yNjb9IG6OYcegL12IkENCXA9TIwNg2IPVNd5OT2UG6K3jANVYUU61YBW4BJEaYoSxkdmT--sB1vc6O1VDADocUReUB-7wh6UZTGWXkupI2W_eiHnSkQiO2UkApytWS0fynTFTuQWnTK6m-8vD9fTES460CBNuCXEVCbfWiRv8TIS5JYlEeyCcUxW6ATkhkrxqITDhp_EcIuFQ": {
+      "path": "/reference-assets/2d13b78644d9b4f6.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoBr3JQbSYlqmbP5HcVbg_JwDpN10Fmb5MKJbVfzN13yNjb9IG6OYcegL12IkENCXA9TIwNg2IPVNd5OT2UG6K3jANVYUU61YBW4BJEaYoSxkdmT--sB1vc6O1VDADocUReUB-7wh6UZTGWXkupI2W_eiHnSkQiO2UkApytWS0fynTFTuQWnTK6m-8vD9fTES460CBNuCXEVCbfWiRv8TIS5JYlEeyCcUxW6ATkhkrxqITDhp_EcIuFQ",
+      "bytes": 31568,
+      "sha256": "8fd094cb821960c9d4e8f6d2456db50a913fe4a45d5f7ddcb89ded144ccc6cc0",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuConOrbqSu9pskNeOxnRycObZkkDoIkGUT-5FgQFYNjWD0pirI-cPSdVNAQShWFINZg-9UVqjcaXLt4_faCoUME5pmV5J8cAm8FVSxqRG-IvxoUSv7mdZWqwSwoAR5G1pTcCBFGFQmGtZ2SkuV-Ewqvb46ztnkzWYaT9XDPwFW3hkLXLjM31EKvki2-DZxf7eti7iTdNHaYszizP57RwdBchlvZOK5uy1wpdrf0BdUuyXvPsi0XheKgCA": {
+      "path": "/reference-assets/f241b998f080c6ed.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuConOrbqSu9pskNeOxnRycObZkkDoIkGUT-5FgQFYNjWD0pirI-cPSdVNAQShWFINZg-9UVqjcaXLt4_faCoUME5pmV5J8cAm8FVSxqRG-IvxoUSv7mdZWqwSwoAR5G1pTcCBFGFQmGtZ2SkuV-Ewqvb46ztnkzWYaT9XDPwFW3hkLXLjM31EKvki2-DZxf7eti7iTdNHaYszizP57RwdBchlvZOK5uy1wpdrf0BdUuyXvPsi0XheKgCA",
+      "bytes": 45727,
+      "sha256": "aa116428679777e859ac1fd24d254108d43cb2c94defcd8bcd18893811bfbbce",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCrVVVoLuIZoJXdCynceAp5MsCxBsAteNrbWxTRnCy8aXVSPPZq4DylQh1nEF3j2M8z3ricVyc1UQ5BvmdZx8ee9fVy2HNX-AvIqfcTnE-jsjcE4dE9GvkxoBkdLrV6Ow8FfReRGZVWx41-WWMtGQYiI8iWheaOpU2xZQNsoNSuwBGD2_K-4f681HVhc1icKCkXYTWO5a62Tj4exU7D9KuuJkwif9l66XIWozkMCgDDiGJTbNbH18TtZQ": {
+      "path": "/reference-assets/f014ee37aa1a0fb2.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrVVVoLuIZoJXdCynceAp5MsCxBsAteNrbWxTRnCy8aXVSPPZq4DylQh1nEF3j2M8z3ricVyc1UQ5BvmdZx8ee9fVy2HNX-AvIqfcTnE-jsjcE4dE9GvkxoBkdLrV6Ow8FfReRGZVWx41-WWMtGQYiI8iWheaOpU2xZQNsoNSuwBGD2_K-4f681HVhc1icKCkXYTWO5a62Tj4exU7D9KuuJkwif9l66XIWozkMCgDDiGJTbNbH18TtZQ",
+      "bytes": 77303,
+      "sha256": "3ef5fc30813516e56f5333e9b0b5a494c7a970d622d38d2f2b9cff96df248984",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCsJocbnRRfCX1EWzrywt6knn11oeIZpdPvpAe4dBfB5VMI3VIcWzR3O9NnKq2bea1SrvLSL-OS-ccvZQ98_0zgZGY14tEeixqTHqSasnnZeDv8Nr7PJ7c2VBFTdobo5Uh5QQ-86pmD9GppbansI8BYWwSDFCFle-SX-e2QcwZ4w0FGtOKH-bbQ7AccsI4aXXr-3UXAI1i9G63O5FzKo11LoZFOn62iW6vHeZYgbgI2EEbKrXqkuO7bKA": {
+      "path": "/reference-assets/8947ef1b9aa9732d.jpg",
+      "source_files": [
+        "ready_design/catalog.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCsJocbnRRfCX1EWzrywt6knn11oeIZpdPvpAe4dBfB5VMI3VIcWzR3O9NnKq2bea1SrvLSL-OS-ccvZQ98_0zgZGY14tEeixqTHqSasnnZeDv8Nr7PJ7c2VBFTdobo5Uh5QQ-86pmD9GppbansI8BYWwSDFCFle-SX-e2QcwZ4w0FGtOKH-bbQ7AccsI4aXXr-3UXAI1i9G63O5FzKo11LoZFOn62iW6vHeZYgbgI2EEbKrXqkuO7bKA",
+      "bytes": 62467,
+      "sha256": "4d251bf2eb80e53133676cd15604cf52d47d8488b20627d17b7a00acf5960f3f",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCs_DiccJYoW_pQzsQ3JIAgLvBDDk02P2azH8ojIrmEKlhm8PTQvEUU8rVxKvl_BlGem5_BBFZVpMPiqcJ0LngPOALoDfv1vIVP-8mjDJU9h8T5nko3ebURtFh0Is7QSWiJ5FQ2eURElTVY7AYtFrNrjIlCAS04pOOA3ZTig119xjGyxkMSAUdazPvffNUwswwEJRN0-dQ8aCbL5JTSbmsF1faKOXWnNymTic5kQda_GI1-ILiys9YxyQ": {
+      "path": "/reference-assets/caa0eb572e84d237.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCs_DiccJYoW_pQzsQ3JIAgLvBDDk02P2azH8ojIrmEKlhm8PTQvEUU8rVxKvl_BlGem5_BBFZVpMPiqcJ0LngPOALoDfv1vIVP-8mjDJU9h8T5nko3ebURtFh0Is7QSWiJ5FQ2eURElTVY7AYtFrNrjIlCAS04pOOA3ZTig119xjGyxkMSAUdazPvffNUwswwEJRN0-dQ8aCbL5JTSbmsF1faKOXWnNymTic5kQda_GI1-ILiys9YxyQ",
+      "bytes": 64830,
+      "sha256": "e1a21a55f96dbf97e6337021504b3aabe3bcc426bb9debc460a16166e6697008",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuD9YW0K6IAEAOp4KiW7BLZ_WzA3MhtKbfxptOA6JiSPg7zIcIJV0ZnZoG5ut5zZ8SjfbuHcxAJsQb-thzpssJEU3OeIphfiACzms5_v3uRWOm2owo9ZtWnI87TyFSdbz-Dxhrs-zJo0kN_ZqCc-rS6uFTFep508Y3txIzMxoSWSrcrd_Jw24sNnVlrDZ22ERpsVtGj1XhAmH1vwVe2OHnN3Zu_ZrKym9CiWeZ9U1kMoX_VEuky5uOaVTw": {
+      "path": "/reference-assets/a3dc292069c861b9.jpg",
+      "source_files": [
+        "ready_design/book_detail.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9YW0K6IAEAOp4KiW7BLZ_WzA3MhtKbfxptOA6JiSPg7zIcIJV0ZnZoG5ut5zZ8SjfbuHcxAJsQb-thzpssJEU3OeIphfiACzms5_v3uRWOm2owo9ZtWnI87TyFSdbz-Dxhrs-zJo0kN_ZqCc-rS6uFTFep508Y3txIzMxoSWSrcrd_Jw24sNnVlrDZ22ERpsVtGj1XhAmH1vwVe2OHnN3Zu_ZrKym9CiWeZ9U1kMoX_VEuky5uOaVTw",
+      "bytes": 74378,
+      "sha256": "5ba626824bf3313eda65263d985dee4d6c18be9acdca39fef37629270f71e22f",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDOFlbmkM8AfUvqpzW7vRlWbWn_mQVmaoem14riktQiFejbAQDRKPfSwkpD4zYuiugONMD_rn0PXCNo_sE1XYjgZAfFJm9rsSrTUhlnYqDDcEStceTT34QMffQnF4HIkK_nhwY3hD32corutJhEIWkdQAVT5uNqFoHCel2TzfCwqY1wCWGoDw0aKegkfu0DoS4uI5TC2jR27fwT5qxeCXlL1Lodhdaki7zZj33YZDXT7JH96Bq7bw_cxA": {
+      "path": "/reference-assets/bd57e086a2dfe74a.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOFlbmkM8AfUvqpzW7vRlWbWn_mQVmaoem14riktQiFejbAQDRKPfSwkpD4zYuiugONMD_rn0PXCNo_sE1XYjgZAfFJm9rsSrTUhlnYqDDcEStceTT34QMffQnF4HIkK_nhwY3hD32corutJhEIWkdQAVT5uNqFoHCel2TzfCwqY1wCWGoDw0aKegkfu0DoS4uI5TC2jR27fwT5qxeCXlL1Lodhdaki7zZj33YZDXT7JH96Bq7bw_cxA",
+      "bytes": 32684,
+      "sha256": "972292be4d163a9774a809edf2c08948da8029f308ec6477187b1fb02ba38d94",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuD_uzukV4wHItAyh12agy6ekLWIe3FHThN4xubz0hoy1OR3jDS94tsimo8Jq3jjKcSzdFu3E7BOT8AOzOa2T1YhKMpCwtWBf8L1s6BXOXR9zsBkqXKBVDg2kyW-B0UN5VnFt6fTw9Kmwqff_TpVJi7vKzVpnpWs9nRCO9sHXm7Lj2YaVMNaTVPzG9zRCWQkkc03f69J6BT19TAhotHoi2c0979JfYDzpzyQlrJv5mO5cYJDWPMkIzcgaw": {
+      "path": "/reference-assets/5653585dd977e54d.jpg",
+      "source_files": [
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_uzukV4wHItAyh12agy6ekLWIe3FHThN4xubz0hoy1OR3jDS94tsimo8Jq3jjKcSzdFu3E7BOT8AOzOa2T1YhKMpCwtWBf8L1s6BXOXR9zsBkqXKBVDg2kyW-B0UN5VnFt6fTw9Kmwqff_TpVJi7vKzVpnpWs9nRCO9sHXm7Lj2YaVMNaTVPzG9zRCWQkkc03f69J6BT19TAhotHoi2c0979JfYDzpzyQlrJv5mO5cYJDWPMkIzcgaw",
+      "bytes": 91820,
+      "sha256": "28c8ceba760b6b6dd55d49b50358339825e3c539b5d50e9045e8742615035b92",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDiepeIPTvK5Gp9Ka7mA7c1vOUJy2KWjfScmGBVlGA4lINJxAORta2gkmh34lczwiWZoLaoXQtMFccWBtJGPklqz3F_34RVEHxWanSkQ4wMl5X9dvG_J6QGHLW2KzjqKtiy1wFnvwJImCkhxV4QAsm0TAPiS9dzU-ewh3Xh5rsXZe-UqD_DcDzemPGTg9IlH9FvnGDIlm0wHnyZ_POVMTcsZ6WSK7CbXGQCHH0Z6YG-CX9TUylSP4IuHw": {
+      "path": "/reference-assets/17637eceb7463377.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDiepeIPTvK5Gp9Ka7mA7c1vOUJy2KWjfScmGBVlGA4lINJxAORta2gkmh34lczwiWZoLaoXQtMFccWBtJGPklqz3F_34RVEHxWanSkQ4wMl5X9dvG_J6QGHLW2KzjqKtiy1wFnvwJImCkhxV4QAsm0TAPiS9dzU-ewh3Xh5rsXZe-UqD_DcDzemPGTg9IlH9FvnGDIlm0wHnyZ_POVMTcsZ6WSK7CbXGQCHH0Z6YG-CX9TUylSP4IuHw",
+      "bytes": 38990,
+      "sha256": "3e16cada309d6cc886f0a3d213d149efa312c7197060680716531123d05f7aff",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDtzj-k2lnfMhHAnA7UniTXPeFJnhjH_7E_EnDgZTIkloBtjGUfO-eE5I2dgtqKqFkYIFCTGC6CHk2E_hfmm6hJn7eStxl9_cV1VwrS40g6ZhKL8LoT4YgCiLw9dpciQcylMgu9_x7Z095LcURRCHOMzOixYCyRv6XM6OyP32DWLhUS4DXXAPIdDaQzGl7oI1to3jRiKs2yeBCZBHBdxHjm9-l9yLlyoOJqS2-6SeKw7BxGM1nIfOsC9Q": {
+      "path": "/reference-assets/4b167d0bd7c4fafd.jpg",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "resolved_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDtzj-k2lnfMhHAnA7UniTXPeFJnhjH_7E_EnDgZTIkloBtjGUfO-eE5I2dgtqKqFkYIFCTGC6CHk2E_hfmm6hJn7eStxl9_cV1VwrS40g6ZhKL8LoT4YgCiLw9dpciQcylMgu9_x7Z095LcURRCHOMzOixYCyRv6XM6OyP32DWLhUS4DXXAPIdDaQzGl7oI1to3jRiKs2yeBCZBHBdxHjm9-l9yLlyoOJqS2-6SeKw7BxGM1nIfOsC9Q",
+      "bytes": 47817,
+      "sha256": "b46ef71dc31012b55155977f20b877349a8853f57c683849a6f6206e525ed086",
+      "signature": "jpg"
+    },
+    "https://lh3.googleusercontent.com/aida/AEtjO1V0N-cKAFDfkPQ-UONMk35P49oEqsKTjNDk5cHSobqtbPUR_BybxS7O8zhg-0LZt1iYXMTrVRCXICsFJsVrJq4tlgB6m1YBjilBhEoINNo6sXVKl79zrKgdn0UXGtZBpSV3Dad5lAiLiyJpcayAwFcMkvqm94GXs7nuOqmc0cG0J2pECHHljFTRVrm8pN9ShC-X0K8XiKnz_UO1IfPt_55rsMPahe7Ks6dxr4brRe1CU0iruV21lJU2aUpb": {
+      "path": "/reference-assets/8e1e3d66f632a483.png",
+      "source_files": [
+        "ready_design/catalog.html",
+        "ready_design/index.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/png",
+      "resolved_url": "https://lh3.googleusercontent.com/aida/AEtjO1V0N-cKAFDfkPQ-UONMk35P49oEqsKTjNDk5cHSobqtbPUR_BybxS7O8zhg-0LZt1iYXMTrVRCXICsFJsVrJq4tlgB6m1YBjilBhEoINNo6sXVKl79zrKgdn0UXGtZBpSV3Dad5lAiLiyJpcayAwFcMkvqm94GXs7nuOqmc0cG0J2pECHHljFTRVrm8pN9ShC-X0K8XiKnz_UO1IfPt_55rsMPahe7Ks6dxr4brRe1CU0iruV21lJU2aUpb",
+      "bytes": 215443,
+      "sha256": "37dd8fe8aee63ad5a3bc216f97c7663a143a32383f42a1667174c89583feada5",
+      "signature": "png"
+    },
+    "https://lh3.googleusercontent.com/aida/AEtjO1Wn13h_i8BLLl0waPfmeZePohSJBnERTL1DKeAqTWuEab6EOnk4C0tmv-F0JYFQBo595VGfaDhTMQ4sNrIVN7NKD_uoqXi8PH3o6c_KZ5VVfe2lX9RgUeoZWbZke-0494ioBD0EfalX9UbCem4kJUckV75KBVQ-lGV808yUMnAz1AtMfFjiIjJ5JpoERg9Xf9a_LwOw8gCzEJo9NoDwItNKIc9211WR2s9DZCXQibZeFUvGY28cH3ZY0mU": {
+      "path": "/reference-assets/892be2afb84d311f.png",
+      "source_files": [
+        "ready_design/book_detail.html",
+        "ready_design/catagory.html"
+      ],
+      "http_status": 200,
+      "content_type": "image/png",
+      "resolved_url": "https://lh3.googleusercontent.com/aida/AEtjO1Wn13h_i8BLLl0waPfmeZePohSJBnERTL1DKeAqTWuEab6EOnk4C0tmv-F0JYFQBo595VGfaDhTMQ4sNrIVN7NKD_uoqXi8PH3o6c_KZ5VVfe2lX9RgUeoZWbZke-0494ioBD0EfalX9UbCem4kJUckV75KBVQ-lGV808yUMnAz1AtMfFjiIjJ5JpoERg9Xf9a_LwOw8gCzEJo9NoDwItNKIc9211WR2s9DZCXQibZeFUvGY28cH3ZY0mU",
+      "bytes": 10138,
+      "sha256": "0e8bb6c498b3f062363210e5013d0c3bba8320b4ad7c1acb1a9e0a8a4207a4c9",
+      "signature": "png"
+    }
+  },
+  "material_symbols": {
+    "stylesheet_url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+    "stylesheet_content_type": "text/css; charset=utf-8",
+    "stylesheet_resolved_url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+    "url": "https://fonts.gstatic.com/s/materialsymbolsoutlined/v382/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2",
+    "resolved_url": "https://fonts.gstatic.com/s/materialsymbolsoutlined/v382/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2",
+    "http_status": 200,
+    "content_type": "font/woff2",
+    "bytes": 1139560,
+    "sha256": "063d21b404f5e048c8f7535d3ca4cf80c6d996a08e5c5ba8dfe38bb8dfdb4595",
+    "path": "/reference-assets/material-symbols-outlined.woff2"
+  }
+}
