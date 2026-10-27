@@ -1,39 +1,29 @@
-# Routes and screen map
+# Current routes and primary designs
 
-## Implemented routes
+`ready_design/` is the user-designated primary visual reference.
 
-| URL                | File                                               | Status                                                                        |
-| ------------------ | -------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `/`                | `src/app/page.tsx`, `src/components/home-hero.tsx` | Hero narrative, CTAs and GET search; book artwork pending approval            |
-| `/books?q=…`       | `src/app/books/page.tsx`                           | Query-preserving catalogue entry with honest empty state; no approved records |
-| `/publish-with-us` | `src/app/publish-with-us/page.tsx`                 | Publishing enquiry contact; no online proposal submission                     |
-| `/contact`         | `src/app/contact/page.tsx`                         | Email/telephone contacts from handoff                                         |
-| `/robots.txt`      | `src/app/robots.ts`                                | Disallow crawling during development                                          |
-| Unknown URLs       | `src/app/not-found.tsx`                            | Native 404 with home recovery link                                            |
-| Shared document    | `src/app/layout.tsx`, `src/app/globals.css`        | Header, footer, local fonts, language, no-index metadata and tokens           |
+| Route                                                                            | Reference / implementation                                                         |
+| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `/`                                                                              | Complete `ready_design/index.html` main content and footer                         |
+| `/books`                                                                         | `ready_design/catalog.html`; URL search/facets/sort over 10 supplied cards         |
+| `/subjects`                                                                      | Redirect to the supplied Horticulture category                                     |
+| `/subjects/horticulture-pomology`                                                | `ready_design/catagory.html`; six supplied cards, filters and citations            |
+| `/books/frontier-agronomy-for-climate-smart-digital-and-natural-farming-systems` | Complete `ready_design/book_detail.html` main view, tabs, citation and footer      |
+| `/books/[slug]`                                                                  | Other supplied catalogue/category/related records, using only their own metadata   |
+| `/contact`                                                                       | Existing handoff contact page, new shared reference chrome                         |
+| `/publish-with-us`                                                               | Existing honest publishing enquiry page; manuscript submission remains unavailable |
+| `/robots.txt`                                                                    | Disallow crawling during content validation                                        |
+| Unknown routes/slugs                                                             | Native 404 and home recovery, with shared reference chrome                         |
 
-`src/config/site.ts` is the canonical site identity/navigation configuration.
-Only implemented routes appear in navigation. Contacts reflect the supplied
-handoff, not independently verified business ownership/delivery. No APIs, forms,
-catalogue records, database or provider adapters exist. Search does not invent
-matches from the reference HTML. No redirects are invented; any live indexed
-URL inventory is still needed.
+`/index.html`, `/catalog.html`, `/catagory.html` and `/book_detail.html` redirect to
+application routes. The old misspelling is preserved as an alias, not a new public
+URL convention. Header Services/About/Book Chapters links use real homepage section
+anchors because no separate ready-design pages were supplied. Subject tiles link to
+the actual category or matching catalogue facet; all book cards link to their own
+record. Footer legal policies lacking approved content are unavailable text.
 
-## Supplied references and future routes
-
-| Reference                       | Intended route     | Remaining implementation                             |
-| ------------------------------- | ------------------ | ---------------------------------------------------- |
-| `design/homepage.html`          | `/`                | Approved seal/artwork and remaining content sections |
-| `design/catalog.html`           | `/books`           | Verified records, search/filter/sort/pagination      |
-| `design/specific_category.html` | `/subjects/[slug]` | Approved subjects and content                        |
-| `design/book_detail.html`       | `/books/[slug]`    | Edition-level metadata, covers, actions and SEO      |
-
-`/about`, `/services`, `/book-chapters`, legal and ordering pages remain
-unimplemented. Subjects index and proposal URLs remain open. No links expose
-these unresolved destinations. The rectangular logo linked in the reference does
-not satisfy the requirement for the actual circular seal; plain brand typography
-is used while that asset remains unavailable.
-
-Original exports remain unchanged and outside `public/`. Local fonts and their
-licenses are served under `public/fonts`; external book artwork has not been added.
-See `SHARED_SHELL_PLAN.md` and `MILESTONE_2.md` for scope and verification.
+All four views render real server-side elements from the sanitized compiled
+reference. See `READY_DESIGN_WORKFLOW.md`. Native markup/React enhancement replaces
+all copied source scripts. Assets are local under `/reference-assets/` and `/fonts/`.
+No database, submission API, payment, storage, transactional mail, sitemap or public
+release is introduced. Supplied metadata conflicts remain launch blockers.

@@ -44,3 +44,9 @@ permissions are read-only. Actual workflow execution requires a GitHub repositor
 No hosting account or deployment is configured. No production URL, canonical
 origin, sitemap, mail delivery, upload, backup or restore has been verified.
 Do not deploy as a completed publishing website. See TRD release gates.
+
+## Primary design compilation
+
+Python 3.12+ (standard library only) is required for `npm run reference:compile`
+and `npm run reference:check`. The full check includes stale-output verification
+and compiler security/regression tests. See `READY_DESIGN_WORKFLOW.md`.

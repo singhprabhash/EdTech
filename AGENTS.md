@@ -3,7 +3,7 @@
 ## Mission
 
 Build the production website incrementally. `PRD.md` defines
-behavior; `TRD.md` defines engineering constraints. HTML screens
+behavior; `TRD.md` defines engineering constraints. `ready_design/` is the user-designated primary visual reference. HTML screens
 are references, not proof that every interaction or datum is correct.
 
 The working plan is `docs/IMPLEMENTATION_PLAN.md`; the current kickoff foundation
@@ -62,6 +62,10 @@ explicitly approved.
 Run relevant existing lint, typecheck, tests, content checks and build.
 Add regression tests. Check responsive and accessibility behavior for UI
 changes. State exact results and explain any checks that could not run.
+
+Run `npm run reference:compile` after reference changes; generated ready trees/theme
+must never be hand-edited. Read `docs/READY_DESIGN_WORKFLOW.md` for preview content
+and sanitization boundaries.
 
 Run `npm run check`, then `npm run test:e2e` after installing Chromium. Run
 `npm audit --audit-level=high` with registry access. Preserve archived designs;

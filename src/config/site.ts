@@ -6,11 +6,3 @@ export const site = {
   telephoneLabel: "+91 74082 06291",
   location: "Lucknow, India",
 };
-
-// Add links only when their destination is implemented.
-export const navigation = [
-  { href: "/", label: "Home" },
-  { href: "/books", label: "Books" },
-  { href: "/publish-with-us", label: "Publish With Us" },
-  { href: "/contact", label: "Contact" },
-] as const;

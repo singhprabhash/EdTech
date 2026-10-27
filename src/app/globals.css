@@ -268,3 +268,31 @@ footer :focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+@media (min-width: 1024px) {
+  [data-ready-page="home"] h1,
+  [data-ready-page="catalogue"] h1 {
+    line-height: 64px;
+  }
+  [data-ready-page="subject"] h1 {
+    line-height: 48px;
+  }
+}
+@media (min-width: 1536px) {
+  [data-ready-page="subject"] h1 {
+    line-height: 64px;
+  }
+}
+
+.ready-document #langFilterGroup,
+.ready-document #yearFilterGroup,
+.ready-document #typeFilterGroup {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.ready-document .ready-acquisitions {
+  flex-wrap: wrap;
+}
+.ready-document a[href^="https://doi.org/"] {
+  overflow-wrap: anywhere;
+}

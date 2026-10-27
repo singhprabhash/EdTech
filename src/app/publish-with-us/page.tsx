@@ -17,7 +17,10 @@ export default function PublishWithUs() {
           Contact EdTech Publications to discuss your academic book or
           manuscript.
         </p>
-        <section className="info-panel publishing-panel">
+        <section
+          id="publishing-enquiries"
+          className="info-panel publishing-panel"
+        >
           <h2>Start a publishing conversation</h2>
           <p>
             For publishing enquiries, email the team. Online proposal submission

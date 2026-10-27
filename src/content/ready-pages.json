@@ -4332,7 +4332,6 @@
                               "tag": "a",
                               "attrs": {
                                 "class": "font-title-sm text-title-sm text-secondary hover:text-primary transition-colors flex items-center gap-1.5",
-                                "download": "EdTech_Publications_Catalogue_2025.pdf",
                                 "href": "mailto:edtechpublications@gmail.com?subject=Request%20Master%20Catalogue%20%28PDF%29",
                                 "data-request-download": "true"
                               },
@@ -5192,7 +5191,7 @@
                 {
                   "tag": "div",
                   "attrs": {
-                    "class": "max-w-[1360px] mx-auto bg-surface-container-low/70 border border-outline-variant/40 rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5 sm:gap-6 shadow-xs"
+                    "class": "max-w-[1360px] mx-auto bg-surface-container-low/70 border border-outline-variant/40 rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5 sm:gap-6 shadow-xs ready-acquisitions"
                   },
                   "children": [
                     {

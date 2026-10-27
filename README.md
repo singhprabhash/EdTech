@@ -1,10 +1,15 @@
 # EdTech Publications
 
-The publishing website is in development. The responsive header/footer, homepage
-narrative/search and book/publishing/contact entry pages are implemented. The
-application is **not production ready**: verified catalogue records, the approved
-circular seal/hero artwork, full public content and submissions remain outstanding.
-Original HTML/screenshots remain reference material only.
+The current design implementation uses **`ready_design/` as the primary reference**.
+Home, catalogue, Horticulture category and Frontier Agronomy detail are implemented,
+with the exact supplied local images, circular seal, local fonts and interactive
+navigation/search/filter/sort/tabs/citations. Other supplied records have metadata
+only detail pages. Original reference files remain unchanged.
+
+This is an **unindexed design preview**, not publication approval. Supplied ISBNs,
+prices, credentials, accreditation and business copy have unresolved conflicts and
+are not independently verified. Submission storage/mail and real download documents
+are not configured. See [current implementation report](docs/READY_DESIGN_REPORT.md).
 
 ## Start and verify
 
@@ -33,6 +38,21 @@ separate production server on port 3100; build first. Each check is also an
 individual npm script. Browser dependencies are required on Linux:
 `npx playwright install --with-deps chromium`.
 
+## Updating the primary designs
+
+Edit `ready_design/{index,catalog,catagory,book_detail}.html`, then run:
+
+```sh
+npm run reference:compile
+npm run reference:check
+```
+
+The compiler generates inert presentation trees, a supplied-record index and theme
+CSS. Never hand-edit `src/content/ready-*.json` or `src/app/ready-theme.css`.
+[Reference workflow](docs/READY_DESIGN_WORKFLOW.md) explains asset import, sanitization,
+source conflicts and verification. No source scripts are executed in the app.
+Python 3.12+ is required for compilation/checking; no Python packages are needed.
+
 ## Sources and architecture
 
 - [PRD](PRD.md) defines behavior; [TRD](TRD.md) defines engineering constraints.
@@ -54,15 +74,15 @@ provider or own book metadata. No business content source is approved yet.
 
 ## Preservation and release limits
 
-`design/` holds four unique HTML references; `stitch_edtech_publications_academic_portal/`
-contains duplicated exports and screenshots. Neither directory is served by Next.
-Their literal metadata and claims are unverified; do not import them as approved
-catalogue data. Root DESIGN prose contains palette/radius conflicts; explicit
-PRD/TRD/user navy/blue requirements govern foundation colors. Newsreader and Manrope are now locally hosted with their font licenses; the
-approved seal and book artwork remain pending. Navigation exposes only implemented
-destinations, and catalogue search returns an honest empty state until records exist.
+`ready_design/` holds the current four primary HTML references. The older `design/`
+and Stitch directories were removed during this implementation session outside
+these edits; their earlier state is recorded in the historical audit. Supplied metadata and claims remain
+unverified and must not be treated as approved production catalogue data. Root DESIGN prose contains palette/radius conflicts; explicit
+PRD/TRD/user navy/blue requirements govern foundation colors. Newsreader, Manrope and Material Symbols are local. The new reference supplied the
+circular seal and artwork. Catalogue search operates over its supplied preview cards;
+no invented records fill the difference between visible cards and source totals.
 
-The development site metadata and robots policy prevent indexing. Review/remove that
+The preview site metadata and robots policy prevent indexing. Review/remove that
 policy only when approved public content is ready. CI is a GitHub Actions
 configuration, not a connected repository or completed remote run. This folder
 arrived without Git metadata; no repository/remote/deployment is created here.

@@ -2,6 +2,12 @@
 
 > **For agentic workers:** Use superpowers:executing-plans for approved implementation, task by task. Subagent-driven work requires an explicitly authorized execution choice. The current kickoff authorizes Task 1 foundation; later tasks remain pending.
 
+**Current visual authority:** The user now designates `ready_design/` as primary.
+`READY_DESIGN_PLAN.md`, `READY_DESIGN_WORKFLOW.md` and `READY_DESIGN_REPORT.md`
+record the implemented four-page design preview, including interactive catalogue,
+category and detail. The older task checklists below retain production content and
+provider gates; preview copy is not factual publication approval.
+
 **Goal:** Convert the supplied four-screen static handoff into the production website defined by the PRD, with verified content and reliable submissions.
 
 **Architecture:** Preserve the reference files as inputs. After stack review, use one web application with shared UI, a catalogue domain/data boundary, and isolated persistence/mail/private-storage adapters. Do not create separate services, a CMS, search engine, queue or payment integration by default.

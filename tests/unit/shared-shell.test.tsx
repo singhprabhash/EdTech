@@ -61,15 +61,21 @@ describe("ready-design behavior", () => {
       document.querySelectorAll("[data-record-id]:not([hidden])"),
     ).toHaveLength(1);
   });
-  it("keeps the subject pagination summary live through repeated filtering",()=>{
-    render(<ReadyDocument page="subject"/>);
-    const input=document.querySelector("#hero-subject-search")!;
-    fireEvent.input(input,{target:{value:"greenhouse"}});
-    expect(document.querySelector("#category-pagination-summary")).toHaveTextContent("Showing 1 of 6");
-    fireEvent.input(input,{target:{value:"missingxyz"}});
-    expect(document.querySelector("#category-pagination-summary")).toHaveTextContent("Showing 0 of 6");
+  it("keeps the subject pagination summary live through repeated filtering", () => {
+    render(<ReadyDocument page="subject" />);
+    const input = document.querySelector("#hero-subject-search")!;
+    fireEvent.input(input, { target: { value: "greenhouse" } });
+    expect(
+      document.querySelector("#category-pagination-summary"),
+    ).toHaveTextContent("Showing 1 of 6");
+    fireEvent.input(input, { target: { value: "missingxyz" } });
+    expect(
+      document.querySelector("#category-pagination-summary"),
+    ).toHaveTextContent("Showing 0 of 6");
     fireEvent.click(document.querySelector("#reset-filters-btn")!);
-    expect(document.querySelector("#category-pagination-summary")).toHaveTextContent("Showing 6 of 6");
+    expect(
+      document.querySelector("#category-pagination-summary"),
+    ).toHaveTextContent("Showing 6 of 6");
   });
   it("provides accessible book tabs with arrow-key navigation", () => {
     render(<ReadyDocument page="detail" />);

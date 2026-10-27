@@ -102,7 +102,11 @@ export function ReadyTree({
       node={child}
       visible={visible}
       count={count}
-      requestCopy={requestCopy || Boolean(node.attrs["data-request-download"])}
+      requestCopy={
+        node.attrs.class?.includes("material-symbols-outlined")
+          ? false
+          : requestCopy || Boolean(node.attrs["data-request-download"])
+      }
     />
   ));
   if (

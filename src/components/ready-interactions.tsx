@@ -90,7 +90,10 @@ export default function ReadyInteractions({
     };
     const update = (write = true) => {
       if (!grid) return;
-      const selected = queryCatalogue(records, query);
+      const selected = queryCatalogue(records, {
+        sort: page === "catalogue" ? "newest" : undefined,
+        ...query,
+      });
       const ids = new Set(selected.map((r) => r.id));
       for (const card of cards)
         card.hidden = !ids.has(card.dataset.recordId ?? "");
@@ -250,7 +253,12 @@ export default function ReadyInteractions({
       if (copyTarget) {
         const value = one(`#${CSS.escape(copyTarget)}`)?.textContent?.trim();
         if (value) {
-          if(!navigator.clipboard) { announce("Copy unavailable. Select and copy the citation text manually."); return; }
+          if (!navigator.clipboard) {
+            announce(
+              "Copy unavailable. Select and copy the citation text manually.",
+            );
+            return;
+          }
           void navigator.clipboard.writeText(value).then(
             () => announce("Citation copied."),
             () =>
@@ -435,11 +443,16 @@ export default function ReadyInteractions({
       options,
     );
     for (const link of all<HTMLAnchorElement>("header nav a"))
-      if (link.pathname === location.pathname)
+      if (link.pathname === location.pathname) {
         link.setAttribute("aria-current", "page");
-      else link.removeAttribute("aria-current");
+        link.classList.add("text-secondary");
+      } else {
+        link.removeAttribute("aria-current");
+        link.classList.remove("text-secondary");
+      }
     if (page === "detail") tab("overview");
     update(false);
+    scope.dataset.enhanced = "true";
     return () => {
       controller.abort();
       observer?.disconnect();
