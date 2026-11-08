@@ -35,19 +35,19 @@ assets produce honest request/contact actions, not fake download success.
 
 ## Files/tasks
 
-- [ ] Read/map all four inputs, take hashes and run baseline checks.
-- [ ] `scripts/compile-ready-design.py`, `src/content/ready-pages.json` and
+- [x] Read/map all four inputs, take hashes and run baseline checks.
+- [x] `scripts/compile-ready-design.py`, `src/content/ready-pages.json` and
       `src/content/ready-catalogue.json`: reproducible sanitized layout and source metadata.
-- [ ] `public/reference-assets/`: exact local linked images/icons, verified signatures,
+- [x] `public/reference-assets/`: exact local linked images/icons, verified signatures,
       URL mapping and provenance. Keep original reference files unmodified.
-- [ ] `src/components/ready-document.tsx`, `ready-interactions.tsx`: SSR tree rendering
+- [x] `src/components/ready-document.tsx`, `ready-interactions.tsx`: SSR tree rendering
       with scoped client behavior. Shared chrome from current primary homepage reference.
-- [ ] `src/domain/catalogue.ts` and unit tests: deterministic query/filter/sort/URL rules.
-- [ ] App pages/routes/layout and CSS: exact theme classes, local fonts/icons and view maps.
-- [ ] Remove superseded minimal hero/chrome components from active rendering, preserve
+- [x] `src/domain/catalogue.ts` and unit tests: deterministic query/filter/sort/URL rules.
+- [x] App pages/routes/layout and CSS: exact theme classes, local fonts/icons and view maps.
+- [x] Remove superseded minimal hero/chrome components from active rendering, preserve
       useful enquiry pages. Add anchor/alias navigation only to real destinations.
-- [ ] Unit/compiler/security checks plus browser journeys through all four pages,
+- [x] Unit/compiler/security checks plus browser journeys through all four pages,
       query/filter/reset/view mode, details/tabs/citations, mobile nav and all six widths.
-- [ ] Render reference and implementation screenshots at desktop/mobile, compare
+- [x] Render reference and implementation screenshots at desktop/mobile, compare
       layout geometry and fix material discrepancies; record unavoidable content changes.
-- [ ] Full quality gates, original-file preservation, docs/routes/report and refresh preview.
+- [x] Full quality gates, original-file preservation, docs/routes/report and refresh preview.

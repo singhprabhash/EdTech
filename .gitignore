@@ -9,4 +9,9 @@ test-results/
 !.env.example
 .DS_Store
 ready_design/
-scripts/
+# Runtime data must remain outside the checkout.
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+references/
+docs/

@@ -28,7 +28,16 @@
   font-style: normal;
   font-weight: 100 700;
   font-display: block;
-  src: url("/reference-assets/material-symbols-outlined.woff2") format("woff2");
+  src: url("/fonts/material-symbols-site.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/noto-sans-devanagari-variable.ttf") format("truetype");
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF;
 }
 
 @layer base {
@@ -101,13 +110,13 @@
 }
 .ready-document select option {
   background: white;
-  color: #111c2c;
+  color: var(--color-on-surface);
 }
 .ready-document img {
   color: transparent;
 }
 .ready-document .ready-filter-active {
-  background: #011633 !important;
+  background: var(--color-primary) !important;
   color: white !important;
 }
 .ready-document #citation-modal {
@@ -132,9 +141,10 @@
   z-index: 100;
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
-  background: #011633;
+  background: var(--color-primary);
   color: white;
-  box-shadow: 0 4px 20px #01163333;
+  box-shadow: 0 4px 20px
+    color-mix(in srgb, var(--color-primary-dark) 20%, transparent);
 }
 .skip-link {
   position: fixed;
@@ -142,7 +152,7 @@
   top: 1rem;
   padding: 0.75rem 1rem;
   background: white;
-  color: #011633;
+  color: var(--color-primary);
   z-index: 100;
   transform: translateY(-200%);
 }
@@ -150,11 +160,11 @@
   transform: translateY(0);
 }
 :focus-visible {
-  outline: 2px solid #1f58c4 !important;
+  outline: 2px solid var(--color-focus) !important;
   outline-offset: 3px;
 }
 footer :focus-visible {
-  outline-color: #b4c7ed !important;
+  outline-color: var(--color-focus-dark) !important;
 }
 .no-scrollbar {
   scrollbar-width: none;
@@ -175,20 +185,20 @@ footer :focus-visible {
   font-family: Newsreader, serif;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.15;
-  color: #011633;
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 .content-page h2 {
   font-family: Newsreader, serif;
   font-size: 1.75rem;
-  color: #011633;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 .eyebrow {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #1f58c4;
+  color: var(--color-secondary);
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -203,7 +213,8 @@ footer :focus-visible {
 .info-panel {
   padding: 2rem;
   background: white;
-  border: 1px solid #c5c6ce66;
+  border: 1px solid
+    color-mix(in srgb, var(--color-outline-variant) 40%, transparent);
   border-radius: 0.5rem;
 }
 .info-panel p {
@@ -225,13 +236,13 @@ footer :focus-visible {
   font-weight: 600;
 }
 .button-primary {
-  background: #1f58c4;
+  background: var(--color-primary);
   color: white;
 }
 .text-link {
   display: block;
   margin-top: 1.5rem;
-  color: #1f58c4;
+  color: var(--color-secondary);
 }
 @media (min-width: 640px) {
   .ready-document[data-ready-page="home"],
@@ -295,4 +306,32 @@ footer :focus-visible {
 }
 .ready-document a[href^="https://doi.org/"] {
   overflow-wrap: anywhere;
+}
+
+/* Bot-only field remains outside the visual and accessibility flow. */
+.submission-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+
+.aeetds-header > div:first-child :focus-visible {
+  outline-color: var(--color-focus-dark) !important;
+}
+@media (max-width: 639px) {
+  .aeetds-header .aeetds-utility a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .aeetds-page main :is(a, button) {
+    min-height: 44px;
+  }
+  .aeetds-ticker button {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }

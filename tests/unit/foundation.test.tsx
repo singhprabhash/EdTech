@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Home from "../../src/app/page";
+import ReadyDocument from "../../src/components/ready-document";
 import NotFound from "../../src/app/not-found";
 import { metadata } from "../../src/app/layout";
 
 describe("reference application foundation", () => {
-  it("renders the supplied homepage sections and real local artwork", () => {
-    render(<Home />);
+  it("preserves the archived EdTech homepage renderer and local artwork", () => {
+    render(<ReadyDocument page="home" />);
     expect(
       screen.getByRole("heading", {
         level: 1,

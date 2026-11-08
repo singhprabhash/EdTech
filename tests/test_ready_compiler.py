@@ -37,4 +37,10 @@ class CompilerTests(unittest.TestCase):
     def test_rejects_unknown_tags(self):
         self.assertIsNone(compiler.sanitize({'tag':'iframe','attrs':{'src':'https://example.com'},'children':[]}))
 
+    def test_disabled_pagination_names_keep_visible_label(self):
+        data=__import__('json').loads(compiler.compile_design()['src/content/ready-pages.json'])
+        buttons=[node for node in compiler.walk(data['subject']['main']) if node['tag']=='button' and 'No additional supplied pages' in node['attrs'].get('aria-label','')]
+        self.assertEqual(len(buttons),2)
+        for button in buttons:self.assertTrue(button['attrs']['aria-label'].startswith(compiler.label_text(button)))
+
 if __name__ == '__main__': unittest.main()

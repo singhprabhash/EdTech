@@ -87,7 +87,24 @@ supplied originals. Those were excluded instead of reformatted.
 
 ### Final observed results
 
-Pending final gates and preservation check.
+- `NEXT_TELEMETRY_DISABLED=1 npm run check`: **exit 0**, lint, strict types,
+  **36/36 unit tests**, source/compiler checks, formatting and optimized build passed.
+- `npm run reference:check`: generated outputs current; **6/6 compiler tests passed**.
+- `npm run test:e2e`: **exit 0, 14/14 passed** against the optimized server. Covers
+  24 page/viewport combinations, hero query parity, composed facets/sort/reset/view,
+  category repeated counters, category/detail citation success/failure, tab keyboard
+  operation, mobile Escape/focus, generic detail destinations, native 404/aliases,
+  robots and no browser console/page errors on the main view matrix.
+- `npm audit --audit-level=high`: **exit 0, zero vulnerabilities**.
+- All four primary reference SHA-256 values unchanged. Older reference-directory
+  removal is explained below. Git metadata was absent at the start; it appeared during the session and now
+  reports `main...origin/main`. No Git initialization, staging, commit, push or
+  deployment was performed by this implementation.
+
+A final responsive pass also found the long supplied DOI overflowing the 320px
+specification grid; `overflow-wrap:anywhere` fixes the text instead of clipping it.
+The final browser suite includes that regression. Inherited terminal color-variable
+warnings from Playwright processes are unrelated to browser console errors.
 
 ## Preservation observation
 
@@ -95,6 +112,12 @@ All four current `ready_design/` files match the pre-edit SHA-256 snapshot. The
 older `design/` and Stitch directories disappeared during this session outside the
 implementation edits. They were not restored or modified; no application code
 depends on them. Historical audit reports retain their original time-specific facts.
+
+Two final development-mode diagnostics were also resolved: SVG attributes are
+normalized to React's camelCase names, and automatic framework agent-rule generation
+is disabled so repository instructions remain repository-owned. An earlier screenshot
+hydration diagnostic came from capturing input carets before hydration; final checks
+wait for enhancement before screenshotting. Production browser checks remain clean.
 
 ## Remaining production prerequisites
 

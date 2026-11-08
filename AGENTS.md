@@ -29,8 +29,8 @@ phase outline. Use Node from `.nvmrc`, npm and `package-lock.json`.
 - Do not invent book titles, ISBNs, DOIs, authors, prices, statistics,
   awards, availability, testimonials, policies or claims.
 - Maintain one source of truth for book metadata and validate content.
-- Preserve approved EdTech theme: navy `#011633`, blue `#1F58C4`,
-  pale-blue/white surfaces, Newsreader headings, Manrope UI
+- Preserve approved EdTech theme: Leaf Green `#0B6B3A`, Deep Green `#074A28`, Harvest Gold `#E3AE1F`,
+  Globe Blue `#1D5F8C`, off-white `#FAFAF7`, charcoal `#1E2329` (Developer Guide pp.34–35), Newsreader headings, Manrope UI
   typography, actual circular seal logo.
 - Preserve responsive behavior, functional navigation, populated dark
   navy footer and working interactions.
@@ -76,13 +76,3 @@ checks for production content must not imply their sample data is approved.
 List files changed, behavior delivered, commands/tests and outcomes,
 residual risks and next step. Update docs when routes, architecture,
 contracts, setup or operations change.
-
-<!-- BEGIN:nextjs-agent-rules -->
-
-## This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->

@@ -5,6 +5,16 @@ The user designated `ready_design/` as the primary design and page reference on
 present at the final repository check.
 Do not reformat or edit supplied originals incidentally.
 
+## Current theme authority
+
+The November AEETDS Developer Guide supersedes the original navy palette.
+`src/config/brand-theme.json` is the maintained semantic color source; the compiler
+combines it with reference typography and spacing, body text at 16px and the local
+Hindi fallback. Run `npm run reference:compile` after theme/compiler changes.
+Do not hand-edit generated CSS or trees. Archived HTML remains unchanged.
+Production sanitization also replaces retired literal color utilities and repairs
+disabled pagination labels and filter semantics without executing export scripts.
+
 ## Architecture and generation
 
 `scripts/compile-ready-design.py` uses Python's standard-library HTML parser to

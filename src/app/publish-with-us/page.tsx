@@ -1,11 +1,14 @@
+import { pageMetadata } from "../../config/seo";
 import { ReadyLayout } from "../../components/ready-document";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "../../config/site";
 
-export const metadata: Metadata = {
-  title: "Publish With Us | EdTech Publications",
-};
+export const metadata: Metadata = pageMetadata(
+  "/publish-with-us",
+  "Publish With Us | EdTech Publications",
+  "Archived EdTech Publications design preview. Catalogue content is pending factual approval.",
+);
 
 export default function PublishWithUs() {
   return (

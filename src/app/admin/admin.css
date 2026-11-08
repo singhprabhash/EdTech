@@ -1,0 +1,73 @@
+.admin-console {
+  max-width: 72rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+.admin-console h1 {
+  font-size: 2rem;
+}
+.admin-console h2 {
+  font-size: 1.5rem;
+  margin-block: 1rem;
+}
+.admin-console h3 {
+  font-size: 1.15rem;
+}
+.admin-console label {
+  display: grid;
+  gap: 0.3rem;
+  margin-block: 0.7rem;
+}
+.admin-console input,
+.admin-console textarea,
+.admin-console select {
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  padding: 0.65rem;
+  background: var(--color-surface, #fafaf7);
+  max-width: 100%;
+  width: 100%;
+}
+.admin-console textarea {
+  min-height: 6rem;
+}
+.admin-console button,
+.admin-console .admin-link {
+  padding: 0.7rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  margin: 0.25rem;
+  min-height: 44px;
+}
+.admin-console button:disabled {
+  opacity: 0.55;
+}
+.admin-console fieldset {
+  border: 1px solid currentColor;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+.admin-console legend {
+  padding-inline: 0.4rem;
+  font-weight: 700;
+}
+.admin-console nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block: 1rem;
+}
+.admin-console pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 1rem;
+  border: 1px solid currentColor;
+}
+.admin-console [role="status"],
+.admin-console [role="alert"] {
+  padding-block: 0.75rem;
+  font-weight: 600;
+}
+.admin-console :focus-visible {
+  outline: 3px solid var(--color-primary, #0b6b3a);
+  outline-offset: 3px;
+}

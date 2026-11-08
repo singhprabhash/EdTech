@@ -3794,7 +3794,7 @@
     "footer": {
       "tag": "footer",
       "attrs": {
-        "class": "bg-[#011633] text-white pt-16 pb-12 border-t border-primary-container/40"
+        "class": "bg-primary-dark text-white pt-16 pb-12 border-t border-primary-container/40"
       },
       "children": [
         {
@@ -3846,7 +3846,7 @@
                     {
                       "tag": "p",
                       "attrs": {
-                        "class": "text-sm text-slate-300 mt-2 leading-relaxed"
+                        "class": "text-sm text-primary-fixed mt-2 leading-relaxed"
                       },
                       "children": [
                         "\n            Academic publishing serving researchers, faculty, students, and academic institutions across India.\n          "
@@ -3855,7 +3855,7 @@
                     {
                       "tag": "div",
                       "attrs": {
-                        "class": "inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-slate-400"
+                        "class": "inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-primary-fixed-dim"
                       },
                       "children": [
                         {
@@ -3870,7 +3870,9 @@
                         },
                         {
                           "tag": "span",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             "Lucknow, India"
                           ]
@@ -3881,12 +3883,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Explore"
@@ -3900,12 +3904,14 @@
                       "children": [
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "home",
                                 "href": "/"
                               },
@@ -3917,12 +3923,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "books",
                                 "href": "/books"
                               },
@@ -3934,12 +3942,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "subjects",
                                 "href": "/subjects"
                               },
@@ -3951,12 +3961,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "about",
                                 "href": "/#about"
                               },
@@ -3968,12 +3980,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "contact",
                                 "href": "/contact"
                               },
@@ -3989,12 +4003,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Publishing"
@@ -4008,12 +4024,14 @@
                       "children": [
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "publish-with-us",
                                 "href": "/publish-with-us"
                               },
@@ -4025,12 +4043,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "services",
                                 "href": "/#publishing-services"
                               },
@@ -4042,12 +4062,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "book-chapters",
                                 "href": "/#book-chapters"
                               },
@@ -4059,12 +4081,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "submit-a-manuscript",
                                 "href": "/publish-with-us#publishing-enquiries"
                               },
@@ -4080,12 +4104,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Contact"
@@ -4116,7 +4142,7 @@
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors block break-words",
+                                "class": "text-primary-fixed hover:text-white transition-colors block break-words",
                                 "href": "tel:+917408206291"
                               },
                               "children": [
@@ -4144,7 +4170,7 @@
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors block break-all",
+                                "class": "text-primary-fixed hover:text-white transition-colors block break-all",
                                 "href": "mailto:edtechpublications@gmail.com"
                               },
                               "children": [
@@ -4156,7 +4182,7 @@
                         {
                           "tag": "li",
                           "attrs": {
-                            "class": "flex items-center gap-2 text-slate-300"
+                            "class": "flex items-center gap-2 text-primary-fixed"
                           },
                           "children": [
                             {
@@ -4171,7 +4197,9 @@
                             },
                             {
                               "tag": "span",
-                              "attrs": {},
+                              "attrs": {
+                                "class": ""
+                              },
                               "children": [
                                 "Lucknow, India"
                               ]
@@ -4187,12 +4215,14 @@
             {
               "tag": "div",
               "attrs": {
-                "class": "border-t border-white/10 pt-6 mt-12 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4"
+                "class": "border-t border-white/10 pt-6 mt-12 flex flex-col md:flex-row items-center justify-between text-xs text-primary-fixed-dim gap-4"
               },
               "children": [
                 {
                   "tag": "p",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     "Copyright © 2026 EdTech Publications. All rights reserved."
                   ]
@@ -4205,7 +4235,9 @@
                   "children": [
                     {
                       "tag": "span",
-                      "attrs": {},
+                      "attrs": {
+                        "class": ""
+                      },
                       "children": [
                         "Lucknow, India · Scholarly Press"
                       ]
@@ -8310,7 +8342,7 @@
     "footer": {
       "tag": "footer",
       "attrs": {
-        "class": "bg-[#011633] text-white pt-16 pb-12 border-t border-primary-container/40"
+        "class": "bg-primary-dark text-white pt-16 pb-12 border-t border-primary-container/40"
       },
       "children": [
         {
@@ -8362,7 +8394,7 @@
                     {
                       "tag": "p",
                       "attrs": {
-                        "class": "text-sm text-slate-300 mt-2 leading-relaxed"
+                        "class": "text-sm text-primary-fixed mt-2 leading-relaxed"
                       },
                       "children": [
                         "\n          Academic publishing serving researchers, faculty, students, and academic institutions across India.\n        "
@@ -8371,7 +8403,7 @@
                     {
                       "tag": "div",
                       "attrs": {
-                        "class": "inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-slate-400"
+                        "class": "inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-primary-fixed-dim"
                       },
                       "children": [
                         {
@@ -8386,7 +8418,9 @@
                         },
                         {
                           "tag": "span",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             "Lucknow, India"
                           ]
@@ -8397,12 +8431,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Explore"
@@ -8416,12 +8452,14 @@
                       "children": [
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "home",
                                 "href": "/"
                               },
@@ -8433,12 +8471,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "books",
                                 "href": "/books"
                               },
@@ -8450,12 +8490,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "subjects",
                                 "href": "/subjects"
                               },
@@ -8467,12 +8509,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "about",
                                 "href": "/#about"
                               },
@@ -8484,12 +8528,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "contact",
                                 "href": "/contact"
                               },
@@ -8505,12 +8551,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Publishing"
@@ -8524,12 +8572,14 @@
                       "children": [
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "publish-with-us",
                                 "href": "/publish-with-us"
                               },
@@ -8541,12 +8591,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "services",
                                 "href": "/#publishing-services"
                               },
@@ -8558,12 +8610,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "book-chapters",
                                 "href": "/#book-chapters"
                               },
@@ -8575,12 +8629,14 @@
                         },
                         {
                           "tag": "li",
-                          "attrs": {},
+                          "attrs": {
+                            "class": ""
+                          },
                           "children": [
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors",
+                                "class": "text-primary-fixed hover:text-white transition-colors",
                                 "data-path": "submit-a-manuscript",
                                 "href": "/publish-with-us#publishing-enquiries"
                               },
@@ -8596,12 +8652,14 @@
                 },
                 {
                   "tag": "div",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     {
                       "tag": "h4",
                       "attrs": {
-                        "class": "text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4"
+                        "class": "text-sm font-semibold uppercase tracking-wider text-on-primary-container mb-4"
                       },
                       "children": [
                         "Contact"
@@ -8632,7 +8690,7 @@
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors block break-words",
+                                "class": "text-primary-fixed hover:text-white transition-colors block break-words",
                                 "href": "tel:+917408206291"
                               },
                               "children": [
@@ -8660,7 +8718,7 @@
                             {
                               "tag": "a",
                               "attrs": {
-                                "class": "text-slate-300 hover:text-white transition-colors block break-all",
+                                "class": "text-primary-fixed hover:text-white transition-colors block break-all",
                                 "href": "mailto:edtechpublications@gmail.com"
                               },
                               "children": [
@@ -8672,7 +8730,7 @@
                         {
                           "tag": "li",
                           "attrs": {
-                            "class": "flex items-center gap-2 text-slate-300"
+                            "class": "flex items-center gap-2 text-primary-fixed"
                           },
                           "children": [
                             {
@@ -8687,7 +8745,9 @@
                             },
                             {
                               "tag": "span",
-                              "attrs": {},
+                              "attrs": {
+                                "class": ""
+                              },
                               "children": [
                                 "Lucknow, India"
                               ]
@@ -8703,12 +8763,14 @@
             {
               "tag": "div",
               "attrs": {
-                "class": "border-t border-white/10 pt-6 mt-12 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4"
+                "class": "border-t border-white/10 pt-6 mt-12 flex flex-col md:flex-row items-center justify-between text-xs text-primary-fixed-dim gap-4"
               },
               "children": [
                 {
                   "tag": "p",
-                  "attrs": {},
+                  "attrs": {
+                    "class": ""
+                  },
                   "children": [
                     "Copyright © 2026 EdTech Publications. All rights reserved."
                   ]
@@ -8721,7 +8783,9 @@
                   "children": [
                     {
                       "tag": "span",
-                      "attrs": {},
+                      "attrs": {
+                        "class": ""
+                      },
                       "children": [
                         "Lucknow, India · Scholarly Press"
                       ]
@@ -8903,7 +8967,7 @@
                             {
                               "tag": "span",
                               "attrs": {
-                                "class": "px-2.5 sm:px-3 py-1 rounded bg-surface-container-lowest text-on-tertiary-container font-label-md text-[11px] sm:text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap"
+                                "class": "px-2.5 sm:px-3 py-1 rounded bg-surface-container-lowest text-tertiary font-label-md text-[11px] sm:text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap"
                               },
                               "children": [
                                 {
@@ -9380,16 +9444,14 @@
                         "aria-label": "Subject subdiscipline filters",
                         "class": "flex items-center gap-2 overflow-x-auto pb-1 xl:pb-0 chip-scrollbar -mx-1 px-1 min-w-0 w-full xl:w-auto flex-nowrap",
                         "id": "subdiscipline-filters",
-                        "role": "tablist"
+                        "role": "group"
                       },
                       "children": [
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "true",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-primary text-on-primary transition-all shadow-sm flex-shrink-0 cursor-pointer",
                             "data-category": "all",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -9410,10 +9472,8 @@
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "false",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0 cursor-pointer",
                             "data-category": "pomology",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -9423,10 +9483,8 @@
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "false",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0 cursor-pointer",
                             "data-category": "orchard",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -9436,10 +9494,8 @@
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "false",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0 cursor-pointer",
                             "data-category": "postharvest",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -9449,10 +9505,8 @@
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "false",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0 cursor-pointer",
                             "data-category": "propagation",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -9462,10 +9516,8 @@
                         {
                           "tag": "button",
                           "attrs": {
-                            "aria-selected": "false",
                             "class": "filter-btn px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-title-sm text-xs sm:text-title-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0 cursor-pointer",
                             "data-category": "protected",
-                            "role": "tab",
                             "type": "button"
                           },
                           "children": [
@@ -11175,7 +11227,7 @@
                                 "class": "px-3 sm:px-3.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-mono-isbn text-xs sm:text-label-mono-isbn text-on-surface transition-colors",
                                 "type": "button",
                                 "disabled": "",
-                                "aria-label": "No additional supplied pages",
+                                "aria-label": "2 — No additional supplied pages",
                                 "title": "All supplied titles are on this page"
                               },
                               "children": [
@@ -11188,7 +11240,7 @@
                                 "class": "px-3 sm:px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs sm:text-body-sm transition-colors",
                                 "type": "button",
                                 "disabled": "",
-                                "aria-label": "No additional supplied pages",
+                                "aria-label": "Next — No additional supplied pages",
                                 "title": "All supplied titles are on this page"
                               },
                               "children": [
@@ -13773,7 +13825,7 @@
                             {
                               "tag": "span",
                               "attrs": {
-                                "class": "font-label-mono-isbn text-[11px] font-bold text-secondary-container bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm"
+                                "class": "font-label-mono-isbn text-[11px] font-bold text-secondary bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm"
                               },
                               "children": [
                                 "RRRNA-ISBN"
@@ -17591,7 +17643,7 @@
                   {
                     "tag": "span",
                     "attrs": {
-                      "class": "hidden sm:inline text-primary-fixed-dim/90"
+                      "class": "hidden sm:inline text-primary-fixed-dim"
                     },
                     "children": [
                       "Lucknow, India"

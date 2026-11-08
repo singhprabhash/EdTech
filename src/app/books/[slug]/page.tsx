@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../config/seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ReadyDocument, {
@@ -14,9 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const record = previewRecords.find((r) => r.slug === slug);
-  return {
-    title: record ? `${record.title} | EdTech Publications` : "Book not found",
-  };
+  return pageMetadata(
+    `/books/${slug}`,
+    record ? `${record.title} | EdTech Publications` : "Book not found",
+    "Archived catalogue design preview. Book metadata is pending factual approval.",
+  );
 }
 export default async function BookDetail({
   params,

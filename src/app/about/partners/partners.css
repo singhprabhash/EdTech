@@ -1,0 +1,163 @@
+/* Partners reference styling stays scoped to the existing route. */
+.aeetds-partners section[aria-labelledby="about-section-title"] {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-surface-container-low) 40%, transparent),
+    var(--color-background)
+  );
+}
+.aeetds-partners .partners-hero-note {
+  border-radius: var(--radius-lg);
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 1px 4px
+    color-mix(in srgb, var(--color-primary-dark) 4%, transparent);
+}
+.aeetds-partners .partners-note-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-container);
+}
+.aeetds-partners .partners-directory-count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-container-low);
+  color: var(--color-on-surface-variant);
+  font-size: var(--text-body-sm);
+  line-height: 1.5;
+}
+.aeetds-partners .partners-directory-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-lg);
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary-dark) 4%, transparent);
+  border-top: 4px solid var(--color-secondary);
+  background: white;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px
+    color-mix(in srgb, var(--color-primary-dark) 6%, transparent);
+}
+.aeetds-partners .partners-directory-card:nth-child(odd) {
+  border-top-color: var(--color-primary);
+}
+.aeetds-partners .partners-identity-label {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  padding: 0.25rem 0.625rem;
+  background: var(--color-surface-container-high);
+  color: var(--color-primary);
+  font-size: var(--text-label-md);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.aeetds-partners .partners-institution-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+}
+.aeetds-partners .partners-collaboration-panel {
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  background: var(--color-primary-dark);
+  color: white;
+  box-shadow: 0 12px 24px
+    color-mix(in srgb, var(--color-primary-dark) 10%, transparent);
+}
+.aeetds-partners .partners-secretariat-card {
+  min-width: 0;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  background: var(--color-primary-container);
+}
+.aeetds-partners .partners-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.aeetds-partners .partners-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary);
+  color: var(--color-tertiary-fixed-dim);
+}
+.aeetds-partners .partners-contact-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: var(--text-body-md);
+  line-height: 1.6;
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 35%);
+  text-underline-offset: 0.25rem;
+}
+.aeetds-partners .partners-collaboration-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.aeetds-partners .partners-collaboration-actions > a {
+  min-width: 0;
+  max-width: 100%;
+}
+.aeetds-partners .partners-governance-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2.75rem;
+  color: var(--color-secondary-fixed);
+  font-size: var(--text-title-sm);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.aeetds-partners .partners-contact-link:hover,
+.aeetds-partners .partners-governance-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .aeetds-partners .partners-collaboration-panel {
+    padding: 2.5rem;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .aeetds-partners .partners-directory-card {
+    transition:
+      transform 200ms,
+      box-shadow 200ms;
+  }
+  .aeetds-partners .partners-directory-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px
+      color-mix(in srgb, var(--color-primary-dark) 10%, transparent);
+  }
+}
+.aeetds-partners .partners-collaboration-panel a:focus-visible {
+  /* Match the global important focus rule while providing contrast on navy. */
+  outline-color: var(--color-primary-fixed-dim) !important;
+}

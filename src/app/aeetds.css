@@ -1,0 +1,205 @@
+/* AEETDS homepage only. Shared palette/type/spacing come from ready-theme.css. */
+.aeetds-page {
+  background: var(--color-background);
+  font-size: var(--text-body-md);
+  line-height: var(--text-body-md--line-height);
+}
+.aeetds-container {
+  width: min(calc(100% - 2.5rem), 1360px);
+  margin-inline: auto;
+}
+.aeetds-section {
+  padding-block: 4rem;
+}
+.aeetds-hero {
+  padding-block: 3rem;
+}
+.aeetds-page [id] {
+  scroll-margin-top: 15rem;
+}
+.aeetds-page [hidden] {
+  display: none !important;
+}
+.aeetds-page h1,
+.aeetds-page h2,
+.aeetds-page h3 {
+  text-wrap: pretty;
+}
+.aeetds-header {
+  display: flex;
+  flex-direction: column;
+  max-height: 100dvh;
+}
+.aeetds-header > div:first-child {
+  flex-shrink: 0;
+}
+.aeetds-header > div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.aeetds-masthead {
+  flex-shrink: 0;
+}
+.aeetds-mobile-nav {
+  min-height: 0;
+}
+.aeetds-brand {
+  max-width: 28rem;
+}
+.aeetds-brand-name {
+  text-wrap: balance;
+}
+.aeetds-desktop-nav {
+  display: none;
+}
+.aeetds-mobile-nav {
+  max-height: 60dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-top: 1px solid var(--color-surface-container);
+}
+.aeetds-ticker-window {
+  overflow: hidden;
+}
+.aeetds-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: aeetds-ticker 100s linear infinite;
+}
+.aeetds-ticker-items {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+  white-space: nowrap;
+  font-size: var(--text-body-sm);
+}
+.aeetds-ticker[data-paused="true"] .aeetds-ticker-track,
+.aeetds-ticker:hover .aeetds-ticker-track {
+  animation-play-state: paused;
+}
+/* Keyboard users get a stable, horizontally scrollable original list. */
+.aeetds-ticker:focus-within .aeetds-ticker-track {
+  animation: none;
+}
+.aeetds-ticker:focus-within .aeetds-ticker-window {
+  overflow-x: auto;
+}
+.aeetds-ticker:focus-within .aeetds-ticker-copy {
+  display: none;
+}
+.aeetds-slide-button {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-container-high);
+  color: var(--color-primary);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.aeetds-slide-button:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: white;
+}
+.aeetds-slide-button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+@keyframes aeetds-ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 640px) {
+  .aeetds-container {
+    width: min(calc(100% - 3rem), 1360px);
+  }
+}
+@media (min-width: 1024px) {
+  .aeetds-container {
+    width: min(calc(100% - 6rem), 1360px);
+  }
+}
+@media (min-width: 1280px) {
+  .aeetds-desktop-nav {
+    display: flex;
+  }
+  .aeetds-menu-toggle,
+  .aeetds-mobile-nav {
+    display: none;
+  }
+  .aeetds-brand {
+    max-width: 17rem;
+  }
+}
+@media (max-width: 767px) {
+  .aeetds-phones,
+  .aeetds-reg {
+    display: none;
+  }
+  .aeetds-utility {
+    justify-content: center;
+    gap: 0.25rem;
+    padding-block: 0.375rem;
+  }
+  .aeetds-utility > div {
+    justify-content: center;
+  }
+  .aeetds-masthead {
+    gap: 0.75rem;
+  }
+  .aeetds-brand {
+    gap: 0.5rem;
+  }
+  .aeetds-brand-name {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .aeetds-section {
+    padding-block: 3rem;
+  }
+  .aeetds-ticker-label {
+    gap: 0.375rem;
+    padding-inline: 0.5rem;
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aeetds-ticker-track {
+    width: auto;
+    animation: none;
+  }
+  .aeetds-ticker-items {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0;
+    white-space: normal;
+  }
+  .aeetds-ticker-items a {
+    align-items: flex-start;
+  }
+  .aeetds-ticker-items a > span:first-child {
+    flex-shrink: 0;
+  }
+  .aeetds-ticker .aeetds-ticker-copy,
+  .aeetds-ticker-toggle {
+    display: none;
+  }
+  .aeetds-ticker > div {
+    align-items: flex-start;
+    padding-block: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .aeetds-desktop-nav {
+    gap: 0.875rem;
+    font-size: 12px;
+  }
+}

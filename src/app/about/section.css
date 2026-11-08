@@ -1,0 +1,68 @@
+/* Shared About-section integration only. Existing global shell/home are untouched. */
+.aeetds-about-section .about-subnavigation {
+  border-bottom: 1px solid var(--color-surface-container);
+}
+.aeetds-about-section .about-subnavigation-track {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding-block: 0.25rem;
+}
+.aeetds-about-section .about-section-block {
+  padding-block: var(--spacing-space-xl);
+}
+.aeetds-governance main,
+.aeetds-partners main {
+  overflow-wrap: anywhere;
+}
+.aeetds-governance .committee-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.aeetds-governance .committee-table th,
+.aeetds-governance .committee-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.aeetds-governance .committee-table thead {
+  background: var(--color-primary);
+  color: white;
+}
+.aeetds-governance .committee-table thead th:first-child {
+  width: 35%;
+}
+.aeetds-governance .committee-table tbody tr:nth-child(even) {
+  background: var(--color-surface-container-low);
+}
+.aeetds-governance .committee-table tbody tr {
+  border-bottom: 1px solid var(--color-surface-container);
+}
+@media (max-width: 767px) {
+  .aeetds-governance .committee-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .aeetds-governance .committee-table tbody tr {
+    display: block;
+    padding-block: 0.5rem;
+  }
+  .aeetds-governance .committee-table tbody th,
+  .aeetds-governance .committee-table tbody td {
+    display: block;
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+  .aeetds-governance .committee-table tbody td::before {
+    content: "Role";
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+}

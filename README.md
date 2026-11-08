@@ -1,5 +1,12 @@
 # EdTech Publications
 
+**Current AEETDS alignment (8 November 2026):** the Developer Guide now supplies
+the green/gold semantic theme. Existing page compositions are retained. The three
+existing forms have a private SQLite/SMTP backend, and `/admin` manages Society
+content and private applications. Live services remain disabled until configured.
+See [operations](docs/AEETDS_GUIDE_OPERATIONS.md),
+[alignment report](docs/AEETDS_GUIDE_REPORT.md) and `.env.example`.
+
 The current design implementation uses **`ready_design/` as the primary reference**.
 Home, catalogue, Horticulture category and Frontier Agronomy detail are implemented,
 with the exact supplied local images, circular seal, local fonts and interactive

@@ -1,10 +1,13 @@
+import { pageMetadata } from "../../config/seo";
 import type { Metadata } from "next";
 import ReadyDocument from "../../components/ready-document";
 import { catalogueQueryFromParams } from "../../domain/catalogue";
 
-export const metadata: Metadata = {
-  title: "Books Catalogue | EdTech Publications",
-};
+export const metadata: Metadata = pageMetadata(
+  "/books",
+  "Books Catalogue | EdTech Publications",
+  "Archived EdTech Publications design preview. Catalogue content is pending factual approval.",
+);
 export default async function Books({
   searchParams,
 }: {

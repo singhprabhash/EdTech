@@ -2,7 +2,11 @@ import { expect, test, type Page } from "@playwright/test";
 
 async function load(page: Page, route: string) {
   const response = await page.goto(route);
-  await page.locator('.ready-document[data-enhanced="true"]').waitFor();
+  await page
+    .locator(
+      route === "/" ? ".aeetds-page" : '.ready-document[data-enhanced="true"]',
+    )
+    .waitFor();
   return response;
 }
 
@@ -49,27 +53,14 @@ for (const width of [320, 390, 768, 1024, 1280, 1440]) {
   });
 }
 
-test("hero search Enter/button and direct subject links work", async ({
+test("catalogue shared queries preserve direct subject filtering", async ({
   page,
 }) => {
-  await load(page, "/");
-  const search = page.locator("#catalog-search-hero");
-  await search.fill("soil");
-  await search.press("Enter");
-  await expect(page).toHaveURL(/\/books\?q=soil/);
+  await load(page, "/books?q=soil");
   await expect(page.locator("#resultCounter")).toHaveText("1 monographs");
-  await load(page, "/");
-  await page.locator("#catalog-search-hero").fill("soil");
-  await page
-    .locator("#catalog-search-hero")
-    .locator("xpath=ancestor::form")
-    .getByRole("button", { name: "Search", exact: true })
-    .click();
-  await expect(page.locator("#resultCounter")).toHaveText("1 monographs");
-  await load(page, "/");
-  await page
-    .getByRole("link", { name: /Food, Nutrition & Home Science/ })
-    .click();
+  await expect(page.locator("#catalogSearch")).toHaveValue("soil");
+  await load(page, "/books");
+  await page.locator('.subject-chip[data-subject="Food & Nutrition"]').click();
   await expect(page.locator("#resultCounter")).toHaveText("1 monographs");
 });
 
@@ -188,7 +179,7 @@ test("mobile navigation supports Escape and exposes all real destinations", asyn
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await load(page, "/");
+  await load(page, "/books");
   const trigger = page.locator("#mobile-nav-toggle");
   await trigger.focus();
   await trigger.press("Enter");

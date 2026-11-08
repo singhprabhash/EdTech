@@ -50,3 +50,12 @@ Do not deploy as a completed publishing website. See TRD release gates.
 Python 3.12+ (standard library only) is required for `npm run reference:compile`
 and `npm run reference:check`. The full check includes stale-output verification
 and compiler security/regression tests. See `READY_DESIGN_WORKFLOW.md`.
+
+## AEETDS server services
+
+Use Node 24 from `.nvmrc`. See `.env.example` and
+[Developer Guide operations](AEETDS_GUIDE_OPERATIONS.md) for private persistent
+storage, authenticated SMTP, Turnstile, scanner and Secretary credentials.
+`npm run storage:init`, `npm run submissions:retry`, `npm run backup:create` and
+`npm run backup:restore -- <snapshot> <new-directory>` are operator commands.
+No production environment or scheduled worker is installed by local development.

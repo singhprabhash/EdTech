@@ -1,6 +1,40 @@
 # EdTech Publications Repository Implementation Plan
 
+**Current authorization — 8 November 2026:** project-wide AEETDS Developer Guide
+alignment supersedes older navy/global-token preservation requirements. The user
+approved self-hosted Node 24, SQLite and a persistent private disk. Current scope
+and verification are in `AEETDS_GUIDE_PLAN.md` / `AEETDS_GUIDE_REPORT.md`; production
+service credentials and deployment remain separate configuration requirements.
+
 > **For agentic workers:** Use superpowers:executing-plans for approved implementation, task by task. Subagent-driven work requires an explicitly authorized execution choice. The current kickoff authorizes Task 1 foundation; later tasks remain pending.
+
+**Vision visual refinement — 7 November 2026:** The user requests improved
+presentation of the existing Vision/Mission page. `AEETDS_VISION_REFRESH.md`
+records the scoped editorial/panel/card changes and regression results. Official
+content, shared About navigation, homepage and global tokens remain unchanged.
+
+**Complete About section — 7 November 2026:** The user now authorizes the
+cohesive four-page section: existing Society/Vision pages gain shared secondary
+navigation, and Governance/Partners are implemented from canonical content.
+See `AEETDS_ABOUT_SECTION_PLAN.md` and `AEETDS_ABOUT_SECTION_REPORT.md`.
+Homepage/global shell remain protected; office-bearer confirmations stay explicit.
+
+**Vision page update — 7 November 2026:** `/about/vision-mission` implements the
+next explicitly requested page, using PDF pages 8–9 and the supplied Stitch design.
+See `AEETDS_VISION_PLAN.md` and `AEETDS_VISION_REPORT.md`. Existing Home/About
+remain protected; new CTA actions use real Secretariat email destinations.
+
+**About page update — 7 November 2026:** `/about` is the next explicitly
+requested AEETDS slice. `AEETDS_ABOUT_PLAN.md` and `AEETDS_ABOUT_REPORT.md`
+record its canonical content, supplied visual reference, reused shell and
+homepage preservation checks. Other AEETDS pages remain separate future work.
+
+**Homepage update — 7 November 2026:** The explicit AEETDS implementation brief
+supersedes the original publisher homepage requirement at `/` only. See
+`AEETDS_HOME_PLAN.md` and `AEETDS_HOME_REPORT.md`. The supplied refined HTML is
+this page's visual reference, and the supplied 36-page PDF is its canonical
+factual content. Existing EdTech pages and provider gates remain unchanged;
+future AEETDS routes are intentionally not implemented in this slice.
 
 **Current visual authority:** The user now designates `ready_design/` as primary.
 `READY_DESIGN_PLAN.md`, `READY_DESIGN_WORKFLOW.md` and `READY_DESIGN_REPORT.md`
@@ -215,3 +249,56 @@ For each approved task, record actual changed files, delivered behavior, exact c
 ## Remaining inputs after the foundation
 
 Task 1 is complete under the current kickoff. Identify the catalogue/content owner and obtain approved seal/covers and content; resolve remaining radius/URL choices before dependent public pages. Confirm privacy, ordering and submission infrastructure decisions before those features. If an existing application or live indexed routes are later supplied, inspect and reconcile them before migration. No provider purchase or product-policy decision has been made. See `MILESTONE_1.md` for exact results and the next shared-shell slice.
+
+## Governance reference refresh — 7 November 2026
+
+The `/about/governance` reference refresh is recorded in
+[AEETDS_GOVERNANCE_UPDATE.md](AEETDS_GOVERNANCE_UPDATE.md), with original inputs
+under `references/aeetds/governance-update/`. It retains canonical PDF wording,
+pending appointments and the existing shared shell. The page adds governance
+information and Secretariat contact links; no new route, dependency or service.
+
+## Partners reference refresh — 7 November 2026
+
+The `/about/partners` implementation follows the new supplied Stitch reference,
+with canonical page-21 content and existing shared shell preserved. See
+[AEETDS_PARTNERS_UPDATE.md](AEETDS_PARTNERS_UPDATE.md) for the file-level plan,
+content omissions and verification evidence. This slice adds the sourced locations,
+neutral eight-card directory and complete Secretariat contact panel without new
+routes, dependencies or external services.
+
+## Membership implementation — 7 November 2026
+
+The user authorizes the membership overview, application and acknowledgement
+screens. `AEETDS_MEMBERSHIP_PLAN.md` records the scoped implementation;
+`AEETDS_MEMBERSHIP_INTEGRATION.md` defines the unavailable service boundary and
+future persistence/mail/security contract. No provider is selected or fabricated.
+Completed AEETDS pages remain protected. Actual results are recorded in
+`AEETDS_MEMBERSHIP_REPORT.md`.
+
+## Conferences & Events implementation — 7 November 2026
+
+The user authorizes six new event/training screens from the supplied HTML.
+`AEETDS_EVENTS_PLAN.md` records the scoped typed data, shared components, calendar,
+gallery and genuine PDF asset extraction. Existing completed pages remain protected;
+no registration/abstract submission endpoint or proceedings asset is invented.
+Actual verification and residual inputs are recorded in `AEETDS_EVENTS_REPORT.md`.
+
+
+## Awards, Publications and submission resources — 8 November 2026
+
+Implement the four user-supplied resource screens with the existing shell and
+PDF-authoritative facts. `AEETDS_RESOURCES_PLAN.md` records reference mapping and
+file-level scope. The missing Publications export uses the permitted visual fallback.
+Bank coordinates and current registration fees remain unpublished pending verification.
+`AEETDS_REGISTRATION_INTEGRATION.md` defines the future service contract;
+`AEETDS_RESOURCES_REPORT.md` records actual checks and remaining production inputs.
+
+
+## Final AEETDS informational screens — 8 November 2026
+
+The supplied three exports authorize replacing `/contact` and adding `/contact/faqs`
+and `/policies`. `AEETDS_SUPPORT_PLAN.md` records the page-specific compositions,
+canonical PDF27–29/B8 content, unavailable contact service and protected-page scope.
+`AEETDS_CONTACT_INTEGRATION.md` describes future acceptance/security/mail requirements;
+`AEETDS_SUPPORT_REPORT.md` records actual visual, responsive and test evidence.

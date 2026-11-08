@@ -1,0 +1,64 @@
+{
+  "source": "AEETDS_Website_Content (1).pdf",
+  "version": "1.0, 30 October 2026",
+  "sourceSha256": "95e35a4d84d32c1754992894d19c44340994f3bcccc1a3d3c8a2186323a29bd3",
+  "method": "Poppler pdfimages extraction; JPEG streams retained without re-encoding. Logo RGB image extracted as PNG on its supplied white background.",
+  "assets": [
+    {
+      "file": "logo.png",
+      "pdfPage": 1,
+      "pdfObject": 3,
+      "caption": "AEETDS logo",
+      "sha256": "f356e933ea13d74045dc550b23fa3e36722032992f5d3086b72d96ad3f69e8de"
+    },
+    {
+      "file": "2026_01_group_photo.jpg",
+      "pdfPage": 22,
+      "pdfObject": 27,
+      "caption": "Delegates, scientists and organisers in front of ICAR-Central Agroforestry Research Institute, Jhansi.",
+      "sha256": "f064581ec806ecba4ec94eab45c39759c63c1e386b237756d3211987c443d0f5"
+    },
+    {
+      "file": "2025_02_group_photo.jpg",
+      "pdfPage": 23,
+      "pdfObject": 32,
+      "caption": "Group photograph of delegates at the ICAR-NAARM campus, Hyderabad.",
+      "sha256": "97f2ce2b257da5786b77e1a23c3511e170ebf782c5e5ab8750dd8d45e2450268"
+    },
+    {
+      "file": "2024_01_inauguration.jpg",
+      "pdfPage": 24,
+      "pdfObject": 34,
+      "caption": "Release of the conference publication at the inaugural session, ICAR-Indian Institute of Sugarcane Research, Lucknow.",
+      "sha256": "9bbceca3d52bb74dfa514c5e487d4056566988585a495fe09388c72dddf04a1e"
+    },
+    {
+      "file": "2026_02_delegates.jpg",
+      "pdfPage": 23,
+      "pdfObject": 30,
+      "caption": "A full auditorium of delegates from across India at ICAR-CAFRI, Jhansi.",
+      "sha256": "2b7b420c66be78e6c2f292028f466e8c1b75e3a7344d0b360fa8dad185348379"
+    },
+    {
+      "file": "2026_03_release.jpg",
+      "pdfPage": 22,
+      "pdfObject": 28,
+      "caption": "Dignitaries release the conference publication at the inaugural session of NCFAHS-2026.",
+      "sha256": "a140b3b792d3570fe5ca885a3b34c8004ca083dfa637e0edaf5e7f5c681b9715"
+    },
+    {
+      "file": "2025_01_release.jpg",
+      "pdfPage": 23,
+      "pdfObject": 31,
+      "caption": "Release of the conference publication by dignitaries at the inaugural session, ICAR-NAARM, Hyderabad.",
+      "sha256": "9b81483395dabf04a4d012513d5aa04846a29ec83b0d2f6fbf254f64185dd9ef"
+    },
+    {
+      "file": "2024_02_delegates.jpg",
+      "pdfPage": 24,
+      "pdfObject": 35,
+      "caption": "Scientists, scholars and students at a technical session in the ICAR-IISR auditorium.",
+      "sha256": "a06bca596e9afc40e1fddc40ac22a916260f697c0ba137c2399ca871a435b85f"
+    }
+  ]
+}
