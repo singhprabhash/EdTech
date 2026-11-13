@@ -1,6 +1,6 @@
+import BrochureDownload from "./brochure-download";
 import Link from "next/link";
-import { society } from "../../../content/aeetds";
-import type { Conference } from "../../../content/aeetds-events";
+import { crafnsForms, type Conference } from "../../../content/aeetds-events";
 import { Action, Eyebrow, Icon } from "../ui";
 import EventBreadcrumb from "./breadcrumb";
 import EventImage from "./event-image";
@@ -48,25 +48,24 @@ export function ConferenceHero({ conference }: { conference: Conference }) {
             {upcoming ? (
               <>
                 <Eyebrow>CONFERENCE PARTICIPATION</Eyebrow>
-                <h2 className="mb-4 text-title-sm">CRAFNS-2026 Enquiries</h2>
+                <h2 className="mb-4 text-title-sm">
+                  CRAFNS-2026 Participation
+                </h2>
                 <div className="flex flex-col gap-3">
+                  <BrochureDownload />
                   <Action
-                    href={`mailto:${society.email}?subject=CRAFNS-2026%20Registration%20Enquiry`}
+                    href={crafnsForms.registration}
                     tone="navy"
                     icon="how_to_reg"
                   >
-                    Registration Enquiry
+                    Registration
                   </Action>
-                  <Action
-                    href={`mailto:${society.email}?subject=CRAFNS-2026%20Abstract%20Submission%20Enquiry`}
-                    icon="article"
-                  >
-                    Abstract Submission Enquiry
+                  <Action href={crafnsForms.abstractSubmission} icon="article">
+                    Abstract Submission
                   </Action>
                 </div>
                 <p className="mt-4 text-body-sm leading-relaxed text-on-surface-variant">
-                  Online registration and abstract submission are not yet
-                  available. Contact the Secretariat for guidance.
+                  Registration and abstract submission open in Google Forms.
                 </p>
               </>
             ) : (
@@ -205,9 +204,9 @@ function ConferenceOverview({ conference }: { conference: Conference }) {
           </p>
           {conference.slug === "ncfahs-2026" && (
             <p className="mt-5 text-body-md leading-relaxed text-on-surface-variant">
-              The conference drew 361 delegates from 24 states, who took part in
-              oral and poster sessions and visited the institute&apos;s
-              agroforestry and horticulture demonstration models.
+              Delegates took part in oral and poster sessions and visited the
+              institute&apos;s agroforestry and horticulture demonstration
+              models.
             </p>
           )}
         </div>

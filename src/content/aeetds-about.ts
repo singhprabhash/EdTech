@@ -82,7 +82,7 @@ export const societyMilestones: readonly SocietyMilestone[] = [
     dateTime: "2026-07",
     title: "National Conference (NCFAHS-2026)",
     description:
-      "National Conference on Frontiers in Agroforestry and Horticultural Sciences (NCFAHS-2026) with ICAR-CAFRI and ISAF, Jhansi — 361 delegates from 24 states.",
+      "National Conference on Frontiers in Agroforestry and Horticultural Sciences (NCFAHS-2026) with ICAR-CAFRI and ISAF, Jhansi.",
     icon: "nature_people",
   },
   {

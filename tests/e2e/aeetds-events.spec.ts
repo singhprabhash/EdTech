@@ -79,8 +79,25 @@ for (const width of [360, 390, 768, 1024, 1280, 1440])
         await expect(toggle).toBeFocused();
       }
       const main = page.getByRole("main");
+      await expect(main).not.toContainText(/361|24 states/i);
+      if (route.path === "/events") {
+        const featured = page.getByRole("region", {
+          name: "Featured Upcoming Assembly",
+        });
+        await expect(featured).toContainText("10-11 December, 2026");
+        await expect(featured).toContainText(
+          "ICAR - National Academy of Agricultural Research Management (ICAR-NAARM), Rajendranagar, Hyderabad – 500030, Telangana, India",
+        );
+        await expect(featured).not.toContainText(
+          /Host institution|To be announced/i,
+        );
+      }
       expect(
-        await main.locator('a[href="#"], [data-path], a[download]').count(),
+        await main
+          .locator(
+            'a[href="#"], [data-path], a[download]:not([href="/aeetds/documents/crafns-2026-brochure.pdf"])',
+          )
+          .count(),
       ).toBe(0);
       // The existing shared ticker keeps its planned destinations; new event
       // content must use working enquiries until those submission routes exist.
@@ -116,8 +133,11 @@ test("event cards, breadcrumb, training links and refresh all work", async ({
     .click();
   await expect(page).toHaveURL("/events/crafns-2026");
   await expect(
-    page.getByRole("link", { name: "Registration Enquiry", exact: true }),
-  ).toHaveAttribute("href", /^mailto:secretaryaeetds@gmail.com\?subject=/);
+    page.getByRole("link", { name: "Registration", exact: true }),
+  ).toHaveAttribute("href", "https://forms.gle/AyASGfqcDvEtHaTV8");
+  await expect(
+    page.getByRole("link", { name: "Abstract Submission", exact: true }),
+  ).toHaveAttribute("href", "https://forms.gle/3CD99LypP1iszLF16");
   await expect(page.getByRole("main")).toContainText("To be announced");
   for (const item of routes.slice(2, 5)) {
     await page
@@ -360,4 +380,29 @@ test("all event screens remain usable with doubled text", async ({ page }) => {
       route.path,
     ).toBe(true);
   }
+});
+
+test("current conference brochure is available everywhere and downloads the actual PDF", async ({
+  page,
+  request,
+}) => {
+  const href = "/aeetds/documents/crafns-2026-brochure.pdf";
+  const response = await request.get(href);
+  expect(response.status()).toBe(200);
+  expect(response.headers()["content-type"]).toContain("application/pdf");
+  expect((await response.body()).subarray(0, 5).toString()).toBe("%PDF-");
+  for (const route of ["/", "/events", "/events/crafns-2026", "/downloads"]) {
+    await page.goto(route);
+    const brochure = page.locator(`a[href="${href}"]`).first();
+    await expect(brochure).toBeVisible();
+    await expect(brochure).toHaveAttribute(
+      "download",
+      "CRAFNS-2026-Brochure.pdf",
+    );
+  }
+  const pending = page.waitForEvent("download");
+  await page.locator(`a[href="${href}"]`).first().click();
+  const download = await pending;
+  expect(download.suggestedFilename()).toBe("CRAFNS-2026-Brochure.pdf");
+  expect(await download.failure()).toBeNull();
 });

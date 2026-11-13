@@ -1,4 +1,5 @@
 "use client";
+import BrochureDownload from "./brochure-download";
 import Link from "next/link";
 import { useSiteContent } from "../site-content";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
@@ -41,6 +42,7 @@ export default function EventCalendar() {
         endDate: item.endDate,
       }))
     : calendarConferences;
+  const upcoming = events.find((event) => event.slug === "crafns-2026");
   const [month, setMonth] = useState<CalendarMonth>({ year: 2026, month: 6 });
   const [selected, setSelected] = useState("2026-07-15");
   const focusRequested = useRef(false);
@@ -213,10 +215,13 @@ export default function EventCalendar() {
             </div>
             <div className="events-calendar-undated">
               <Eyebrow>CRAFNS-2026</Eyebrow>
-              <h3 className="mb-2 text-title-sm">Dates to be announced</h3>
+              <h3 className="mb-2 text-title-sm">
+                {upcoming?.startDate ? upcoming.dates : "Dates to be announced"}
+              </h3>
               <p className="text-body-sm text-on-surface-variant">
-                The upcoming conference has no confirmed dates, so it is not
-                placed on the calendar.
+                {upcoming?.startDate
+                  ? upcoming.shortVenue
+                  : "The upcoming conference has no confirmed dates, so it is not placed on the calendar."}
               </p>
               <Link
                 prefetch={false}
@@ -226,6 +231,9 @@ export default function EventCalendar() {
                 Upcoming Conference
                 <Icon name="arrow_forward" className="text-[18px]" />
               </Link>
+              <div className="mt-3">
+                <BrochureDownload />
+              </div>
             </div>
           </aside>
         </div>

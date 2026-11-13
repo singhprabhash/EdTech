@@ -1,14 +1,21 @@
+import BrochureDownload from "./brochure-download";
 import Link from "next/link";
-import type { Conference, EventTheme } from "../../../content/aeetds-events";
+import {
+  crafnsForms,
+  type Conference,
+  type EventTheme,
+} from "../../../content/aeetds-events";
 import { society } from "../../../content/aeetds";
 import { Action, Eyebrow, Icon } from "../ui";
 import EventImage from "./event-image";
 export function EventMetadata({
   conference,
   compact = false,
+  showHost = true,
 }: {
   conference: Conference;
   compact?: boolean;
+  showHost?: boolean;
 }) {
   const fields = [
     { label: "Dates", icon: "calendar_month", value: conference.dates },
@@ -18,7 +25,7 @@ export function EventMetadata({
       value: compact ? conference.shortVenue : conference.venue,
     },
     { label: "Mode", icon: "connected_tv", value: conference.mode },
-    ...(!compact
+    ...(!compact && showHost
       ? [
           {
             label: "Host institution",
@@ -130,11 +137,6 @@ export function ArchiveCard({ conference }: { conference: Conference }) {
         <p className="mt-4 text-body-sm text-on-surface-variant">
           {conference.organiser}.
         </p>
-        {conference.stats && (
-          <p className="mt-3 text-body-sm font-semibold text-secondary">
-            361 delegates from 24 states.
-          </p>
-        )}
         <Link
           prefetch={false}
           href={`/events/${conference.slug}`}
@@ -179,18 +181,16 @@ export function SecretariatCTA({
             <div className="events-actions mt-6">
               {upcoming && (
                 <>
-                  <Action
-                    href={`mailto:${society.email}?subject=${encodeURIComponent("CRAFNS-2026 Registration Enquiry")}`}
-                    icon="how_to_reg"
-                  >
-                    Conference Registration Enquiry
+                  <BrochureDownload />
+                  <Action href={crafnsForms.registration} icon="how_to_reg">
+                    Conference Registration
                   </Action>
                   <Action
-                    href={`mailto:${society.email}?subject=${encodeURIComponent("CRAFNS-2026 Abstract Submission Enquiry")}`}
+                    href={crafnsForms.abstractSubmission}
                     tone="light"
                     icon="article"
                   >
-                    Submit Abstract Enquiry
+                    Submit Abstract
                   </Action>
                 </>
               )}
@@ -206,9 +206,7 @@ export function SecretariatCTA({
             </div>
             {upcoming && (
               <p className="mt-4 text-body-sm text-surface-variant">
-                Online registration and abstract submission are not yet
-                available. These actions open an email enquiry to the
-                Secretariat.
+                Registration and abstract submission open in Google Forms.
               </p>
             )}
           </div>

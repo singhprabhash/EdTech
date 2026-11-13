@@ -41,7 +41,9 @@ for (const width of [360, 390, 768, 1024, 1280, 1440])
     }
     expect(errors).toEqual([]);
   });
-test("award filters and honest empty directory work", async ({ page }) => {
+test("award filters work with an image-only photograph and no awardee directory", async ({
+  page,
+}) => {
   await page.goto("/awards");
   await page
     .getByLabel("Award group", { exact: true })
@@ -49,13 +51,13 @@ test("award filters and honest empty directory work", async ({ page }) => {
   await expect(page.getByText("1 of 8 award groups displayed")).toBeVisible();
   await page.getByLabel("Award group", { exact: true }).selectOption("");
   await expect(page.getByText("8 of 8 award groups displayed")).toBeVisible();
-  await page.getByLabel("Year", { exact: true }).selectOption("2025");
-  await page.getByLabel("Search awardees").fill("Example");
+  const photograph = page.locator(".resource-awards-photo");
+  await expect(photograph.locator("img")).toBeVisible();
+  await expect(photograph.locator("figcaption")).toHaveCount(0);
   await expect(
-    page.getByText("0 confirmed records · Year: 2025 · Search: Example"),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Reset filters" }).click();
-  await expect(page.getByLabel("Search awardees")).toHaveValue("");
+    page.getByRole("heading", { name: "Past Awardees Directory" }),
+  ).toHaveCount(0);
+  await expect(page.getByLabel("Search awardees")).toHaveCount(0);
 });
 test("submit entry redirects and checklist supports keyboard and reset", async ({
   page,

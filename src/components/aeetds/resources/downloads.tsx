@@ -1,8 +1,9 @@
 "use client";
+import { crafnsBrochure } from "../../../content/aeetds-events";
 import { useSiteContent } from "../site-content";
 import { Icon } from "../ui";
 export default function Downloads() {
-  const items = useSiteContent().downloads ?? [];
+  const items = [crafnsBrochure, ...(useSiteContent().downloads ?? [])];
   return (
     <section className="resource-section">
       <div className="aeetds-container">
@@ -18,7 +19,15 @@ export default function Downloads() {
                 <p className="mb-4 text-on-surface-variant">
                   {item.description}
                 </p>
-                <a href={item.href} className="resource-inline-link">
+                <a
+                  href={item.href}
+                  download={
+                    item.href === crafnsBrochure.href
+                      ? crafnsBrochure.filename
+                      : undefined
+                  }
+                  className="resource-inline-link"
+                >
                   <Icon name="download" />
                   Download document
                 </a>

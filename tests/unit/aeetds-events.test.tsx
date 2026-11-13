@@ -16,17 +16,19 @@ import TrainingsWorkshopsPage from "../../src/components/aeetds/events/training"
 import EventCalendar from "../../src/components/aeetds/events/calendar";
 import EventImage from "../../src/components/aeetds/events/event-image";
 
-it("keeps confirmed ranges chronological and never assigns CRAFNS a date, fee or image", () => {
+it("uses approved CRAFNS logistics without inventing a host or image", () => {
   expect(pastConferences.map((item) => item.slug)).toEqual([
     "ncfahs-2026",
     "fstat-2025",
     "iacrsaegns-2024",
   ]);
-  expect(crafnsConference.startDate).toBeUndefined();
-  expect(crafnsConference.endDate).toBeUndefined();
+  expect(crafnsConference.startDate).toBe("2026-12-10");
+  expect(crafnsConference.endDate).toBe("2026-12-11");
   expect(crafnsConference.photos).toEqual([]);
-  for (const field of ["dates", "venue", "host"] as const)
-    expect(crafnsConference[field]).toBe("To be announced");
+  expect(crafnsConference.host).toBe("To be announced");
+  expect(crafnsConference.dates).toBe("10-11 December, 2026");
+  expect(crafnsConference.venue).toContain("Rajendranagar, Hyderabad – 500030");
+  expect(JSON.stringify(conferences)).not.toMatch(/361|24 states/i);
   expect(conferences.map((item) => item.themes.length)).toEqual([8, 5, 9, 7]);
   expect(trainingPillars).toHaveLength(9);
   expect(crafnsConference.themesHeading).toContain("Suggested");
@@ -53,7 +55,7 @@ it("uses all seven real photographs and exact PDF extraction provenance", () => 
     );
   }
 });
-it("links every landing archive and training route, with honest email participation actions", () => {
+it("links every landing archive and training route, with the supplied conference participation forms", () => {
   render(<EventsLanding />);
   for (const item of conferences)
     expect(
@@ -62,12 +64,13 @@ it("links every landing archive and training route, with honest email participat
   expect(
     screen.getByRole("link", { name: "Explore Training Programmes" }),
   ).toHaveAttribute("href", "/events/trainings-workshops");
-  expect(
-    screen.getByRole("link", { name: "Registration Enquiry" }),
-  ).toHaveAttribute(
+  expect(screen.getByRole("link", { name: "Registration" })).toHaveAttribute(
     "href",
-    expect.stringContaining("mailto:secretaryaeetds@gmail.com"),
+    "https://forms.gle/AyASGfqcDvEtHaTV8",
   );
+  expect(
+    screen.getByRole("link", { name: "Abstract Submission" }),
+  ).toHaveAttribute("href", "https://forms.gle/3CD99LypP1iszLF16");
   expect(
     document.querySelector(
       'a[href="#"],a[href="/submit/registration"],a[href="/submit/abstract"]',
@@ -102,7 +105,11 @@ it.each(conferences)(
     expect(document.body).not.toHaveTextContent(
       /540\+|382|18 keynote|100% peer|60%|audited|authenticated download|DOI:|ISBN:|formally adopted|registry token|3-Day Technical Schedule|MoU Finalization/,
     );
-    expect(document.querySelector('a[download],a[href="#"]')).toBeNull();
+    expect(
+      document.querySelector(
+        'a[download]:not([href="/aeetds/documents/crafns-2026-brochure.pdf"]),a[href="#"]',
+      ),
+    ).toBeNull();
   },
 );
 it("renders nine training areas without operational guarantees or fake application forms", () => {

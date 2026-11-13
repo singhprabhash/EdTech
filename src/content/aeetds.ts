@@ -1,3 +1,5 @@
+import { crafnsConference } from "./aeetds-events";
+
 // Canonical copy: AEETDS Website Content, v1.0, 30 October 2026, pp. 3–6,
 // 13–17 and 22–24. Visual composition: references/aeetds/home.html.
 export const society = {
@@ -27,7 +29,7 @@ export const navigation = [
 export const announcements = [
   {
     label: "CFP",
-    text: "Call for Papers: 3rd International Conference CRAFNS-2026 — abstracts invited. Dates and venue announced shortly.",
+    text: "Call for Papers: 3rd International Conference CRAFNS-2026 — abstracts invited. 10-11 December, 2026 · ICAR-NAARM, Hyderabad.",
     href: "/submit/guidelines",
   },
   {
@@ -47,7 +49,7 @@ export const announcements = [
   },
   {
     label: "REPORT",
-    text: "NCFAHS-2026 held 15–16 July 2026 at ICAR-CAFRI, Jhansi — 361 delegates from 24 states.",
+    text: "NCFAHS-2026 held 15–16 July 2026 at ICAR-CAFRI, Jhansi.",
     href: "/events",
   },
   {
@@ -63,7 +65,7 @@ export const slides = [
     alt: "Delegates, scientists and organisers in front of ICAR-Central Agroforestry Research Institute, Jhansi.",
     label: "NCFAHS-2026 • ICAR-CAFRI JHANSI",
     caption: "Frontiers in Agroforestry and Horticultural Sciences",
-    detail: "15–16 July 2026 • 361 delegates from 24 states.",
+    detail: "15–16 July 2026 • ICAR-CAFRI, Jhansi.",
   },
   {
     image: "/aeetds/2025_02_group_photo.jpg",
@@ -99,6 +101,8 @@ export const welcome = [
 export const conference = {
   title:
     "3rd International Conference: Advances in Agricultural and Allied Sciences for Climate-Resilient Food and Nutritional Security (CRAFNS-2026)",
+  dates: crafnsConference.dates,
+  venue: crafnsConference.venue,
   description:
     "The conference brings together scientists, academicians, policy makers, industry, students and farmers to discuss advances in agricultural and allied sciences for climate-resilient food and nutritional security.",
 };
@@ -204,7 +208,7 @@ export const news = [
     category: "CONFERENCE REPORT",
     title: "NCFAHS-2026 National Conference at ICAR-CAFRI, Jhansi",
     summary:
-      "Held 15–16 July 2026, the conference brought together 361 delegates from 24 states for scientific exchange in agroforestry and horticultural sciences.",
+      "Held 15–16 July 2026, the conference provided scientific exchange in agroforestry and horticultural sciences.",
     badge: ["JULY", "15–16", "2026"],
     note: "EVENT DATES • ICAR-CAFRI JHANSI",
     action: "Conference details",
@@ -214,9 +218,9 @@ export const news = [
     category: "CALL FOR PAPERS",
     title: "Call for Papers: CRAFNS-2026",
     summary:
-      "Abstracts invited for the hybrid international conference on climate-resilient food and nutritional security. Final dates and venue to be announced.",
+      "Abstracts invited for the hybrid international conference on climate-resilient food and nutritional security. 10-11 December, 2026 at ICAR-NAARM, Hyderabad.",
     badge: ["CRAFNS", "2026", "CALL FOR PAPERS"],
-    note: "DATES & VENUE TO BE ANNOUNCED",
+    note: "10–11 DECEMBER 2026 • ICAR-NAARM HYDERABAD",
     action: "Submit Abstract",
     href: "/submit/guidelines",
   },

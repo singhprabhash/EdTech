@@ -1,10 +1,11 @@
+import BrochureDownload from "./brochure-download";
 import {
   eventsIntroduction,
   crafnsConference,
+  crafnsForms,
   pastConferences,
   eventPhotos,
 } from "../../../content/aeetds-events";
-import { society } from "../../../content/aeetds";
 import { Action, Eyebrow, Icon } from "../ui";
 import EventBreadcrumb from "./breadcrumb";
 import EventImage from "./event-image";
@@ -76,8 +77,9 @@ export default function EventsLanding({
               <p className="mb-5 text-on-surface-variant">
                 {currentCrafns.subtitle}
               </p>
-              <EventMetadata conference={currentCrafns} />
+              <EventMetadata conference={currentCrafns} showHost={false} />
               <div className="events-actions mt-6">
+                <BrochureDownload />
                 <Action
                   href="/events/crafns-2026"
                   tone="navy"
@@ -85,22 +87,15 @@ export default function EventsLanding({
                 >
                   View Conference Details
                 </Action>
-                <Action
-                  href={`mailto:${society.email}?subject=CRAFNS-2026%20Registration%20Enquiry`}
-                  tone="light"
-                >
-                  Registration Enquiry
+                <Action href={crafnsForms.registration} tone="light">
+                  Registration
                 </Action>
-                <Action
-                  href={`mailto:${society.email}?subject=CRAFNS-2026%20Abstract%20Submission%20Enquiry`}
-                  tone="light"
-                >
-                  Abstract Submission Enquiry
+                <Action href={crafnsForms.abstractSubmission} tone="light">
+                  Abstract Submission
                 </Action>
               </div>
               <p className="mt-4 text-body-sm text-on-surface-variant">
-                Online registration and abstract submission are not yet
-                available. Enquiries open an email to the Secretariat.
+                Registration and abstract submission open in Google Forms.
               </p>
             </div>
             <aside className="events-featured-aside events-dark">
@@ -115,12 +110,6 @@ export default function EventsLanding({
               <p className="text-surface-variant">
                 Climate-resilient food and nutritional security.
               </p>
-              <div className="mt-6 border-t border-white/15 pt-5">
-                <p className="text-body-sm text-surface-variant">
-                  Dates, venue, host institution and fees
-                </p>
-                <p className="mt-2 text-title-sm">To be announced</p>
-              </div>
             </aside>
           </article>
         </div>

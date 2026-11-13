@@ -94,7 +94,11 @@ describe("About the Society content", () => {
     );
     items.forEach((item, index) => {
       const milestone = societyMilestones[index];
-      expect(brief).toContain(milestone.description);
+      // The user retired attendance figures after the archived brief was approved.
+      expect(brief.replace(" — 361 delegates from 24 states.", ".")).toContain(
+        milestone.description,
+      );
+      expect(item).not.toHaveTextContent(/361|24 states/i);
       expect(item.querySelector("time")).toHaveAttribute(
         "datetime",
         milestone.dateTime,

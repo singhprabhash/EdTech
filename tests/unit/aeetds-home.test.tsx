@@ -49,9 +49,7 @@ describe("AEETDS homepage", () => {
         decodeURIComponent(image.src).includes("/aeetds/logo.png"),
       ),
     ).not.toBeNull();
-    expect(screen.getByText(/Representing 24 states/)).toHaveTextContent(
-      "NCFAHS-2026",
-    );
+    expect(document.body).not.toHaveTextContent(/361|24 states/i);
   });
   it("opens the mobile menu, focuses a link and returns focus on Escape", () => {
     render(<Home />);

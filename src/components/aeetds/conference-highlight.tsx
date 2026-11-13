@@ -1,3 +1,4 @@
+import BrochureDownload from "./events/brochure-download";
 import { conference } from "../../content/aeetds";
 import { Action, Icon } from "./ui";
 
@@ -54,6 +55,7 @@ export default function ConferenceHighlight() {
                 subject to the official conference notice.
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
+                <BrochureDownload />
                 <Action href="/events" tone="navy" icon="article">
                   View Details
                 </Action>
@@ -79,26 +81,19 @@ export default function ConferenceHighlight() {
               </div>
               <div className="rounded bg-white p-4 text-center">
                 <p className="font-label-mono-isbn text-[11px] tracking-wider text-secondary">
-                  OFFICIAL SCHEDULE STATUS
+                  Conference Dates
                 </p>
                 <p className="mt-2 font-headline-sm text-headline-sm text-primary">
-                  Dates &amp; Venue to be Announced Shortly
+                  {conference.dates}
                 </p>
               </div>
-              <div
-                className="grid grid-cols-3 gap-2 text-center"
-                aria-label="Countdown pending confirmed conference date"
-              >
-                {["Days", "Hours", "Minutes"].map((label) => (
-                  <div key={label} className="rounded bg-white px-2 py-3">
-                    <div className="font-headline-sm text-headline-sm font-bold text-primary">
-                      --
-                    </div>
-                    <span className="text-[11px] font-semibold text-on-surface-variant uppercase">
-                      {label}
-                    </span>
-                  </div>
-                ))}
+              <div className="rounded bg-white p-4">
+                <p className="font-label-mono-isbn text-[11px] tracking-wider text-secondary">
+                  Venue
+                </p>
+                <p className="mt-2 text-body-sm leading-relaxed text-on-surface">
+                  {conference.venue}
+                </p>
               </div>
               <p className="flex items-start gap-2 rounded bg-surface-container-high p-3 text-body-sm text-on-surface-variant">
                 <Icon

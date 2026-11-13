@@ -9,7 +9,7 @@ import { eventPhotos } from "../../../content/aeetds-events";
 import { society } from "../../../content/aeetds";
 import { Action, Eyebrow, Icon } from "../ui";
 import { ResourceBreadcrumb, ResourceHero, ResourceCTA } from "./shared";
-import { AwardCatalogue, AwardeeDirectory } from "./award-catalogue";
+import { AwardCatalogue } from "./award-catalogue";
 export default function AwardsPageContent() {
   const photo = eventPhotos.ncfahs[2];
   return (
@@ -48,16 +48,6 @@ export default function AwardsPageContent() {
               sizes="100vw"
               priority
             />
-            <figcaption>
-              <Eyebrow dark>AEETDS CONFERENCE COMMUNITY</Eyebrow>
-              <p className="font-headline-sm text-headline-sm">
-                {photo.caption}
-              </p>
-              <p className="mt-2 text-body-sm">
-                NCFAHS-2026 · This photograph documents the conference, not an
-                award ceremony.
-              </p>
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -168,7 +158,6 @@ export default function AwardsPageContent() {
           </ul>
         </div>
       </section>
-      <AwardeeDirectory />
       <ResourceCTA
         title="Recognising Excellence Across Agricultural Sciences"
         text="For the prescribed nomination form, current deadlines and official award guidance, contact the Society Secretariat."

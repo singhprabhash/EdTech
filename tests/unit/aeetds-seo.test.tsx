@@ -131,8 +131,8 @@ describe("verified Society structured data", () => {
     expect(organizationSchema().telephone).toHaveLength(4);
     expect(organizationSchema()).not.toHaveProperty("address");
   });
-  it("uses canonical dates and venue for the three completed conferences only", () => {
-    for (const conference of pastConferences) {
+  it("uses canonical dates and venue for conferences with confirmed dates", () => {
+    for (const conference of [...pastConferences, crafnsConference]) {
       expect(eventSchema(conference)).toMatchObject({
         "@type": "Event",
         startDate: conference.startDate,
@@ -141,7 +141,9 @@ describe("verified Society structured data", () => {
       });
       expect(eventSchema(conference)).not.toHaveProperty("offers");
     }
-    expect(eventSchema(crafnsConference)).toBeNull();
+    expect(
+      eventSchema({ ...crafnsConference, startDate: undefined }),
+    ).toBeNull();
   });
   it("escapes script breakout sequences without changing JSON values", () => {
     const data = { name: "</script><script>alert(1)</script>&" };

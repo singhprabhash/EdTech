@@ -211,14 +211,16 @@ export function StatisticsSection() {
               NCFAHS-2026
             </Eyebrow>
             <div className="my-3">
-              <p className="font-headline-sm text-headline-sm">361 Delegates</p>
+              <p className="font-headline-sm text-headline-sm">
+                ICAR-CAFRI, Jhansi
+              </p>
               <p className="mt-2 text-body-sm text-white">
-                Representing 24 states, hosted at NCFAHS-2026, ICAR-CAFRI,
-                Jhansi.
+                National Conference on Frontiers in Agroforestry and
+                Horticultural Sciences.
               </p>
             </div>
             <p className="border-t border-white/30 pt-3 text-[11px] text-white">
-              15–16 July 2026 • Conference attendance
+              15–16 July 2026 • Conference dates
             </p>
           </div>
         </div>

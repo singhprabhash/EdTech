@@ -23,8 +23,10 @@ export function Action({
   children,
   icon,
   tone = "blue",
+  download,
 }: {
   href: string;
+  download?: string;
   children: ReactNode;
   icon?: string;
   tone?: "blue" | "navy" | "light" | "text";
@@ -40,6 +42,7 @@ export function Action({
     <Link
       prefetch={false}
       href={href}
+      download={download}
       className={`inline-flex min-h-11 items-center justify-center gap-2 rounded px-5 py-3 text-title-sm font-title-sm transition-colors ${tones[tone]}`}
     >
       {icon && <Icon name={icon} className="text-[20px]" />}

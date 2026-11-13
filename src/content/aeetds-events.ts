@@ -59,6 +59,18 @@ export const eventPhotos = {
 } as const;
 export const eventsIntroduction =
   "AEETDS organises national and international conferences, seminars, workshops and training programmes that bring together scientists, academicians, policy makers, industry, students and farmers to exchange knowledge and advance agricultural and allied sciences.";
+// Conference participation destinations supplied by the Society on 13 November 2026.
+export const crafnsBrochure = {
+  title: "CRAFNS-2026 Conference Brochure",
+  href: "/aeetds/documents/crafns-2026-brochure.pdf",
+  filename: "CRAFNS-2026-Brochure.pdf",
+  description:
+    "3rd International Conference · 10–11 December 2026 · ICAR-NAARM, Hyderabad.",
+} as const;
+export const crafnsForms = {
+  registration: "https://forms.gle/AyASGfqcDvEtHaTV8",
+  abstractSubmission: "https://forms.gle/3CD99LypP1iszLF16",
+} as const;
 export const crafnsConference: Conference = {
   slug: "crafns-2026",
   shortName: "CRAFNS-2026",
@@ -68,9 +80,12 @@ export const crafnsConference: Conference = {
     "Advancing agricultural science for climate-resilient food and nutritional security.",
   category: "international",
   status: "upcoming",
-  dates: "To be announced",
-  venue: "To be announced",
-  shortVenue: "To be announced",
+  dates: "10-11 December, 2026",
+  startDate: "2026-12-10",
+  endDate: "2026-12-11",
+  venue:
+    "ICAR - National Academy of Agricultural Research Management (ICAR-NAARM), Rajendranagar, Hyderabad – 500030, Telangana, India",
+  shortVenue: "ICAR-NAARM, Hyderabad",
   host: "To be announced",
   mode: "Hybrid — offline and online",
   organiser:
@@ -177,10 +192,6 @@ export const pastConferences: readonly Conference[] = [
       { name: "Dr. Naresh Kumar", role: "Convener · ICAR-CAFRI" },
     ],
     photos: eventPhotos.ncfahs,
-    stats: [
-      { value: "361", label: "delegates" },
-      { value: "24", label: "states" },
-    ],
   },
   {
     slug: "fstat-2025",
@@ -288,7 +299,7 @@ export const conferences: readonly Conference[] = [
   crafnsConference,
   ...pastConferences,
 ];
-export const calendarConferences = pastConferences.map(
+export const calendarConferences = conferences.map(
   ({ slug, shortName, title, startDate, endDate, dates, shortVenue }) => ({
     slug,
     shortName,

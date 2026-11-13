@@ -100,11 +100,6 @@
   object-fit: cover;
   object-position: center 45%;
 }
-.aeetds-resources .resource-awards-photo figcaption {
-  padding: 1.25rem;
-  background: var(--color-primary-dark);
-  color: white;
-}
 .aeetds-resources .resource-award-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -830,19 +825,5 @@
   }
   .aeetds-resources .resource-nomination-process li {
     flex-direction: column;
-  }
-  .aeetds-resources .resource-awards-photo {
-    display: grid;
-    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
-  }
-  .aeetds-resources .resource-awards-photo img {
-    height: 100%;
-    aspect-ratio: 16 / 9;
-  }
-  .aeetds-resources .resource-awards-photo figcaption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
   }
 }

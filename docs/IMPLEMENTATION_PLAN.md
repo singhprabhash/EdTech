@@ -1,5 +1,34 @@
 # EdTech Publications Repository Implementation Plan
 
+**Current conference brochure — 13 November 2026:** user-supplied Drive brochure
+was retrieved successfully and verified as a 17-page CRAFNS-2026 PDF. Preserve its
+original bytes under `public/aeetds/documents/` with source/hash provenance. A shared
+download action appears on Home, Events featured card/calendar, CRAFNS participation
+panels and Downloads. Same-origin links use a descriptive download filename.
+
+**Conference participation links — 13 November 2026:** the user supplied Google
+Forms destinations for Registration and Abstract Submission. The `/events` upcoming
+card and `/events/crafns-2026` participation actions use shared `crafnsForms` values,
+replacing email-enquiry links and obsolete unavailable messages. Submission takes
+place in Google Forms; no local acceptance or email-delivery claim is made.
+
+**Events logistics and attendance cleanup — 13 November 2026:** CRAFNS canonical
+records now contain the user-confirmed 10–11 December 2026 dates and full ICAR-NAARM
+venue. Featured Upcoming Assembly, event detail/calendar/schema and homepage consume
+these details; the featured card omits unconfirmed host/fee placeholders. Remove the 361-delegate/24-state claim
+from all production copy, cards, statistics and timelines. Archived references are
+preserved.
+
+**Homepage logistics — 13 November 2026:** display user-supplied dates
+10–11 December 2026 and the full ICAR-NAARM, Rajendranagar, Hyderabad venue in
+Session Logistics, replacing pending-schedule/countdown placeholders. This update
+is scoped to the homepage; event-page records remain separately maintained.
+
+**Awards cleanup — 13 November 2026:** retain the conference photograph without
+its caption panel; remove the public Past Awardees Directory section. Existing
+award groups, nomination process, fees and rules remain unchanged. The photograph
+uses the full container width at desktop sizes.
+
 **Current authorization — 8 November 2026:** project-wide AEETDS Developer Guide
 alignment supersedes older navy/global-token preservation requirements. The user
 approved self-hosted Node 24, SQLite and a persistent private disk. Current scope
