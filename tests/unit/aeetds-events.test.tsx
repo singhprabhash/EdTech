@@ -16,7 +16,7 @@ import TrainingsWorkshopsPage from "../../src/components/aeetds/events/training"
 import EventCalendar from "../../src/components/aeetds/events/calendar";
 import EventImage from "../../src/components/aeetds/events/event-image";
 
-it("uses approved CRAFNS logistics without inventing a host or image", () => {
+it("uses approved CRAFNS logistics and host without inventing an image", () => {
   expect(pastConferences.map((item) => item.slug)).toEqual([
     "ncfahs-2026",
     "fstat-2025",
@@ -25,7 +25,7 @@ it("uses approved CRAFNS logistics without inventing a host or image", () => {
   expect(crafnsConference.startDate).toBe("2026-12-10");
   expect(crafnsConference.endDate).toBe("2026-12-11");
   expect(crafnsConference.photos).toEqual([]);
-  expect(crafnsConference.host).toBe("To be announced");
+  expect(crafnsConference.host).toBe("ICAR-NAARM, Hyderabad");
   expect(crafnsConference.dates).toBe("10-11 December, 2026");
   expect(crafnsConference.venue).toContain("Rajendranagar, Hyderabad – 500030");
   expect(JSON.stringify(conferences)).not.toMatch(/361|24 states/i);

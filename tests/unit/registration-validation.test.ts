@@ -46,15 +46,18 @@ it("requires all official participant, payment and policy fields", () => {
   });
   expect(validateRegistration(valid, receipt(), "2026-11-08")).toEqual({});
 });
-it("rejects online-only exclusions without inventing fee amounts", () => {
-  for (const category of ["Corporate / Industry", "Accompanying Person"])
+it("allows online participation in all categories from the current payment notice", () => {
+  for (const category of [
+    "Corporate / Industry",
+    "Farmer / Accompanying Person",
+  ])
     expect(
       validateRegistration(
         { ...valid, category, mode: "Online" },
         receipt(),
         "2026-11-08",
       ).mode,
-    ).toBeTruthy();
+    ).toBeUndefined();
   expect(
     validateRegistration(
       {

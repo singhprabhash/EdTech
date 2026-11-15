@@ -138,7 +138,7 @@ test("event cards, breadcrumb, training links and refresh all work", async ({
   await expect(
     page.getByRole("link", { name: "Abstract Submission", exact: true }),
   ).toHaveAttribute("href", "https://forms.gle/3CD99LypP1iszLF16");
-  await expect(page.getByRole("main")).toContainText("To be announced");
+  await expect(page.getByRole("main")).not.toContainText("To be announced");
   for (const item of routes.slice(2, 5)) {
     await page
       .getByRole("navigation", { name: "Breadcrumb" })
@@ -315,7 +315,9 @@ for (const [slug, count] of [
     await page.keyboard.press("Escape");
     await expect(dialog).toBeHidden();
     await expect(first).toBeFocused();
-    expect(await page.evaluate(() => document.body.style.overflow)).toBe("");
+    await expect
+      .poll(() => page.evaluate(() => document.body.style.overflow))
+      .toBe("");
     await first.click();
     await page.mouse.click(2, 2);
     await expect(dialog).toBeHidden();

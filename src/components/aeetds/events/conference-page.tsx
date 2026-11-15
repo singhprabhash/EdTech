@@ -1,3 +1,4 @@
+import { conferenceDeadlines } from "../../../content/aeetds-payment";
 import BrochureDownload from "./brochure-download";
 import Link from "next/link";
 import { crafnsForms, type Conference } from "../../../content/aeetds-events";
@@ -127,8 +128,8 @@ export function ConferenceHero({ conference }: { conference: Conference }) {
                 agricultural economics.
               </p>
               <p className="mt-5 border-t border-white/15 pt-4 text-body-sm text-surface-variant">
-                Final themes, important dates and conference details are to be
-                announced.
+                Refer to the conference brochure and published important dates
+                for the programme and submission schedule.
               </p>
             </div>
           </div>
@@ -145,13 +146,28 @@ export function ConferenceHero({ conference }: { conference: Conference }) {
                 <dt className="text-label-md text-on-surface-variant">
                   Registration fees
                 </dt>
-                <dd className="mt-2 font-semibold">To be announced</dd>
+                <dd className="mt-2 font-semibold">
+                  <Link
+                    href="/submit/registration#registration-fees"
+                    className="events-inline-link"
+                  >
+                    View category-wise registration fees
+                  </Link>
+                </dd>
               </div>
               <div className="rounded bg-white p-4">
                 <dt className="text-label-md text-on-surface-variant">
                   Important dates
                 </dt>
-                <dd className="mt-2 font-semibold">To be announced</dd>
+                <dd className="mt-2">
+                  <ul className="space-y-3 text-body-sm">
+                    {conferenceDeadlines.map((item) => (
+                      <li key={item.label}>
+                        {item.label}: <strong>{item.date}</strong>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
               </div>
             </dl>
           )}

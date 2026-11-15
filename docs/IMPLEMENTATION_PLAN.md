@@ -1,5 +1,19 @@
 # EdTech Publications Repository Implementation Plan
 
+**CRAFNS payment notice — 13 November 2026:** user-supplied three-page PDF is the
+authority for seven early/spot registration fee rows, deadlines, Society bank/UPI
+and extracted QR, award contributions, sponsorship/exhibition amounts and benefits,
+registration workflow and policies. `aeetds-payment.ts` is the canonical source;
+update Registration, conference metadata, Awards and the conflicting FAQ/refund
+wording. Publish the unchanged source PDF with hash/QR provenance in Downloads.
+Keep Google Forms as the official registration path; local persistence availability
+remains separately configured. No payment gateway or automatic payment verification.
+
+**Publication journal list — 13 November 2026:** add the 17 user-supplied journal
+titles from `journalTitles` to `/publications`, preserving their order and wording.
+Use the existing planned-journals context and a responsive list; no launch dates,
+ISSNs, editorial details, indexing or submission availability are invented.
+
 **Current conference brochure — 13 November 2026:** user-supplied Drive brochure
 was retrieved successfully and verified as a 17-page CRAFNS-2026 PDF. Preserve its
 original bytes under `public/aeetds/documents/` with source/hash provenance. A shared

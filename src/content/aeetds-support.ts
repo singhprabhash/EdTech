@@ -1,3 +1,4 @@
+import { registrationTransferPolicy } from "./aeetds-payment";
 // Official Website Content PDF pp.27–29; enquiry categories/fields p.33 (B8).
 import { society } from "./aeetds";
 export const contactInformation = {
@@ -77,8 +78,7 @@ export const faqs: readonly Faq[] = [
     id: "registration-refund",
     category: "logistics",
     question: "Is the registration fee refundable?",
-    answer:
-      "No. Registration and award contribution fees are non-refundable and non-transferable.",
+    answer: `No. Registration and award contribution fees are non-refundable. For CRAFNS-2026: ${registrationTransferPolicy}`,
   },
   {
     id: "participant-certificate",
@@ -156,7 +156,7 @@ export const policies: readonly Policy[] = [
     title: "Refund and Cancellation Policy",
     icon: "receipt_long",
     paragraphs: [
-      "Registration fees, membership fees and award contribution fees are non-refundable and non-transferable.",
+      `Registration fees, membership fees and award contribution fees are non-refundable. Membership fees remain non-transferable. For CRAFNS-2026: ${registrationTransferPolicy}`,
       "If AEETDS cancels an event, registered participants will be offered a full refund or a transfer to the next event.",
       "Payments made twice by mistake are refunded after verification, less bank charges.",
     ],

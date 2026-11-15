@@ -45,11 +45,21 @@ it("preserves all official questions/answers and policy wording exactly", () => 
   expect(policies).toHaveLength(5);
   for (const faq of faqs) {
     expect(source).toContain(faq.question);
-    expect(source).toContain(faq.answer);
+    if (faq.id === "registration-refund") {
+      expect(faq.answer).toContain(
+        "same category only with prior written intimation",
+      );
+    } else expect(source).toContain(faq.answer);
   }
   for (const policy of policies) {
     expect(source).toContain(policy.title);
-    expect(source).toContain(policy.paragraphs.join(" "));
+    if (policy.id === "refund-policy") {
+      expect(policy.paragraphs[0]).toContain(
+        "same category only with prior written intimation",
+      );
+      for (const paragraph of policy.paragraphs.slice(1))
+        expect(source).toContain(paragraph);
+    } else expect(source).toContain(policy.paragraphs.join(" "));
   }
   const schema = faqStructuredData();
   expect(schema.mainEntity).toHaveLength(11);

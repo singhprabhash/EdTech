@@ -16,4 +16,25 @@ export const chapterPublication =
 export const magazineCopy =
   "A monthly magazine of popular science articles on agriculture, environment, entrepreneurship and rural development, written for students, extension workers and farmers. Call for articles will be announced on this page.";
 export const journalCopy =
-  "The Society plans to launch a peer-reviewed research journal. Details of the editorial board, scope and submission system will be published here once the journal is launched.";
+  "The Society plans to launch peer-reviewed research journals. Details of the editorial boards, scope and submission systems will be published here once the journals are launched.";
+
+// Journal titles supplied by the Society on 13 November 2026.
+export const journalTitles = [
+  "Journal of Crop, Soil and Climate Sciences",
+  "International Journal of Crop Genetic Resources and Seed Science",
+  "International Journal of Insect, Pathogen and Nematode Management",
+  "International Journal of Horticultural Production and Postharvest Management",
+  "Journal of Agroforestry and Forest Resource Sciences",
+  "International Journal of Extension Science, Economics and Enterprise",
+  "Journal of Agricultural Biosciences and Agrochemicals",
+  "Journal of Agri-Genomics, Biotechnology and Bioinformatics",
+  "International Journal of Agricultural Data Science and Informatics",
+  "International Journal of Veterinary Biomedical and Clinical Sciences",
+  "Journal of Livestock Genetics, Nutrition and Production Systems",
+  "Journal of Dairy Process Science and Technology",
+  "International Journal of Farm, Food, Water and Energy Engineering",
+  "International Journal of Blue Food and Fisheries Sciences",
+  "International Journal of Apparel Science and Textile Innovation",
+  "Journal of Community Extension and Communication Studies",
+  "International Journal of Nutrition, Human Development and Consumer Sciences",
+] as const;

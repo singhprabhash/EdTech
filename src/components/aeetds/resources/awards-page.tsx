@@ -74,8 +74,8 @@ export default function AwardsPageContent() {
             <h3 className="mb-2 text-title-sm">No payment at nomination</h3>
             <p>
               Pay the award contribution fee only after written confirmation of
-              your award by email. The nomination deadline and current fee
-              validity are awaiting confirmation.
+              your award by email. The CRAFNS-2026 nomination deadline is 25
+              November 2026.
             </p>
           </div>
           <div className="resource-actions mt-6">
@@ -102,31 +102,30 @@ export default function AwardsPageContent() {
             Award Contribution Fees
           </h2>
           <div className="resource-notice mb-5">
-            <strong>Pending confirmation of current validity.</strong>
+            <strong>CRAFNS-2026 award contribution fees.</strong>
             <p className="mt-2">
-              The figures below are from the official content document. AEETDS
-              must confirm that they are current before payment. Do not pay at
-              nomination.
+              Conference registration is mandatory for all award nominees.
+              Submit your bio-data and completed nomination form to the
+              Secretary by 25 November 2026. Pay the award contribution only
+              after official selection confirmation by email.
             </p>
           </div>
           <div className="resource-table-frame">
             <table
               className="resource-fee-table"
-              aria-label="Award contribution fees pending confirmation"
+              aria-label="CRAFNS-2026 award contribution fees"
             >
               <thead>
                 <tr>
                   <th scope="col">Category</th>
-                  <th scope="col">Offline</th>
-                  <th scope="col">Online</th>
+                  <th scope="col">Contribution Fee</th>
                 </tr>
               </thead>
               <tbody>
                 {awardFees.map((row) => (
                   <tr key={row.category}>
                     <th scope="row">{row.category}</th>
-                    <td>{row.offline}</td>
-                    <td>{row.online}</td>
+                    <td>{row.contribution}</td>
                   </tr>
                 ))}
               </tbody>

@@ -6,7 +6,7 @@ export const registrationCategories = [
   "Corporate / Industry",
   "International Participant",
   "International Student / Scholar",
-  "Accompanying Person",
+  "Farmer / Accompanying Person",
 ] as const;
 export type RegistrationValues = {
   fullName: string;
@@ -108,11 +108,6 @@ export function validateRegistration(
     errors.category = "Select a participant category.";
   if (!["Offline", "Online"].includes(values.mode))
     errors.mode = "Select a participation mode.";
-  if (
-    values.mode === "Online" &&
-    ["Corporate / Industry", "Accompanying Person"].includes(values.category)
-  )
-    errors.mode = "Online participation is not applicable to this category.";
   if (!["Oral", "Poster", "Attending only"].includes(values.presentation))
     errors.presentation = "Select a presentation option.";
   if (values.email && !isPlainMailbox(values.email))

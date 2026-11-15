@@ -21,7 +21,11 @@ for (const width of [360, 390, 768, 1024, 1280, 1440])
         path,
       ).toBe(true);
       expect(
-        await page.locator('main a[href="#"],main a[download]').count(),
+        await page
+          .locator(
+            'main a[href="#"],main a[download]:not([href="/aeetds/documents/crafns-2026-registration-payment.pdf"])',
+          )
+          .count(),
       ).toBe(0);
       if (path.startsWith("/submit/")) {
         const active = page
@@ -36,6 +40,16 @@ for (const width of [360, 390, 768, 1024, 1280, 1440])
             }),
           )
           .toBe(true);
+      }
+      if (path === "/publications") {
+        const journals = page.getByRole("list", { name: "Journal titles" });
+        await expect(journals.getByRole("listitem")).toHaveCount(17);
+        await expect(journals.getByRole("listitem").first()).toHaveText(
+          "Journal of Crop, Soil and Climate Sciences",
+        );
+        await expect(journals.getByRole("listitem").last()).toHaveText(
+          "International Journal of Nutrition, Human Development and Consumer Sciences",
+        );
       }
       await expect(page.getByRole("contentinfo")).toBeVisible();
     }
@@ -88,7 +102,7 @@ test("registration validates, retains prepared details and never claims submissi
 }) => {
   await page.goto("/submit/registration");
   await expect(
-    page.getByText("Online submission is not yet available.", { exact: true }),
+    page.getByText("Local submission is not yet available.", { exact: true }),
   ).toBeVisible();
   const submit = page.getByRole("button", {
     name: "Submit Registration",
@@ -181,4 +195,49 @@ test("resource text can enlarge and guideline anchors clear the sticky navigatio
       }),
     )
     .toBe(true);
+});
+
+test("published payment notice supplies fees, bank details, deadlines and the downloadable source", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/submit/registration");
+  const fees = page.getByRole("table", {
+    name: "CRAFNS-2026 registration fees",
+  });
+  await expect(fees.getByRole("row")).toHaveCount(8);
+  await expect(
+    fees.getByRole("columnheader", { name: "On or before 30 Nov 2026" }),
+  ).toBeVisible();
+  await expect(
+    fees.getByRole("row", { name: /Online Participation/ }),
+  ).toContainText("₹1,500");
+  await expect(
+    fees.getByRole("row", { name: /Online Participation/ }),
+  ).toContainText("₹2,000");
+  await expect(page.getByText("77300100025568", { exact: true })).toBeVisible();
+  await expect(page.getByText("BARB0VJMOHI", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Online Registration", exact: true }),
+  ).toHaveAttribute("href", "https://forms.gle/AyASGfqcDvEtHaTV8");
+  const qr = page.getByRole("img", {
+    name: /Google Pay and PhonePe payment QR/,
+  });
+  await qr.scrollIntoViewIfNeeded();
+  await qr.evaluate((element) => (element as HTMLImageElement).decode());
+  const href = "/aeetds/documents/crafns-2026-registration-payment.pdf";
+  const response = await request.get(href);
+  expect(response.status()).toBe(200);
+  expect((await response.body()).subarray(0, 5).toString()).toBe("%PDF-");
+  const pending = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Download Payment Details" }).click();
+  const download = await pending;
+  expect(download.suggestedFilename()).toBe(
+    "CRAFNS-2026-Registration-and-Payment.pdf",
+  );
+  expect(await download.failure()).toBeNull();
+  await page.goto("/awards");
+  await expect(
+    page.getByRole("row", { name: /All other Indian participants/ }),
+  ).toHaveText(/₹6,000/);
 });

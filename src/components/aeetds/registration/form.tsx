@@ -151,16 +151,16 @@ export default function RegistrationForm() {
         <strong>
           {securityState.security.enabled
             ? "Online registration submission is available."
-            : "Online submission is not yet available."}
+            : "Local submission is not yet available."}
         </strong>
         <p className="mt-2">
           {securityState.security.enabled ? (
-            "Submit an existing official receipt with your details. Application receipt does not confirm payment; bank instructions and current fees still require official confirmation."
+            "Submit your receipt with your details. Application receipt does not confirm payment; confirmation follows verification by the Society."
           ) : (
             <>
               You can prepare this form, but it will not send a registration or
-              upload your receipt. Do not make a payment using this preview;
-              fees and bank instructions await official confirmation.
+              upload your receipt. Use the official Google registration form
+              linked above to complete conference registration.
             </>
           )}
         </p>
@@ -272,13 +272,6 @@ export default function RegistrationForm() {
               options={["Offline", "Online"]}
               required
             />
-            {["Corporate / Industry", "Accompanying Person"].includes(
-              values.category,
-            ) && (
-              <p className="resource-notice md:col-span-2">
-                Online participation is not applicable to this category.
-              </p>
-            )}
             <RegistrationField
               {...props}
               name="member"
@@ -352,10 +345,9 @@ export default function RegistrationForm() {
                   type="date"
                 />
                 <p className="text-body-sm text-on-surface-variant md:col-span-2">
-                  Accommodation is on payment and subject to availability.
-                  Conference dates are not yet announced; dates may be left
-                  unspecified. If providing dates, enter both arrival and
-                  departure.
+                  Accommodation is on payment and subject to availability. The
+                  conference is on 10–11 December 2026. Arrival and departure
+                  dates are optional; if providing dates, enter both.
                 </p>
               </>
             )}

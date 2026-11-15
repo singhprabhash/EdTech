@@ -1,0 +1,9 @@
+{
+  "source": "CRAFNS-2026_Registration_and_Payment.pdf",
+  "suppliedOn": "2026-11-13",
+  "pdfSha256": "54aacc0e354c302dfb60b0ee7b7b4d26be7b2f91b50f56c4c685a5820641d01f",
+  "pages": 3,
+  "qr": "crafns-2026-payment-qr.png",
+  "qrSha256": "cebb51f8232ca63f41a806bb3cb32f38f10a4d39f7246c20afabae06453fe5dc",
+  "qrSource": "Poppler pdfimages extraction, page 2, image object 16; original combined Google Pay / PhonePe image retained."
+}

@@ -1,3 +1,4 @@
+import { awardContributionFees } from "./aeetds-payment";
 // Canonical AEETDS content, PDF pages 15–16. Shorthand award lists retain the
 // source's grouping and wording rather than inventing additional designations.
 export type AwardGroup = {
@@ -113,11 +114,7 @@ export const nominationSteps = [
   "Do not pay any fee at the time of nomination. Pay the award contribution fee only after you receive written confirmation of your award by email.",
   "For thesis and dissertation awards, send only the abstract, summary, conclusion and links to papers published from the thesis — not the full thesis. This protects your unpublished research.",
 ] as const;
-export const awardFees = [
-  { category: "Students", offline: "₹5,000", online: "₹5,000" },
-  { category: "Other participants", offline: "₹6,000", online: "₹5,000" },
-  { category: "Foreign participants", offline: "US$150", online: "US$150" },
-] as const;
+export const awardFees = awardContributionFees;
 export const awardRules = [
   {
     title: "Young Professionals",

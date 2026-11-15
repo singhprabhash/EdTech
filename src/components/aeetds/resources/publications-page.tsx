@@ -7,6 +7,7 @@ import {
   chapterPublication,
   magazineCopy,
   journalCopy,
+  journalTitles,
 } from "../../../content/aeetds-publications";
 import { society } from "../../../content/aeetds";
 import { Action, Eyebrow, Icon } from "../ui";
@@ -157,7 +158,7 @@ export default function PublicationsPageContent() {
         <div className="aeetds-container">
           <Eyebrow>FUTURE PUBLICATIONS</Eyebrow>
           <h2 id="future-publications-title" className="resource-heading mb-6">
-            Magazine &amp; Journal
+            Magazine &amp; Journals
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <article className="resource-future-publication">
@@ -172,16 +173,33 @@ export default function PublicationsPageContent() {
             <article className="resource-future-publication">
               <span className="resource-pending">Planned</span>
               <h3 className="mt-4 mb-4 font-headline-md text-headline-md">
-                AEETDS Journal
+                AEETDS Journals
               </h3>
               <p className="leading-relaxed text-on-surface-variant">
                 {journalCopy}
               </p>
               <p className="mt-4 text-body-sm font-semibold text-primary">
-                The journal has not launched and is not accepting submissions.
+                The journals have not launched and are not accepting
+                submissions.
               </p>
             </article>
           </div>
+          <h3 className="mt-8 mb-4 font-headline-sm text-headline-sm text-primary">
+            List of Journals
+          </h3>
+          <ul
+            aria-label="Journal titles"
+            className="grid grid-cols-1 gap-3 md:grid-cols-2"
+          >
+            {journalTitles.map((title) => (
+              <li
+                key={title}
+                className="rounded-lg border border-outline-variant bg-white p-4 text-body-md leading-relaxed text-on-surface"
+              >
+                {title}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
       <ResourceCTA

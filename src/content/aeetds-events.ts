@@ -86,11 +86,10 @@ export const crafnsConference: Conference = {
   venue:
     "ICAR - National Academy of Agricultural Research Management (ICAR-NAARM), Rajendranagar, Hyderabad – 500030, Telangana, India",
   shortVenue: "ICAR-NAARM, Hyderabad",
-  host: "To be announced",
+  host: "ICAR-NAARM, Hyderabad",
   mode: "Hybrid — offline and online",
-  organiser:
-    "AEETDS, Lucknow, in technical collaboration with the host institution",
-  collaborators: [],
+  organiser: "AEETDS, Lucknow, in collaboration with ICAR-NAARM, Hyderabad",
+  collaborators: ["ICAR-NAARM, Hyderabad"],
   overview:
     "Food and nutritional security is under pressure from rising temperatures, erratic rainfall, degraded soils and shrinking water supplies. CRAFNS-2026 brings together scientists, academicians, policy makers, industry, students and farmers to discuss advances across the agricultural and allied sciences — crop improvement, horticulture, natural resource management, plant protection, animal and fisheries sciences, food technology, digital agriculture and agri-business — that can keep farms productive and diets nutritious under a changing climate.",
   themesHeading: "Suggested Scientific Sub-Themes",

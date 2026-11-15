@@ -1,4 +1,3 @@
-import { registrationCategories } from "../domain/registration";
 export const guidelinesSections = [
   { id: "abstract", label: "Abstract Protocol", icon: "description" },
   { id: "extended-summary", label: "Extended Summary", icon: "article" },
@@ -106,68 +105,11 @@ export const authorChecklist = [
   "Where applicable, my poster follows the 90 × 120 cm portrait layout, identification and typography requirements.",
   "I have checked the conference registration requirements and the relevant instructions before submission.",
 ] as const;
-export const registrationIntroduction =
-  "Registration is required to attend, present, publish an abstract or receive an award at any AEETDS event. An abstract is included in the Book of Abstracts only after the registration fee has been received.";
-export const registrationFeeRows = registrationCategories.map(
-  (category, index) => ({
-    category,
-    offline: "To be announced",
-    online: index === 2 || index === 5 ? "Not applicable" : "To be announced",
-  }),
-);
-export const registrationInclusions = [
-  {
-    icon: "backpack",
-    title: "Conference Kit",
-    text: "The registration fee covers the conference kit.",
-  },
-  {
-    icon: "restaurant",
-    title: "Working Meals",
-    text: "Working meals include tea and lunch, and dinner where stated.",
-  },
-  {
-    icon: "workspace_premium",
-    title: "Certificate",
-    text: "The registration fee covers the certificate.",
-  },
-  {
-    icon: "hotel",
-    title: "Accommodation",
-    text: "Accommodation can be arranged on payment, subject to availability.",
-  },
-] as const;
-export const sponsorshipTiers = [
-  "Platinum",
-  "Diamond",
-  "Gold",
-  "Silver",
-  "Bronze",
-] as const;
-export const sponsorshipBenefits = [
-  "Logo display on the banner, website and conference material",
-  "A stall at the exhibition",
-  "Complimentary registrations as per category",
-  "Advertisements in the souvenir",
-] as const;
-export const advertisementFormats = [
-  "Front inside cover (colour)",
-  "Back inside cover (colour)",
-  "Full page (colour)",
-  "Full page (black and white)",
-] as const;
-export const registrationSteps = [
-  "Review the confirmed category and fee.",
-  "Complete the registration form.",
-  "Pay through officially verified payment instructions.",
-  "Upload the receipt (screenshot or PDF) with the transaction reference (UTR) number.",
-  "Receive an email receipt after payment verification.",
-] as const;
-export const paymentPolicies = [
-  "Registration and award contribution fees are non-refundable.",
-  "Fees are non-transferable.",
-  "A receipt is issued by email after the payment is verified.",
-  "An abstract is included in the Book of Abstracts only after the registration fee has been received.",
-] as const;
-export const registrationPolicyAcknowledgement =
-  "I acknowledge the registration and payment policies, including non-refundable and non-transferable fees and receipt issuance after payment verification.";
+export {
+  registrationIntroduction,
+  registrationFeeRows,
+  registrationInclusions,
+  registrationSteps,
+  paymentPolicies,
+  registrationPolicyAcknowledgement,
+} from "./aeetds-payment";

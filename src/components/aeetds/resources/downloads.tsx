@@ -1,9 +1,14 @@
 "use client";
+import { paymentDocument } from "../../../content/aeetds-payment";
 import { crafnsBrochure } from "../../../content/aeetds-events";
 import { useSiteContent } from "../site-content";
 import { Icon } from "../ui";
 export default function Downloads() {
-  const items = [crafnsBrochure, ...(useSiteContent().downloads ?? [])];
+  const items = [
+    crafnsBrochure,
+    paymentDocument,
+    ...(useSiteContent().downloads ?? []),
+  ];
   return (
     <section className="resource-section">
       <div className="aeetds-container">
@@ -24,7 +29,9 @@ export default function Downloads() {
                   download={
                     item.href === crafnsBrochure.href
                       ? crafnsBrochure.filename
-                      : undefined
+                      : item.href === paymentDocument.href
+                        ? paymentDocument.filename
+                        : undefined
                   }
                   className="resource-inline-link"
                 >

@@ -1,16 +1,16 @@
-import { SubmissionAvailability } from "../submission-security";
 import Image from "next/image";
 import {
   registrationIntroduction,
   registrationFeeRows,
   registrationInclusions,
-  sponsorshipTiers,
-  sponsorshipBenefits,
-  advertisementFormats,
+  sponsorshipOptions,
+  bankDetails,
+  conferenceDeadlines,
+  paymentDocument,
   registrationSteps,
   paymentPolicies,
-} from "../../../content/aeetds-submission";
-import { eventPhotos } from "../../../content/aeetds-events";
+} from "../../../content/aeetds-payment";
+import { crafnsForms, eventPhotos } from "../../../content/aeetds-events";
 import { society } from "../../../content/aeetds";
 import { Action, Eyebrow, Icon } from "../ui";
 import RegistrationForm from "../registration/form";
@@ -27,14 +27,10 @@ export function PaymentDetailsPanel() {
         <h2 id="payment-details-title" className="resource-heading mb-5">
           Payment Details &amp; Bank Transfer
         </h2>
-        <div className="resource-notice mb-6">
-          <strong>Bank instructions are pending Society verification.</strong>
-          <p className="mt-2">
-            The official content requires verification against the bank passbook
-            before publication. Transfer coordinates are withheld until that
-            verification is confirmed. Do not make a payment using this preview.
-          </p>
-        </div>
+        <p className="mb-6 text-on-surface-variant">
+          Pay by bank transfer (NEFT / RTGS / IMPS) or UPI using the Society
+          account below.
+        </p>
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12">
           <div className="resource-payment-pending lg:col-span-8">
             <h3 className="mb-5 flex items-center gap-2 text-title-md">
@@ -45,34 +41,34 @@ export function PaymentDetailsPanel() {
               Bank Payment Instructions
             </h3>
             <dl>
-              {[
-                "Account name",
-                "Bank and branch",
-                "Account number",
-                "IFSC",
-              ].map((label) => (
-                <div key={label} className="resource-payment-row">
-                  <dt>{label}</dt>
-                  <dd>Withheld pending verification</dd>
+              {bankDetails.map((item) => (
+                <div key={item.label} className="resource-payment-row">
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
                 </div>
               ))}
             </dl>
-            <a
-              className="resource-inline-link mt-5"
-              href={`mailto:${society.email}?subject=Verified%20Registration%20Payment%20Instructions`}
-            >
-              Request Verified Instructions
-              <Icon name="arrow_forward" className="text-[18px]" />
-            </a>
+            <p className="mt-5 text-body-sm leading-relaxed">
+              After payment, email your transaction ID / UTR number, payment
+              screenshot and registration form to {society.email}. Include your
+              full name and participant category.
+            </p>
           </div>
           <aside className="resource-qr-pending lg:col-span-4">
-            <Icon name="lock" className="mb-4 text-[40px] text-secondary" />
             <h3 className="mb-3 font-headline-sm text-headline-sm">
-              UPI / QR Unavailable
+              Scan to Pay (UPI)
             </h3>
-            <p className="text-body-sm leading-relaxed text-on-surface-variant">
-              No approved UPI identifier or QR image has been provided. There is
-              no online payment gateway on this page.
+            <Image
+              src="/aeetds/documents/crafns-2026-payment-qr.png"
+              alt="Google Pay and PhonePe payment QR codes supplied by AEETDS for 7408206291"
+              width={359}
+              height={193}
+              unoptimized
+              className="h-auto w-full max-w-sm bg-white"
+            />
+            <p className="mt-4 text-body-sm leading-relaxed text-on-surface-variant">
+              Google Pay / PhonePe at 7408206291. Payment confirmation is sent
+              only after verification by the Society.
             </p>
           </aside>
         </div>
@@ -101,14 +97,23 @@ export default function RegistrationPageContent() {
               Registration Availability
             </h2>
             <p className="text-body-sm leading-relaxed text-on-surface-variant">
-              CRAFNS-2026 registration fees will be announced by AEETDS. Bank
-              instructions await official verification.{" "}
-              <SubmissionAvailability
-                upload
-                available="You can submit an existing official receipt using the registration form."
-                unavailable="Online submission is not yet available."
-              />
+              Register for CRAFNS-2026 through the official Google Form after
+              paying the applicable fee. Confirmation follows payment
+              verification by the Society.
             </p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Action href={crafnsForms.registration} icon="how_to_reg">
+                Online Registration
+              </Action>
+              <Action
+                href={paymentDocument.href}
+                download={paymentDocument.filename}
+                tone="light"
+                icon="download"
+              >
+                Download Payment Details
+              </Action>
+            </div>
             <a
               className="resource-inline-link mt-4"
               href="#registration-process"
@@ -137,30 +142,39 @@ export default function RegistrationPageContent() {
               <thead>
                 <tr>
                   <th scope="col">Category</th>
-                  <th scope="col">Offline</th>
-                  <th scope="col">Online</th>
+                  <th scope="col">On or before 30 Nov 2026</th>
+                  <th scope="col">
+                    Spot
+                    <span className="sr-only sm:not-sr-only">
+                      {" "}
+                      Registration
+                    </span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {registrationFeeRows.map((row) => (
                   <tr key={row.category}>
                     <th scope="row">{row.category}</th>
-                    <td>{row.offline}</td>
-                    <td>{row.online}</td>
+                    <td>{row.early}</td>
+                    <td>{row.spot}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="resource-notice mt-5">
-            <strong>
-              CRAFNS-2026 registration fees will be announced by AEETDS.
-            </strong>
-            <p className="mt-2">
-              No current fee amount is confirmed. Historical 2025 fees are not
-              used as 2026 prices.
-            </p>
-          </div>
+          <p className="mt-5 text-body-sm text-on-surface-variant">
+            Online participation fees apply to all participant categories.
+          </p>
+          <h3 className="mt-8 mb-4 text-title-md">Important Dates</h3>
+          <dl className="grid gap-3 md:grid-cols-2">
+            {conferenceDeadlines.map((item) => (
+              <div key={item.label} className="resource-rule-card">
+                <dt className="text-on-surface-variant">{item.label}</dt>
+                <dd className="mt-2 font-semibold">{item.date}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
       <section
@@ -207,57 +221,28 @@ export default function RegistrationPageContent() {
         <div className="aeetds-container">
           <Eyebrow>INSTITUTIONAL SUPPORT</Eyebrow>
           <h2 id="sponsorship-title" className="resource-heading mb-5">
-            Sponsorship &amp; Souvenir Advertisement
+            Sponsorship &amp; Exhibition
           </h2>
-          <ul className="resource-sponsorship-grid">
-            {sponsorshipTiers.map((tier, index) => (
-              <li key={tier}>
-                <Icon
-                  name={
-                    [
-                      "diamond",
-                      "workspace_premium",
-                      "military_tech",
-                      "stars",
-                      "handshake",
-                    ][index]
-                  }
-                  className="mb-3 text-secondary"
-                />
+          <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {sponsorshipOptions.map((option) => (
+              <li key={option.title} className="resource-rule-card">
                 <h3 className="mb-3 font-headline-sm text-headline-sm">
-                  {tier} Sponsor
+                  {option.title}
                 </h3>
-                <p className="text-body-sm text-on-surface-variant">
-                  Contribution
+                <p className="mb-3 font-semibold text-primary">
+                  {option.amount}
                 </p>
-                <p className="mt-1 font-semibold">To be announced</p>
+                <p className="text-body-sm text-on-surface-variant">
+                  {option.benefits}
+                </p>
               </li>
             ))}
           </ul>
-          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="resource-rule-card">
-              <h3 className="mb-4 text-title-md">Sponsorship Benefits</h3>
-              <ul className="list-inside list-disc space-y-3 text-on-surface-variant">
-                {sponsorshipBenefits.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <p className="mt-4 text-body-sm text-on-surface-variant">
-                Specific contributions and complimentary registrations by tier
-                are to be announced.
-              </p>
-            </div>
-            <div className="resource-rule-card">
-              <h3 className="mb-4 text-title-md">
-                Souvenir Advertisement Formats
-              </h3>
-              <ul className="list-inside list-disc space-y-3 text-on-surface-variant">
-                {advertisementFormats.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <p className="mt-6 text-on-surface-variant">
+            Customised sponsorship of conference kits, sessions, awards,
+            lunch/dinner or the cultural evening is also welcome. Contact the
+            Organising Secretaries for details.
+          </p>
         </div>
       </section>
       <PaymentDetailsPanel />
@@ -280,9 +265,9 @@ export default function RegistrationPageContent() {
             ))}
           </ol>
           <div className="resource-notice mt-6">
-            The workflow above applies when fees, payment instructions and
-            submission are officially available. The form below is currently a
-            preparation interface only.
+            Complete your registration through the official Google Form and
+            upload your receipt there. The local preparation form below does not
+            confirm registration or payment.
           </div>
         </div>
       </section>
@@ -300,6 +285,14 @@ export default function RegistrationPageContent() {
           <RegistrationForm />
         </div>
       </section>
+      <div className="aeetds-container events-actions my-6">
+        <Action href={crafnsForms.registration}>
+          Complete Online Registration
+        </Action>
+        <Action href={crafnsForms.abstractSubmission} tone="light">
+          Abstract Submission
+        </Action>
+      </div>
       <section
         className="resource-section bg-white"
         aria-labelledby="payment-policies-title"
@@ -315,9 +308,13 @@ export default function RegistrationPageContent() {
                 <span className="resource-icon">
                   <Icon
                     name={
-                      ["policy", "swap_horiz", "mark_email_read", "article"][
-                        index
-                      ]
+                      [
+                        "policy",
+                        "swap_horiz",
+                        "article",
+                        "mark_email_read",
+                        "info",
+                      ][index]
                     }
                   />
                 </span>
@@ -331,7 +328,7 @@ export default function RegistrationPageContent() {
       </section>
       <ResourceCTA
         title="Questions About Registration or Payment?"
-        text="For current fees, verified payment instructions and registration guidance, contact the Society Secretariat."
+        text="For payment or registration questions, contact the Society Secretariat."
         subject="CRAFNS-2026 Registration and Payment Enquiry"
       >
         <Action href="/submit/guidelines" tone="light">
