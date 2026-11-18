@@ -202,3 +202,57 @@ test("landscape mobile menu keeps the last link visible with 200 percent text", 
   const bounds = await contact.boundingBox();
   expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(375);
 });
+
+test("conference registration strip follows NewsTicker and supports link, pause and reduced motion", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const news = page.getByRole("region", { name: "Announcements", exact: true });
+  const strip = page.getByRole("region", {
+    name: "Conference registration announcement",
+  });
+  expect(
+    await news.evaluate((el) =>
+      el.nextElementSibling?.getAttribute("aria-label"),
+    ),
+  ).toBe("Conference registration announcement");
+  const link = strip.getByRole("link");
+  await expect(link).toHaveAttribute(
+    "href",
+    "https://forms.gle/AyASGfqcDvEtHaTV8",
+  );
+  await expect(link).toContainText("CRAFNS-2026");
+  const track = strip.locator(".aeetds-ticker-track");
+  await strip.hover();
+  await expect
+    .poll(() => track.evaluate((el) => getComputedStyle(el).animationPlayState))
+    .toBe("paused");
+  expect(
+    await strip.evaluate((el) => getComputedStyle(el).backgroundColor),
+  ).toBe("rgba(0, 0, 0, 0)");
+  expect(await strip.evaluate((el) => getComputedStyle(el).color)).toBe(
+    "rgb(194, 65, 12)",
+  );
+  await strip
+    .getByRole("button", { name: "Pause conference announcement" })
+    .focus();
+  await page.keyboard.press("Space");
+  await expect(strip).toHaveAttribute("data-paused", "true");
+  await link.focus();
+  await expect(link).toBeFocused();
+  await expect
+    .poll(() => track.evaluate((el) => getComputedStyle(el).animationName))
+    .toBe("none");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.setViewportSize({ width: 360, height: 844 });
+  await page.reload();
+  await expect(strip.getByRole("link")).toHaveCount(1);
+  await expect
+    .poll(() => track.evaluate((el) => getComputedStyle(el).animationName))
+    .toBe("none");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});

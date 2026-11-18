@@ -67,6 +67,17 @@
   width: max-content;
   animation: aeetds-ticker 100s linear infinite;
 }
+.aeetds-conference-announcement {
+  background: transparent;
+  color: #c2410c;
+}
+.aeetds-conference-announcement :focus-visible {
+  outline-color: var(--color-focus) !important;
+  outline-offset: -2px;
+}
+.aeetds-conference-announcement .aeetds-ticker-track {
+  animation-duration: 35s;
+}
 .aeetds-ticker-items {
   display: flex;
   align-items: center;

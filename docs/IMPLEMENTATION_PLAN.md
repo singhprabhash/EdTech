@@ -1,5 +1,18 @@
 # EdTech Publications Repository Implementation Plan
 
+**Announcement appearance correction — 18 November 2026:** user requests only
+orange running text with no background. Remove the conference badge, filled strip
+and visible icon; retain the registration link and motion/reduced-motion behavior.
+Use a readable dark orange on the inherited surface, with a keyboard pause control
+that is visually hidden until focused.
+
+**Conference announcement strip — 18 November 2026:** add a second running-text
+strip immediately after NewsTicker across its shared Society pages. Use the current
+CRAFNS-2026 dates/venue and approved Google registration URL. Label it “3rd Conference”
+to identify the current event without changing its approved international classification.
+Reuse ticker animation, keyboard/hover pause and reduced-motion behavior; add an
+independent pause control and keep the duplicated loop inert/hidden from assistive tools.
+
 **Favicon and upcoming-event illustration — 18 November 2026:** generate global
 Next file-based favicon/app/Apple icons from the unchanged actual seal using
 `scripts/generate-brand-icons.mjs`. Extract the supplied past-conference PDF’s

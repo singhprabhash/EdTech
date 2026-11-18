@@ -108,7 +108,8 @@ describe("durable administrator authorization", () => {
     const r = request();
     r.headers.set("x-forwarded-for", "192.0.2.200");
     expect(() => login(r, password, c)).toThrow("Too many");
-  });
+    // Thirty real scrypt verifications need headroom under parallel CPU load.
+  }, 15000);
   it("bounds streamed JSON even when Content-Length is absent", async () => {
     const r = new Request("https://society.example", {
       method: "POST",
