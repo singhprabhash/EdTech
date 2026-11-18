@@ -3,6 +3,7 @@ import {
   eventsIntroduction,
   crafnsConference,
   crafnsForms,
+  upcomingEventIllustration,
   pastConferences,
   eventPhotos,
 } from "../../../content/aeetds-events";
@@ -110,6 +111,12 @@ export default function EventsLanding({
               <p className="text-surface-variant">
                 Climate-resilient food and nutritional security.
               </p>
+              <figure className="mt-6">
+                <EventImage photo={upcomingEventIllustration} />
+                <figcaption className="mt-3 text-body-sm text-surface-variant">
+                  {upcomingEventIllustration.caption}
+                </figcaption>
+              </figure>
             </aside>
           </article>
         </div>

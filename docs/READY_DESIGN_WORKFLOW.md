@@ -77,3 +77,12 @@ policies are plain unavailable text. Publishing CTAs lead to the real enquiry pa
 no online persistence or email delivery is claimed. Citation feedback appears only
 after clipboard success; failure offers manual copy. Native dialogs provide focus
 containment/Escape and restore the invoking control.
+
+## Brand browser icons
+
+Next file-based `src/app/favicon.ico`, `icon.png` and `apple-icon.png` are generated
+from the actual `public/aeetds/logo.png` seal. Run `npm run brand:icons` after an
+approved logo change. The script uses the existing installed Sharp dependency for
+aspect-preserving resizing and white padding, without recoloring/cropping. ICO
+contains 16/32/48px frames; PNG app and Apple icons are 192/180px. Source/output
+hashes are recorded in `public/aeetds/brand-icons.provenance.json`.

@@ -25,7 +25,8 @@
     "submissions:retry": "node --env-file-if-exists=.env.local scripts/aeetds-ops.mjs retry",
     "backup:create": "node --env-file-if-exists=.env.local scripts/aeetds-ops.mjs backup",
     "backup:restore": "node --env-file-if-exists=.env.local scripts/aeetds-ops.mjs restore",
-    "admin:password": "node --env-file-if-exists=.env.local scripts/aeetds-ops.mjs password"
+    "admin:password": "node --env-file-if-exists=.env.local scripts/aeetds-ops.mjs password",
+    "brand:icons": "node scripts/generate-brand-icons.mjs"
   },
   "dependencies": {
     "next": "16.4.3",

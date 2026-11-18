@@ -167,3 +167,6 @@ verification: `AEETDS_SUPPORT_PLAN.md`, `AEETDS_CONTACT_INTEGRATION.md` and
 - `/submit/abstract` and `/submit/award`: compatibility redirects to guidelines and nomination information.
 
 Other five guide submission types remain unavailable pending complete approved forms.
+
+Browser icon routes `/favicon.ico`, `/icon.png` and `/apple-icon.png` are Next
+file-based metadata assets shared by all pages; they are not content/sitemap pages.

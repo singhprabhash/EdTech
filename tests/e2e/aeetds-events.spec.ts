@@ -408,3 +408,38 @@ test("current conference brochure is available everywhere and downloads the actu
   expect(download.suggestedFilename()).toBe("CRAFNS-2026-Brochure.pdf");
   expect(await download.failure()).toBeNull();
 });
+
+test("site favicon uses the seal and upcoming events show the supplied past-conference illustration", async ({
+  page,
+  request,
+}) => {
+  const favicon = await request.get("/favicon.ico");
+  expect(favicon.status()).toBe(200);
+  const ico = await favicon.body();
+  expect(ico.readUInt16LE(2)).toBe(1);
+  expect(ico.readUInt16LE(4)).toBe(3);
+  expect([ico[6], ico[22], ico[38]]).toEqual([16, 32, 48]);
+  for (const route of ["/", "/events", "/events/crafns-2026"]) {
+    await page.goto(route);
+    await expect(
+      page.locator('link[rel="icon"][href^="/favicon.ico"]'),
+    ).toHaveAttribute("href", /favicon\.ico/);
+    await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+      "href",
+      /apple-icon\.png/,
+    );
+    if (route !== "/") {
+      const photo = page.getByRole("img", {
+        name: "Delegates in a group photograph outside ICAR-NAARM at FSTAT-2025, Hyderabad.",
+      });
+      await photo.scrollIntoViewIfNeeded();
+      await photo.evaluate((element) => (element as HTMLImageElement).decode());
+      await expect(photo).toBeVisible();
+      await expect(
+        page.getByText(
+          "Glimpse of FSTAT-2025 at ICAR-NAARM, Hyderabad — a past conference.",
+        ),
+      ).toBeVisible();
+    }
+  }
+});

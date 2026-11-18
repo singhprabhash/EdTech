@@ -1,0 +1,17 @@
+{
+  "source": "Glimpse of Past Conferences (1).pdf",
+  "sourceSha256": "94a286ba54f5b897c60507330c5b3336311534e775da5413f642df6516353258",
+  "suppliedOn": "2026-11-18",
+  "method": "Poppler pdfimages -j; original JPEG stream retained without re-encoding.",
+  "assets": [
+    {
+      "file": "past-conferences-fstat-2025.jpg",
+      "pdfPage": 4,
+      "pdfObject": 29,
+      "width": 1280,
+      "height": 853,
+      "caption": "Glimpse of FSTAT-2025 at ICAR-NAARM, Hyderabad \u2014 a past conference.",
+      "sha256": "fd4c9baa16ab988db1ea11b9a98f77cbc4102184c0e81841d0d606696564df49"
+    }
+  ]
+}

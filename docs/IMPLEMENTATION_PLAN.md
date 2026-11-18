@@ -1,5 +1,12 @@
 # EdTech Publications Repository Implementation Plan
 
+**Favicon and upcoming-event illustration — 18 November 2026:** generate global
+Next file-based favicon/app/Apple icons from the unchanged actual seal using
+`scripts/generate-brand-icons.mjs`. Extract the supplied past-conference PDF’s
+page-four ICAR-NAARM group photo for the Events featured card and CRAFNS hero;
+caption it explicitly as FSTAT-2025, separate from upcoming-event photo records.
+Source hashes and extraction/generation provenance accompany the assets.
+
 **CRAFNS payment notice — 13 November 2026:** user-supplied three-page PDF is the
 authority for seven early/spot registration fee rows, deadlines, Society bank/UPI
 and extracted QR, award contributions, sponsorship/exhibition amounts and benefits,

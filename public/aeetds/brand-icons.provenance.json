@@ -1,0 +1,10 @@
+{
+  "source": "logo.png",
+  "sourceSha256": "f356e933ea13d74045dc550b23fa3e36722032992f5d3086b72d96ad3f69e8de",
+  "method": "Aspect-preserving resize, white padding; original seal retained. ICO embeds 16/32/48px PNG frames; app PNG 192px; Apple PNG 180px.",
+  "outputs": {
+    "favicon.ico": "b88d35cfbc7c37b31f1ca4a528875551b3eb1aa7b251eaf1b4e1518d1d47bb81",
+    "icon.png": "68322f43c7a03dfe774663c9620f799fb0f01a8576ce50e2f9f36ff8f84bacc1",
+    "apple-icon.png": "d6a7c3fe024fbcec142b1265ff02fe72eb162d8ed10d991d9a5c076abe3c0f0b"
+  }
+}

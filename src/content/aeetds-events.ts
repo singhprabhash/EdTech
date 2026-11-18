@@ -60,6 +60,16 @@ export const eventPhotos = {
 export const eventsIntroduction =
   "AEETDS organises national and international conferences, seminars, workshops and training programmes that bring together scientists, academicians, policy makers, industry, students and farmers to exchange knowledge and advance agricultural and allied sciences.";
 // Conference participation destinations supplied by the Society on 13 November 2026.
+// Past-conference illustration from the user-supplied Glimpse PDF, page 4.
+// Keep separate from CRAFNS photos: the upcoming conference has not taken place.
+export const upcomingEventIllustration: EventPhoto = {
+  src: "/aeetds/past-conferences-fstat-2025.jpg",
+  alt: "Delegates in a group photograph outside ICAR-NAARM at FSTAT-2025, Hyderabad.",
+  caption:
+    "Glimpse of FSTAT-2025 at ICAR-NAARM, Hyderabad — a past conference.",
+  width: 1280,
+  height: 853,
+};
 export const crafnsBrochure = {
   title: "CRAFNS-2026 Conference Brochure",
   href: "/aeetds/documents/crafns-2026-brochure.pdf",

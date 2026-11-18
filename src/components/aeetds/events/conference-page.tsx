@@ -1,7 +1,11 @@
 import { conferenceDeadlines } from "../../../content/aeetds-payment";
 import BrochureDownload from "./brochure-download";
 import Link from "next/link";
-import { crafnsForms, type Conference } from "../../../content/aeetds-events";
+import {
+  crafnsForms,
+  upcomingEventIllustration,
+  type Conference,
+} from "../../../content/aeetds-events";
 import { Action, Eyebrow, Icon } from "../ui";
 import EventBreadcrumb from "./breadcrumb";
 import EventImage from "./event-image";
@@ -115,7 +119,12 @@ export function ConferenceHero({ conference }: { conference: Conference }) {
         {upcoming && (
           <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12">
             <div className="lg:col-span-8">
-              <EventImage />
+              <figure>
+                <EventImage photo={upcomingEventIllustration} priority />
+                <figcaption className="mt-3 text-body-sm text-on-surface-variant">
+                  {upcomingEventIllustration.caption}
+                </figcaption>
+              </figure>
             </div>
             <div className="events-upcoming-note events-dark lg:col-span-4">
               <Eyebrow dark>SCIENTIFIC PROGRAMME</Eyebrow>
