@@ -32,7 +32,6 @@ export default async function RootLayout({
             crossOrigin="anonymous"
           />
         ))}
-        <meta name="google-site-verification" content="GXYbw1Sr3OKYCNFMetw2x0VNiOWalUMHv1K9x1ICKv8" />
       </head>
       <body className="bg-surface font-body-md text-body-md text-on-surface antialiased">
         <a className="skip-link" href="#main">
