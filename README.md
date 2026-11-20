@@ -63,8 +63,13 @@ plans and milestone reports are historical and superseded by the conference scop
 ## Search, verification and release
 
 The supplied Google site-verification token is inherited through root metadata.
-It is Search Console verification, not a Google Analytics measurement ID; no
-Analytics script is configured or fabricated.
+It is Search Console verification, not a Google Analytics measurement ID.
+Vercel Web Analytics is integrated separately using `@vercel/analytics/next` on
+Vercel Production deployments. Enable Web Analytics for the project in the Vercel
+dashboard and deploy to activate its hosting endpoints. No Analytics ID is needed.
+Private/application paths are excluded; pageview URLs omit queries/fragments,
+custom events are discarded, and referrers are limited to origins. Local/Preview
+deployments do not mount the SDK. Actual dashboard data is not verified locally.
 
 The sitemap contains only the current public Society routes; event detail URLs
 come from canonical conference data. Set `AEETDS_SITE_URL` to the verified owned

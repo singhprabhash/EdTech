@@ -138,6 +138,7 @@ export const policies: readonly Policy[] = [
       "AEETDS collects only the personal information you give us through our forms — such as name, institution, email, phone number and uploaded documents — and uses it solely to process your membership, registration, submission, nomination or enquiry, and to inform you about Society activities.",
       "We do not sell, rent or share your information with third parties, except with the host institution of a conference where needed to organise the event.",
       "You may ask us to correct or delete your information by writing to secretaryaeetds@gmail.com.",
+      "On production public pages, we use Vercel Web Analytics to understand website usage. We exclude private administration and application URLs and remove URL query strings and fragments from pageview events. Form field values and uploaded documents are not sent as analytics events.",
     ],
     highlight: 2,
   },

@@ -19,3 +19,6 @@ src/content/ready-catalogue.json
 src/app/ready-theme.css
 public/reference-assets
 references/aeetds
+
+# Keep Google-supplied ownership verification files unchanged.
+/public/google*.html

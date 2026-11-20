@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { connection } from "next/server";
-import { rootMetadata } from "../config/seo";
+import SiteAnalytics from "../components/aeetds/site-analytics";
+import { publicSocietyRoutes, rootMetadata } from "../config/seo";
 import { OrganizationStructuredData } from "../components/aeetds/seo/structured-data";
 import { SiteContentProvider } from "../components/aeetds/site-content";
 import { publicContent } from "../server/public-content";
@@ -39,6 +40,9 @@ export default async function RootLayout({
         </a>
         <OrganizationStructuredData />
         <SiteContentProvider initial={content}>{children}</SiteContentProvider>
+        {process.env.VERCEL_ENV === "production" && (
+          <SiteAnalytics paths={publicSocietyRoutes} />
+        )}
       </body>
     </html>
   );

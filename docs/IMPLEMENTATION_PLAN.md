@@ -1,5 +1,15 @@
 # EdTech Publications Repository Implementation Plan
 
+**Vercel Web Analytics — 20 November 2026 (explicit user request):** add the official
+`@vercel/analytics/next` SDK through the root layout. Use a small client wrapper
+for its beforeSend hook: allow only public Society pageview paths, discard custom
+events/private URLs, strip query strings and fragments. Mount on Vercel production
+using the platform-provided VERCEL_ENV; do not add a new manual analytics ID or
+require the separate sitemap release flag. Keep same-origin CSP. Add regression
+coverage and truthful privacy/setup notes; enabling Analytics and deploying are
+separate dashboard operations, not claimed completed. The small official SDK is
+justified by the user’s requested provider; no stack replacement/major infrastructure.
+
 **Conference-only public scope — 20 November 2026 (user authorized):** retire
 `/books`, book detail, `/subjects`, subject detail and `/publish-with-us`, plus
 the old catalogue/category/detail HTML aliases. Remove their unused production

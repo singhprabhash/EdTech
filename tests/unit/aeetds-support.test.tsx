@@ -59,6 +59,9 @@ it("preserves all official questions/answers and policy wording exactly", () => 
       );
       for (const paragraph of policy.paragraphs.slice(1))
         expect(source).toContain(paragraph);
+    } else if (policy.id === "privacy-policy") {
+      expect(source).toContain(policy.paragraphs.slice(0, 3).join(" "));
+      expect(policy.paragraphs[3]).toContain("Vercel Web Analytics");
     } else expect(source).toContain(policy.paragraphs.join(" "));
   }
   const schema = faqStructuredData();
