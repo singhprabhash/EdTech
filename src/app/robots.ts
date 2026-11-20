@@ -9,15 +9,13 @@ export default function robots(): MetadataRoute.Robots {
       rules: {
         userAgent: "*",
         allow: "/",
+        // Retired URLs return 404 and remain crawlable after release.
         disallow: [
           "/admin",
           "/api/",
           "/membership/apply",
           "/membership/acknowledgement",
           "/submit/registration",
-          "/books",
-          "/subjects",
-          "/publish-with-us",
         ],
       },
       sitemap: new URL("/sitemap.xml", origin).href,

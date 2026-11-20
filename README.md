@@ -1,26 +1,22 @@
-# EdTech Publications
+# AEETDS agricultural conferences and Society website
 
-**Current AEETDS alignment (8 November 2026):** the Developer Guide now supplies
-the green/gold semantic theme. Existing page compositions are retained. The three
-existing forms have a private SQLite/SMTP backend, and `/admin` manages Society
-content and private applications. Live services remain disabled until configured.
-See [operations](docs/AEETDS_GUIDE_OPERATIONS.md),
-[alignment report](docs/AEETDS_GUIDE_REPORT.md) and `.env.example`.
+The public project focuses on agricultural conferences, scientific exchange and
+Society activities. The retired publisher storefront is no longer part of the site.
 
-The current design implementation uses **`ready_design/` as the primary reference**.
-Home, catalogue, Horticulture category and Frontier Agronomy detail are implemented,
-with the exact supplied local images, circular seal, local fonts and interactive
-navigation/search/filter/sort/tabs/citations. Other supplied records have metadata
-only detail pages. Original reference files remain unchanged.
+Current pages include Home, About/vision/governance/partners, conferences and their
+archives, training, membership, awards, conference publications/journals, submission
+guidelines, registration/payment details, downloads, Contact/FAQ and Policies.
+`/admin` manages Society content and private applications when configured.
 
-This is an **unindexed design preview**, not publication approval. Supplied ISBNs,
-prices, credentials, accreditation and business copy have unresolved conflicts and
-are not independently verified. Submission storage/mail and real download documents
-are not configured. See [current implementation report](docs/READY_DESIGN_REPORT.md).
+`/books`, book details, `/subjects`, subject details and `/publish-with-us`, together
+with their old catalogue/category/detail HTML aliases, return actual AEETDS 404s.
+There is no book-buying, checkout or publisher-manuscript storefront workflow.
+Original exports in `ready_design/` and historical reference artifacts are preserved;
+they are not live routes or approved product copy.
 
 ## Start and verify
 
-Use Node **24.22.0** (see `.nvmrc`) and npm 11:
+Use Node **24.22.0** from `.nvmrc`, npm 11 and the checked-in lockfile:
 
 ```sh
 nvm install
@@ -29,67 +25,54 @@ npm ci
 npm run dev
 ```
 
-Open <http://localhost:3000>. No credentials or `.env` file are required for this
-milestone. See [environment setup](docs/SETUP.md) before configuring integrations.
+Open <http://localhost:3000>. See [setup](docs/SETUP.md) and `.env.example` before
+configuring services. The public conference registration/abstract actions use the
+Society-supplied Google Forms. Private local submission services fail closed when
+unconfigured; local development does not install a production service.
 
 ```sh
 npm run check
 npx playwright install chromium
-npm run test:e2e
+npm run test:e2e -- --workers=1
 npm audit --audit-level=high
 ```
 
-`check` runs lint, framework route generation/strict typecheck, unit tests,
-production-source content checks, formatting and build. Browser tests start a
-separate production server on port 3100; build first. Each check is also an
-individual npm script. Browser dependencies are required on Linux:
+`check` covers lint, route types, unit/integration tests, reference/compiler and
+production-content checks, formatting and build. Chromium runs against a separate
+local production server on port 3100; build first. Linux browser setup can use
 `npx playwright install --with-deps chromium`.
 
-## Updating the primary designs
+## Content, design and architecture
 
-Edit `ready_design/{index,catalog,catagory,book_detail}.html`, then run:
+- `src/app`: active Next routes; `src/components/aeetds`: shared Society UI.
+- `src/content/aeetds*`: canonical conference, membership, journal, contact and
+  payment content. Public Secretary overrides pass through `src/server/content.mjs`.
+- `src/domain`, `src/services`, `src/server`: validation, form transport and private
+  SQLite/authenticated SMTP/storage/admin adapters.
+- `src/config/brand-theme.json`: official green/gold semantic identity; local
+  Newsreader/Manrope and the actual Society seal remain in use.
+- `npm run reference:compile` generates theme and archived reference artifacts.
+  Never hand-edit `src/app/ready-theme.css` or `src/content/ready-*.json`.
+- `npm run brand:icons` regenerates browser icons from the actual seal.
 
-```sh
-npm run reference:compile
-npm run reference:check
-```
+[Reference workflow](docs/READY_DESIGN_WORKFLOW.md), [route map](docs/ROUTE_MAP.md),
+[working plan](docs/IMPLEMENTATION_PLAN.md) and [operations](docs/AEETDS_GUIDE_OPERATIONS.md)
+describe the current application. Initial PRD/TRD book-commerce sections, foundation
+plans and milestone reports are historical and superseded by the conference scope.
 
-The compiler generates inert presentation trees, a supplied-record index and theme
-CSS. Never hand-edit `src/content/ready-*.json` or `src/app/ready-theme.css`.
-[Reference workflow](docs/READY_DESIGN_WORKFLOW.md) explains asset import, sanitization,
-source conflicts and verification. No source scripts are executed in the app.
-Python 3.12+ is required for compilation/checking; no Python packages are needed.
+## Search, verification and release
 
-## Sources and architecture
+The supplied Google site-verification token is inherited through root metadata.
+It is Search Console verification, not a Google Analytics measurement ID; no
+Analytics script is configured or fabricated.
 
-- [PRD](PRD.md) defines behavior; [TRD](TRD.md) defines engineering constraints.
-- [AGENTS.md](AGENTS.md) contains repository instructions.
-- [Working implementation plan](docs/IMPLEMENTATION_PLAN.md) governs future
-  delivery; [foundation plan](docs/FOUNDATION_PLAN.md) records this kickoff slice.
-- [Foundation decision](docs/decisions/0001-application-foundation.md) records
-  stack rationale, boundaries, deferred dependencies and documentation authority.
-- [Route map](docs/ROUTE_MAP.md) distinguishes implemented routes from references.
-- [Original audit](docs/REPOSITORY_AUDIT.md) records pre-application findings;
-  [Milestone 1 report](docs/MILESTONE_1.md) records the initial foundation.
-- [Shared shell report](docs/MILESTONE_2.md) records the current UI implementation
-  and asset limitations; [shell plan](docs/SHARED_SHELL_PLAN.md) tracks this slice.
+The sitemap contains only the current public Society routes; event detail URLs
+come from canonical conference data. Set `AEETDS_SITE_URL` to the verified owned
+HTTPS origin and `AEETDS_PUBLIC_RELEASE=true` to publish the sitemap/indexing policy.
+Without those settings the local preview remains no-index and its sitemap is empty.
+Google ownership verification/account actions and sitemap submission require the
+actual deployed site and account; none are claimed by local code changes.
 
-`src/app` owns routes/layout; future pure rules belong in `src/domain`, use cases
-in `src/application`, and external data/mail/private-storage access in
-`src/infrastructure`. Create these modules only when used. UI must not query a
-provider or own book metadata. No business content source is approved yet.
-
-## Preservation and release limits
-
-`ready_design/` holds the current four primary HTML references. The older `design/`
-and Stitch directories were removed during this implementation session outside
-these edits; their earlier state is recorded in the historical audit. Supplied metadata and claims remain
-unverified and must not be treated as approved production catalogue data. Root DESIGN prose contains palette/radius conflicts; explicit
-PRD/TRD/user navy/blue requirements govern foundation colors. Newsreader, Manrope and Material Symbols are local. The new reference supplied the
-circular seal and artwork. Catalogue search operates over its supplied preview cards;
-no invented records fill the difference between visible cards and source totals.
-
-The preview site metadata and robots policy prevent indexing. Review/remove that
-policy only when approved public content is ready. CI is a GitHub Actions
-configuration, not a connected repository or completed remote run. This folder
-arrived without Git metadata; no repository/remote/deployment is created here.
+See [SEO and release](docs/AEETDS_SEO.md) for the exact boundary. Hosting, TLS,
+production credentials, monitoring and dependency-advisory remediation remain
+separate operations; no production deployment is implied by passing local checks.

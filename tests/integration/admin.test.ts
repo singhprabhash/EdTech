@@ -120,6 +120,37 @@ describe("durable administrator authorization", () => {
   });
 });
 describe("published content boundary", () => {
+  it("excludes retired storefront links from saved tickers without changing stored records", () => {
+    const c = config();
+    const items = [
+      { label: "OLD", text: "Retired", href: "/books" },
+      { label: "NEW", text: "Conference", href: "/events" },
+    ];
+    const db = database(c.storage!);
+    db.prepare("INSERT INTO content VALUES(?,?,?,?)").run(
+      "ticker",
+      JSON.stringify(items),
+      3,
+      new Date().toISOString(),
+    );
+    expect(getContent("ticker", [], c)).toEqual({
+      items: [items[1]],
+      version: 3,
+    });
+    expect(
+      JSON.parse(
+        (
+          db.prepare("SELECT json FROM content WHERE kind='ticker'").get() as {
+            json: string;
+          }
+        ).json,
+      ),
+    ).toEqual(items);
+    for (const href of ["/books", "/subjects", "/publish-with-us"])
+      expect(() =>
+        validateContent("ticker", [{ label: "OLD", text: "Retired", href }], c),
+      ).toThrow("existing public");
+  });
   it("rejects nonexistent pages, unknown award groups and impossible or reversed conference dates", () => {
     const c = config();
     expect(() =>

@@ -62,9 +62,6 @@ const publicRoutes = new Set([
   "/contact",
   "/contact/faqs",
   "/policies",
-  "/books",
-  "/subjects",
-  "/publish-with-us",
   "/downloads",
 ]);
 const approvedPhones = new Set([
@@ -196,6 +193,14 @@ export function validateContent(kind, items, config = configuration()) {
     return clean;
   });
 }
+const retiredStorefrontPaths = ["/books", "/subjects", "/publish-with-us"];
+function retiredStorefrontLink(href) {
+  if (typeof href !== "string") return false;
+  const pathname = href.split("#")[0];
+  return retiredStorefrontPaths.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
 export function getContent(kind, defaults = [], config = configuration()) {
   if (!contentFields[kind]) throw new AdminError("Unknown collection.", 404);
   if (!config.storage) return { items: defaults, version: 0 };
@@ -203,8 +208,15 @@ export function getContent(kind, defaults = [], config = configuration()) {
     .prepare("SELECT json,version FROM content WHERE kind=?")
     .get(kind);
   if (!row) return { items: defaults, version: 0 };
+  const stored = JSON.parse(row.json);
+  // Retiring a page must not make an older published ticker fail validation/site rendering.
+  // Read-only filtering preserves stored records/version until the Secretary next saves.
+  const current =
+    kind === "ticker" && Array.isArray(stored)
+      ? stored.filter((item) => !retiredStorefrontLink(item?.href))
+      : stored;
   return {
-    items: validateContent(kind, JSON.parse(row.json), config),
+    items: validateContent(kind, current, config),
     version: row.version,
   };
 }

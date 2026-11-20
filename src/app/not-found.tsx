@@ -1,21 +1,27 @@
-import { ReadyLayout } from "../components/ready-document";
-import Link from "next/link";
+import ResourceShell from "../components/aeetds/resources/shell";
+import { Action, Eyebrow } from "../components/aeetds/ui";
 
 export default function NotFound() {
   return (
-    <ReadyLayout>
-      <main id="main" tabIndex={-1} className="mx-auto max-w-3xl px-6 py-20">
-        <h1 className="mb-6 text-4xl font-semibold text-primary">
-          Page not found
-        </h1>
-        <p className="mb-6">The requested page is unavailable.</p>
-        <Link
-          className="font-semibold text-secondary underline underline-offset-4"
-          href="/"
-        >
-          Return to home
-        </Link>
-      </main>
-    </ReadyLayout>
+    <ResourceShell activePath="">
+      <section className="resource-section" aria-labelledby="not-found-title">
+        <div className="aeetds-container max-w-3xl">
+          <Eyebrow>AEETDS / AGRICULTURAL CONFERENCES</Eyebrow>
+          <h1 id="not-found-title" className="resource-heading mb-6">
+            Page not found
+          </h1>
+          <p className="mb-6 text-body-md text-on-surface-variant">
+            This page is unavailable. Explore AEETDS conferences, events and
+            Society resources.
+          </p>
+          <div className="resource-actions">
+            <Action href="/">Return to home</Action>
+            <Action href="/events" tone="light">
+              Explore Conferences
+            </Action>
+          </div>
+        </div>
+      </section>
+    </ResourceShell>
   );
 }

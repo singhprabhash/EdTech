@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   homeTitle,
+  rootMetadata,
   pageMetadata,
   publicSocietyRoutes,
   seoConfiguration,
@@ -23,6 +24,11 @@ function release() {
   vi.stubEnv("AEETDS_PUBLIC_RELEASE", "true");
 }
 describe("Society SEO publication boundary", () => {
+  it("adds the supplied Google Search Console verification without Analytics configuration", () => {
+    expect(rootMetadata.verification).toEqual({
+      google: "GXYbw1Sr3OKYCNFMetw2x0VNiOWalUMHv1K9x1ICKv8",
+    });
+  });
   it("rejects malformed, credentialed and non-origin site URLs", () => {
     for (const url of [
       "",
@@ -115,6 +121,14 @@ describe("Society SEO publication boundary", () => {
     }
     expect(sitemap()).toHaveLength(publicSocietyRoutes.length);
     expect(robots().sitemap).toBe("https://www.aeetds.com/sitemap.xml");
+    const rules = robots().rules as { disallow: string[] };
+    expect(rules.disallow).not.toContain("/books");
+    expect(rules.disallow).not.toContain("/subjects");
+    expect(rules.disallow).not.toContain("/publish-with-us");
+    for (const event of [crafnsConference, ...pastConferences])
+      expect(
+        sitemap().some((entry) => entry.url.endsWith(`/events/${event.slug}`)),
+      ).toBe(true);
   });
   it("does not publish without a valid origin despite a release flag", () => {
     vi.stubEnv("AEETDS_PUBLIC_RELEASE", "true");

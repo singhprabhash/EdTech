@@ -1,5 +1,12 @@
 # EdTech Publications --- Technical Requirements Document (TRD)
 
+> **Scope superseded — 20 November 2026:** the user retired book buying,
+> catalogue/subject/book-detail routes and the publisher submission storefront.
+> The active product is the AEETDS agricultural conference/Society website.
+> The original commerce requirements below are historical, not future implementation
+> authorization. Current scope/routes: `docs/IMPLEMENTATION_PLAN.md` and
+> `docs/ROUTE_MAP.md`; engineering/privacy constraints continue to apply.
+
 **Status:** Draft; finalize stack-specific decisions after repository
 inspection\
 **Companion:** `PRD.md`

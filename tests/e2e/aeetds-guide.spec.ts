@@ -22,10 +22,6 @@ const routes = [
   "/contact/faqs",
   "/policies",
   "/downloads",
-  "/books",
-  "/subjects/horticulture-pomology",
-  "/books/frontier-agronomy-for-climate-smart-digital-and-natural-farming-systems",
-  "/publish-with-us",
 ];
 for (const width of [360, 768, 1280])
   test(`official semantic theme applies across all routes at ${width}px`, async ({

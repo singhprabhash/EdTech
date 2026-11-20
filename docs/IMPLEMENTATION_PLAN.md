@@ -1,5 +1,19 @@
 # EdTech Publications Repository Implementation Plan
 
+**Conference-only public scope — 20 November 2026 (user authorized):** retire
+`/books`, book detail, `/subjects`, subject detail and `/publish-with-us`, plus
+the old catalogue/category/detail HTML aliases. Remove their unused production
+renderer/catalogue modules and obsolete feature tests. Keep original designs,
+compiled reference artifacts/theme and approved Society conference/publication
+content. Use an AEETDS 404 shell and verify all retired URLs return actual 404s.
+Derive sitemap event URLs from canonical conferences; keep the release/origin gates,
+and let released crawlers observe removed URLs rather than blocking their 404s.
+Add the exact Google Search Console token through shared metadata, preserving the
+user’s removal of the direct layout tag. The supplied value is not a GA4 ID; no
+Analytics script can be enabled from it. Refresh README/route/setup/workflow docs.
+Baseline: lint/types/171 tests/reference/content passed; the existing uncommitted
+layout edit fails formatting (blank whitespace). Production build was not reached.
+
 **Announcement appearance correction — 18 November 2026:** user requests only
 orange running text with no background. Remove the conference badge, filled strip
 and visible icon; retain the registration link and motion/reduced-motion behavior.

@@ -12,28 +12,27 @@ The audit host default Node 25 is not the selected runtime. Use `nvm use` first.
 - `npm run typecheck`: generate framework route types, then strict `tsc --noEmit`.
 - `npm test`: Vitest/Testing Library and content guard fixtures.
 - `npm run content:check`: scoped source guard across `src/` for dead `href="#"` and lorem ipsum.
-  It is **not** a catalogue validator, rendered link checker or content-approval system.
+  It is **not** a rendered link checker or content-approval system.
 - `npm run format:check`: Prettier for maintained code/docs. Historical reference
   files are excluded to preserve the handoff.
 - `npm run check`: all the above plus production build.
 - `npm run test:e2e`: production-server Chromium tests at six PRD widths, 404,
-  mobile keyboard navigation, hero GET search, route links, local fonts, no-index
+  mobile keyboard navigation, retired storefront 404s, route links, local fonts, no-index
   policy, text scaling and browser errors. Build/install browser first.
 - `npm audit --audit-level=high`: network-dependent dependency advisory check.
 
 ## Environment variables and external setup
 
-No application environment variables are required or read in Milestone 1.
-`.env.example` documents this without provider keys. Do not put provider secrets
-in `NEXT_PUBLIC_*`, source files, logs or browser code. `.env*` is ignored except
-the example. Do not commit real credentials.
+No credentials are required to view the public local preview. `.env.example`
+documents server services and release flags. Never put secrets in `NEXT_PUBLIC_*`,
+source, logs or client code. See `AEETDS_GUIDE_OPERATIONS.md` for the chosen Node24 /
+private SQLite, authenticated SMTP, Turnstile, scanner, worker and backup setup.
+Missing settings fail closed. Google Forms provide current conference participation.
 
-Before submissions, decide hosting and durable database/store, private storage,
-request/file limits (20 MB per-file versus total unresolved), malware handling,
-rate limits, consent/retention/deletion/access, verified sender domain and mail
-retry/notification operations. Add exact env names and server-only validation when
-adapters are implemented; missing required config must fail safely. No migrations,
-storage buckets or email setup exist yet.
+For production sitemap/canonical URLs set the verified HTTPS `AEETDS_SITE_URL` and
+explicit `AEETDS_PUBLIC_RELEASE=true`. The preview sitemap stays empty without both.
+Google verification is configured in root metadata with the user-supplied token.
+Analytics is not configured: that token is not a GA4 measurement ID.
 
 ## CI and deployment
 

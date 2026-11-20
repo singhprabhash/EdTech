@@ -35,6 +35,8 @@ if (
     console.error(errors.join("\n"));
     process.exitCode = 1;
   } else {
-    console.log("Production app source guard passed (not catalogue approval).");
+    console.log(
+      "Production app source guard passed (not source-content approval).",
+    );
   }
 }

@@ -1,3 +1,4 @@
+import { conferences } from "../content/aeetds-events";
 import type { Metadata } from "next";
 
 export const homeTitle =
@@ -5,8 +6,8 @@ export const homeTitle =
 export const homeDescription =
   "National scientific society for agriculture, entrepreneurship and environment. Conferences, awards, membership and publications.";
 
-// Only approved, implemented Society content can become indexable. Legacy
-// catalogue samples and submission/acknowledgement/private routes stay excluded.
+// Conference-focused Society pages only. The retired storefront has no routes.
+// Submission/acknowledgement/private pages remain excluded from indexing.
 export const publicSocietyRoutes = [
   "/",
   "/about",
@@ -15,10 +16,7 @@ export const publicSocietyRoutes = [
   "/about/partners",
   "/membership",
   "/events",
-  "/events/crafns-2026",
-  "/events/ncfahs-2026",
-  "/events/fstat-2025",
-  "/events/iacrsaegns-2024",
+  ...conferences.map((conference) => `/events/${conference.slug}` as const),
   "/events/trainings-workshops",
   "/awards",
   "/publications",
@@ -92,6 +90,7 @@ export function pageMetadata(
 
 export const rootMetadata: Metadata = {
   ...pageMetadata("/", homeTitle, homeDescription),
+  verification: { google: "GXYbw1Sr3OKYCNFMetw2x0VNiOWalUMHv1K9x1ICKv8" },
   ...(seoConfiguration().origin
     ? { metadataBase: seoConfiguration().origin }
     : {}),

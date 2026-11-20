@@ -1,4 +1,4 @@
-# Primary reference workflow
+# Reference preservation and theme workflow
 
 The user designated `ready_design/` as the primary design and page reference on
 27 October 2026. The earlier `design/` and Stitch exports were historical inputs and are no longer
@@ -15,6 +15,15 @@ Do not hand-edit generated CSS or trees. Archived HTML remains unchanged.
 Production sanitization also replaces retired literal color utilities and repairs
 disabled pagination labels and filter semantics without executing export scripts.
 
+## Current runtime boundary (20 November 2026)
+
+The user retired the initial storefront. ReadyTree/ReadyInteractions and the
+catalogue domain engine are no longer production modules; no active app imports
+the generated page/catalogue JSON. The compiler output trees now preserve historical
+reference structure only. Theme CSS remains active and generated from approved
+semantic tokens. Original reference files and artwork are preserved. The sections
+below describe the historical renderer contract where noted, not live book pages.
+
 ## Architecture and generation
 
 `scripts/compile-ready-design.py` uses Python's standard-library HTML parser to
@@ -28,9 +37,9 @@ assets and real destinations, then emits:
   with separate slugs for conflicting same-title editions.
 - `src/app/ready-theme.css`: reference tokens for the existing local Tailwind build.
 
-`ReadyTree` renders those nodes using React elements and escaped text. It never
-uses raw HTML injection or evaluates the reference scripts. `ReadyInteractions`
-progressively enhances one scoped document; only it owns widget DOM changes.
+The retired `ReadyTree` rendered those nodes using React elements and escaped text. It never
+uses raw HTML injection or evaluates the reference scripts. The retired `ReadyInteractions`
+progressively enhanced one scoped document; only it owns widget DOM changes.
 The pure catalogue module owns normalization, facets and deterministic sorting.
 Server query rendering and client filtering consume that module. Presentation
 JSON remains server-only; only the current page's markup and record descriptors

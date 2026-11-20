@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./ready-theme.css";
-@source "../content/ready-pages.json";
+@source not "../content/ready-pages.json";
+@source not "../content/ready-catalogue.json";
 
 @font-face {
   font-family: Manrope;
@@ -76,76 +77,6 @@
 .rounded-full {
   border-radius: 0.75rem;
 }
-.ready-document {
-  --ready-reference-offset: 112px;
-}
-.ready-document[data-ready-page="home"],
-.ready-document[data-ready-page="catalogue"] {
-  --ready-reference-offset: 96px;
-}
-.ready-document main {
-  padding-top: max(
-    var(--ready-header-height, 112px),
-    var(--ready-reference-offset)
-  ) !important;
-}
-.ready-document #filter-toolbar {
-  top: var(--ready-header-height, 112px);
-}
-.ready-document [hidden] {
-  display: none !important;
-}
-.ready-document main:focus {
-  outline: none;
-}
-.ready-document h1 {
-  overflow-wrap: anywhere;
-}
-.ready-document input {
-  min-width: 0;
-}
-.ready-document input,
-.ready-document select {
-  color-scheme: light;
-}
-.ready-document select option {
-  background: white;
-  color: var(--color-on-surface);
-}
-.ready-document img {
-  color: transparent;
-}
-.ready-document .ready-filter-active {
-  background: var(--color-primary) !important;
-  color: white !important;
-}
-.ready-document #citation-modal {
-  max-width: none;
-  max-height: none;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border: 0;
-}
-.ready-document #citation-modal::backdrop {
-  background: transparent;
-}
-.ready-document .ready-list-view {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
-.ready-status {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  max-width: calc(100% - 3rem);
-  z-index: 100;
-  padding: 1rem 1.25rem;
-  border-radius: 0.5rem;
-  background: var(--color-primary);
-  color: white;
-  box-shadow: 0 4px 20px
-    color-mix(in srgb, var(--color-primary-dark) 20%, transparent);
-}
 .skip-link {
   position: fixed;
   left: 1rem;
@@ -175,11 +106,6 @@ footer :focus-visible {
 .site-container {
   width: min(100% - 2.5rem, 1264px);
   margin-inline: auto;
-}
-.ready-document .content-page {
-  padding-bottom: 5rem;
-  min-height: 60vh;
-  padding-top: calc(var(--ready-header-height, 112px) + 4rem) !important;
 }
 .content-page h1 {
   font-family: Newsreader, serif;
@@ -245,30 +171,8 @@ footer :focus-visible {
   color: var(--color-secondary);
 }
 @media (min-width: 640px) {
-  .ready-document[data-ready-page="home"],
-  .ready-document[data-ready-page="catalogue"] {
-    --ready-reference-offset: 112px;
-  }
-  .ready-document[data-ready-page="subject"] {
-    --ready-reference-offset: 128px;
-  }
   .contact-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  .ready-list-view > article {
-    display: grid;
-    grid-template-columns: 250px minmax(0, 1fr);
-  }
-}
-@media (min-width: 768px) {
-  .ready-document[data-ready-page="home"],
-  .ready-document[data-ready-page="catalogue"] {
-    --ready-reference-offset: 128px;
-  }
-}
-@media (min-width: 1280px) {
-  .ready-document[data-ready-page="subject"] {
-    --ready-reference-offset: 116px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -278,34 +182,6 @@ footer :focus-visible {
     transition: none !important;
     scroll-behavior: auto !important;
   }
-}
-
-@media (min-width: 1024px) {
-  [data-ready-page="home"] h1,
-  [data-ready-page="catalogue"] h1 {
-    line-height: 64px;
-  }
-  [data-ready-page="subject"] h1 {
-    line-height: 48px;
-  }
-}
-@media (min-width: 1536px) {
-  [data-ready-page="subject"] h1 {
-    line-height: 64px;
-  }
-}
-
-.ready-document #langFilterGroup,
-.ready-document #yearFilterGroup,
-.ready-document #typeFilterGroup {
-  flex-wrap: wrap;
-  min-width: 0;
-}
-.ready-document .ready-acquisitions {
-  flex-wrap: wrap;
-}
-.ready-document a[href^="https://doi.org/"] {
-  overflow-wrap: anywhere;
 }
 
 /* Bot-only field remains outside the visual and accessibility flow. */
